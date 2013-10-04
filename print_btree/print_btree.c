@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*=== PUBLIC DEF ===*/
+
 #include <stdio.h>
 
 typedef struct	s_btree
@@ -19,11 +21,12 @@ typedef struct	s_btree
 	void			*item;
 }				t_btree;
 
+void	ft_print_tree(t_btree *root, int prof):
 int		my_pow(int nb, int pow);
 void	print_n_char(char c, int nb);
 void	print_node(t_btree *node, int prof, int offset);
 
-/*============================================================================*/
+/*=== PUBLIC FUNCTION ===*/
 
 void	ft_print_tree(t_btree *root, int prof)
 {
@@ -42,7 +45,7 @@ void	ft_print_tree(t_btree *root, int prof)
 	}
 }
 
-/*============================================================================*/
+/*=== PRIVATE FUNCTIONS ===*/
 
 int		my_pow(int nb, int pow)
 {
