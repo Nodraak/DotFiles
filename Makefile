@@ -1,17 +1,15 @@
 
 #=== VARIABLES ===
-NAME = MY_PROG
-SRCS =	main.c
-INCLUDE = -I/usr/local/include/SDL2
-LIBS = -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx
-
-SRCS_DIR = srcs/
+NAME = PROG_NAME
 INC_DIR = includes/
-OBJ_DIR = obj/
+SRCS_DIR = srcs/
+SRCS =	main.c
 OBJ = $(SRCS:.c=.o)
+OBJ_DIR = obj/
+INCLUDE = #-I/usr/local/include/SDL2
+LIBS = #-L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx
 
 CC = gcc
-# !! ansi + sdl wont work
 CFLAGS = -Wall -Wextra -pedantic -I $(INC_DIR) $(INCLUDE)
 
 #=== SPECIAL ===
@@ -27,12 +25,12 @@ $(NAME): $(addprefix $(OBJ_DIR), $(OBJ))
 
 $(OBJ_DIR)%.o: $(SRCS_DIR)%.c $(INC_DIR)constantes.h $(INC_DIR)%.h
 	@echo "building $@"
-	@mkdir -p obj
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)main.o: $(SRCS_DIR)main.c $(INC_DIR)constantes.h
 	@echo "building $@"
-	@mkdir -p obj
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 #=== REGLES SPECIALES ===
