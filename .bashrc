@@ -4,16 +4,16 @@ SEP="\e[0;32m#\e[m"
 AT="\e[0;32m@\e[m"
 export PS1="$SEP \u$AT\h $SEP \t $SEP \j $SEP \w $SEP\n\$"
 
-
 alias ll='ls -l -G'
 alias la='ls -la -G'
+alias lla='la'
+alias grep='grep --color'
+alias cc='compass compile'
+eval $(complete -p compass | sed 's/compass/cc/')
+alias pmr='python manage.py runserver'
 
-alias st='open -a Sublime\ text\ 2'
-
-function myman
-{
-	man -t $1 | open -f -a /Applications/Preview.app
-}
+# cmd1 use the exact same completion options as cmd2
+# eval $(complete -p cmd2 | sed 's/cmd2/cmd1/')
 
 function gitinfo
 {
@@ -38,7 +38,6 @@ function gitinfo
 }
 
 
-
-archey -c
-
+clear
+linuxlogo
 
