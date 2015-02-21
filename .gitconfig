@@ -1,6 +1,11 @@
 [user]
-	name = Adrien Chardon
-	email = adrienchardon@mailoo.org
+    name = Adrien Chardon
+    email = adrienchardon@mailoo.org
 [alias]
-	s = status
-	c = commit
+    s = status
+    c = commit
+    logo = log --pretty=oneline --abbrev-commit --color
+[color]
+    ui = auto
+[push]
+	default = matching
