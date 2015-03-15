@@ -3,8 +3,9 @@
     email = adrienchardon@mailoo.org
 [alias]
     s = status
-    c = commit
+    cm = commit -m
     logo = log --pretty=oneline --abbrev-commit --color
+    po = push origin
 [color]
     ui = auto
 [push]
