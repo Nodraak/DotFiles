@@ -3,9 +3,15 @@
     email = adrienchardon@mailoo.org
 [alias]
     s = status
-    cm = commit -m
+    c = commit
+    co = checkout
+    psho = push origin
+    pshfo = push -f origin
+    pllo = pull origin
+    pllfo = pull -f origin
     logo = log --pretty=oneline --abbrev-commit --color
-    po = push origin
+    pulledcode = log -p --reverse --no-merges --stat @{1}..
+    pulledcommit = log --reverse --no-merges --stat @{1}..
 [color]
     ui = auto
 [push]

@@ -55,3 +55,7 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 set pastetoggle=<F12>  " disable autoindent (for pasting)
 autocmd FileType make setlocal noexpandtab " for makefile, no expand tab
 
+
+" Stop that stupid window from popping up
+map q: :q
+
