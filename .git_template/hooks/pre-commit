@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# exit immediately if the script fails
+/usr/bin/env python3 .git/hooks/pre-commit.d/pylint.py || exit $?
