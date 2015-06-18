@@ -12,7 +12,10 @@
     logo = log --pretty=oneline --abbrev-commit --color
     pulledcode = log -p --reverse --no-merges --stat @{1}..
     pulledcommit = log --reverse --no-merges --stat @{1}..
+    ri = rebase -i
 [color]
     ui = auto
 [push]
 	default = matching
+[init]
+	templatedir = ~/.git_template
