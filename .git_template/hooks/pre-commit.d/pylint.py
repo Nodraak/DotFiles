@@ -20,7 +20,7 @@ from subprocess import Popen, PIPE
 
 
 # Threshold for code to pass the Pylint test, from 0 to 10
-PYLINT_PASS_THRESHOLD = 9
+PYLINT_PASS_THRESHOLD = 7
 
 
 def is_py_script(filename):
@@ -30,7 +30,7 @@ def is_py_script(filename):
     if filename.endswith(".py"):
         return True
     try:
-        first_line = open(filename, "r").next().strip()
+        first_line = open(filename, "r").readline().strip()
         return ("#!" in first_line) and ("python" in first_line)
     except StopIteration:
         return False
@@ -46,27 +46,41 @@ def main():
     files_changed = [f.strip().decode('utf-8') for f in sub.stdout.readlines()]
     py_files_changed = [f for f in files_changed if is_py_script(f)]
 
+    # if nothing to do, return
+    nb_files_to_check = len(py_files_changed)
+    if nb_files_to_check == 0:
+        return 0
+
     # Run Pylint on each file
+
     results = {}
+    print('Pylint : %d files to check' % nb_files_to_check)
+    print('------------ Pylint report ------------')
     for f in py_files_changed:
         pylint = Popen(("pylint -f text %s" % f).split(), stdout=PIPE, stderr=PIPE)
         pylint.wait()
         output = pylint.stdout.read().decode('utf-8')
 
-        results_re = re.compile(r"Your code has been rated at ([\d\.]+)/10")
-        results[f] = float(results_re.findall(output)[0])
+        results_re = re.compile(r"Your code has been rated at (-?\d+\.\d+)/10")
+        try:
+            results[f] = float(results_re.findall(output)[0])
+            if results[f] < PYLINT_PASS_THRESHOLD:
+                print(output.split('\n\n\n')[0])
+        except IndexError:
+            print(output)
+            print('-' * 50)
+            print('Error : Pylint : score not found.')
+            print('-' * 50)
+            return 1
 
-    # Display a summary of the results (if any files were checked).
-    if len(results.values()) > 0:
-        print('------------ Pylint report ------------')
-        for f in results:
-            result = results[f]
-            grade = "FAIL" if result < PYLINT_PASS_THRESHOLD else "pass"
-            print("    [%s] %s : %.2f/10" % (grade, f, result))
-        print('----------------------------------------')
+    print('------------ Pylint summary ------------')
+    for f in results:
+        result = results[f]
+        grade = "FAIL" if result < PYLINT_PASS_THRESHOLD else "pass"
+        print("[%s] %s : %.2f/10" % (grade, f, result))
+    print('----------------------------------------')
 
-    # If any of the files failed the Pylint test, exit nonzero and stop the
-    # commit from continuing.
+    # If any of the files failed the Pylint test, exit nonzero
     if any([(result < PYLINT_PASS_THRESHOLD) for result in results.values()]):
         return 1
     return 0

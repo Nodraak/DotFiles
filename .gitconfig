@@ -4,6 +4,7 @@
 [alias]
     s = status
     c = commit
+    cm = commit -m
     co = checkout
     psho = push origin
     pshfo = push -f origin
