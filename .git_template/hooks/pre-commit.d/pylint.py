@@ -16,7 +16,7 @@ import os
 import re
 import sys
 
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, check_output
 
 
 # Threshold for code to pass the Pylint test, from 0 to 10
@@ -27,13 +27,22 @@ def is_py_script(filename):
     """Returns True if a file is a python executable."""
     if not os.path.exists(filename):
         return False
+    # django's db migration or urls patterns file, skip it
+    if ('migrations' in filename) or ('urls' in filename):
+        return False
     if filename.endswith(".py"):
         return True
+
+    mime_type = str(check_output(['file', '--mime-type', filename]))
+    mime_type = mime_type.split(':')[1].strip().split('/')[0]
+    if mime_type in ['image', 'application']:
+        return False
+
     try:
         first_line = open(filename, "r").readline().strip()
-        return ("#!" in first_line) and ("python" in first_line)
-    except StopIteration:
-        return False
+    except UnicodeDecodeError:
+        first_line = open(filename, "r", encoding='utf-8').readline().strip()
+    return ("#!" in first_line) and ("python" in first_line)
 
 
 def main():
@@ -64,8 +73,7 @@ def main():
         results_re = re.compile(r"Your code has been rated at (-?\d+\.\d+)/10")
         try:
             results[f] = float(results_re.findall(output)[0])
-            if results[f] < PYLINT_PASS_THRESHOLD:
-                print(output.split('\n\n\n')[0])
+            print(output.split('\n\n\n')[0])
         except IndexError:
             print(output)
             print('-' * 50)
@@ -77,7 +85,7 @@ def main():
     for f in results:
         result = results[f]
         grade = "FAIL" if result < PYLINT_PASS_THRESHOLD else "pass"
-        print("[%s] %s : %.2f/10" % (grade, f, result))
+        print("[%s] %-30s : %.2f/10" % (grade, f, result))
     print('----------------------------------------')
 
     # If any of the files failed the Pylint test, exit nonzero

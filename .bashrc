@@ -1,8 +1,4 @@
 
-###########
-# Custom
-###########
-
 # Color definitions
 black='\e[0;30m'
 red='\e[0;31m'
@@ -14,47 +10,97 @@ cyan='\e[0;36m'
 white='\e[0;37m'
 nc="\e[m"
 
-# prompt + title
-export PS1="${cyan}\t ${green}\u${white}@${red}\h ${blue}\w${nc}\n\$"
-#export PROMPT_COMMAND='echo -ne "\033]0;$(pwd)@$(hostname)\007"'
-. /etc/profile.d/vte.sh # on new tab, opens in the directory I was in previously /!\ override PROMPT_COMMAND
+# fancy prompt
+_ps1_update () {
+    last_cmd_ret=$?
+    PS1=""
+
+    # window title
+    PS1+=$(printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}")
+
+    # date
+    PS1+="${cyan}\t${nc} "
+
+    # login + hostname
+    tmp="${USER}@${HOSTNAME}"
+    if [ "$tmp" == "nodraak@macbian8" ]; then
+        PS1+="${green}$tmp${nc} "
+    else
+        PS1+="${yellow}$tmp${nc} "
+    fi
+
+    # last cmd ret
+    if [ $last_cmd_ret -ne 0 ]; then
+        PS1+="${red}$last_cmd_ret${nc} "
+    fi
+
+    # git
+    tmp="$(__git_ps1 "[%s]")"
+    if [ -n "$tmp" ]; then
+        PS1+="${yellow}$tmp${nc} "
+    fi
+
+    # cwd
+    PS1+="${blue}\w${nc} "
+
+    # finally, new line + user/root prompt
+    PS1+="\n\$"
+}
+
+PROMPT_COMMAND="_ps1_update"
+
+# git prompt config - not working ? :(
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUPSTREAM="auto verbose name git"
+
 
 # basic
-alias ll='ls -l -G'
-alias la='ls -la -G'
+alias ll='ls -lGh'
+alias la='ls -lGha'
 alias lla='la'
 alias grep='grep --color'
 
 # dev foundation + django
-export EDITOR=vim  # for git
+export EDITOR=vim  # for git, crontab, ...
+alias g='git'  # now this is what I call 'lazy'
 alias sba='source ../bin/activate'
 alias cc='compass compile'
+complete -o nospace -F _filedir_xspec cc
 alias pmr='python manage.py runserver'
 alias pylint='pylint --comment=y'
+complete -o nospace -F _filedir_xspec pylint
 alias pylintd='pylint --load-plugins pylint_django'
-alias cvg='coverage erase && coverage run ./manage.py test && coverage html'
-alias docker='sudo docker'
+#alias docker='sudo docker'
 alias pip3='python3 -m pip'
 alias gg='gitg'
+function cvg {
+    coverage erase
+    echo "Starting tests ..."
+    coverage run ./manage.py test
+    echo "Generating html report ..."
+    coverage html
+}
+alias gcc='gcc -fdiagnostics-color=auto'
 
 # ece - fpga basys2
-alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
-alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
+#alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
+#alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
 
 # misc
-alias sag='sudo apt-get'
-alias pdflatex='pdflatex -halt-on-error'
-alias netmap='nmap -v -sn'
-function git_merged {
-    git rev-list -1 --format=%p $1 | grep -v commit | xargs -I {} sh -c 'git rev-list -1 --format="%h %ct" {}' | grep -v commit
-}
+alias pdflatex='pdflatex -file-line-error -halt-on-error'
+#alias netmap='nmap -v -sn'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+HISTIGNORE="jrnl *"
+eval "$(thefuck-alias)"  # pip thefuck
+bind Space:magic-space  # expand !!, ^old^new, etc
 
 function o {
     if [ $# -eq 0 ];
     then
-        echo 'no arg :('
+        echo 'No arg, I need something to open.'
         exit 1
     fi
 
@@ -69,10 +115,14 @@ function o {
             cmd="vlc"
             ;;
         pdf )
-            cmd="evince"
+            #cmd="evince"
+            cmd="zathura"
             ;;
-        txt|md|tex|c|h|py|html|css|scss|js|json|sh )
+        txt|md|tex|c|h|py|css|scss|js|json|sh )
             cmd="sublime"
+            ;;
+        html )
+            cmd="firefox"
             ;;
         * )
             if [ $# -eq 1 ];
@@ -85,24 +135,22 @@ function o {
                         cmd="tar -xzf"
                         ;;
                     * )
-                        echo "unknown extension ($ext), or tricky cmd (gz, ...), using nautilus"
-                        cmd="nautilus"
+                        echo "unknown extension ($ext), or tricky cmd (gz, ...), using caja for opening $@"
+                        cmd="caja"
                         ;;
                 esac
             else
-                echo "unknown extension ($ext), or tricky cmd (gz, ...), using nautilus"
-                cmd="nautilus"
+                echo "unknown extension ($ext), or tricky cmd (gz, ...), using caja for opening $@"
+                cmd="caja"
             fi
             ;;
     esac
 
-    $cmd $@ > /dev/null 2>&1 &
-}
+    exec $cmd $@ &
 
-# ssh tunnel
-# ssh -fNg -L 5555:localhost:5432 {your_username}@{yourdomain.com}
-# This open an SSH connection in the background mapping your local port 5555 to your server’s port 5432 (Postgres’ default port). Type “man ssh” to see what each of these flags is specifically doing.
-# Now, create a new connection in pgAdmin using localhost as your host and port 5555.
+    return 0
+}
+complete -o nospace -F _filedir_xspec o
 
 # colored man
 
@@ -125,12 +173,81 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[34m' # begin underline
 #export LESS_TERMCAP_us=$'\E[04;34;5;146m' # begin underline
 
-clear
-linuxlogo
 
-# dafuq perl ?
-PATH="/home/nodraak/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/nodraak/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/nodraak/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/nodraak/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/nodraak/perl5"; export PERL_MM_OPT;
+alias tamere='klog achard15'
+alias py='python'
+alias ipy='ipython'
+alias py3='python3'
+
+alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 90%"
+
+alias texspell="aspell -d en -t -c MiniProject.tex --extra-dicts=custom.rws"
+# sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt
+
+ssh() {
+    echo -n -e "\e]0;ssh - $@\a"
+    /usr/bin/ssh "$@"
+}
+
+export GOPATH=~/gopath
+export PATH=$GOPATH:$GOPATH/bin:${PATH}
+export DRIVE_GOMAXPROCS=8
+
+complete -o default -o nospace -F _git git
+
+__git_ps1 ()
+{
+    local g="$(git rev-parse --git-dir 2>/dev/null)"
+    if [ -n "$g" ]; then
+        local r
+        local b
+        if [ -d "$g/rebase-apply" ]
+        then
+            if test -f "$g/rebase-apply/rebasing"
+            then
+                r="|REBASE"
+            elif test -f "$g/rebase-apply/applying"
+            then
+                r="|AM"
+            else
+                r="|AM/REBASE"
+            fi
+            b="$(git symbolic-ref HEAD 2>/dev/null)"
+        elif [ -f "$g/rebase-merge/interactive" ]
+        then
+            r="|REBASE-i"
+            b="$(cat "$g/rebase-merge/head-name")"
+        elif [ -d "$g/rebase-merge" ]
+        then
+            r="|REBASE-m"
+            b="$(cat "$g/rebase-merge/head-name")"
+        elif [ -f "$g/MERGE_HEAD" ]
+        then
+            r="|MERGING"
+            b="$(git symbolic-ref HEAD 2>/dev/null)"
+        else
+            if [ -f "$g/BISECT_LOG" ]
+            then
+                r="|BISECTING"
+            fi
+            if ! b="$(git symbolic-ref HEAD 2>/dev/null)"
+            then
+                if ! b="$(git describe --exact-match HEAD 2>/dev/null)"
+                then
+                    b="$(cut -c1-7 "$g/HEAD")..."
+                fi
+            fi
+        fi
+
+        if [ -n "$1" ]; then
+            printf "$1" "${b##refs/heads/}$r"
+        else
+            printf " (%s)" "${b##refs/heads/}$r"
+        fi
+    fi
+}
+
+
+#linuxlogo
+#fortune
+

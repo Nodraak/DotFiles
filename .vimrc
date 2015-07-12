@@ -1,3 +1,7 @@
+
+" au = autocmd
+" hi = highlight
+
 syntax on
 
 set ruler               " Show row and column ruler information
@@ -5,6 +9,7 @@ set laststatus=2 	    " Always show the statusline
 set cmdheight=2 	    " Make the command area two lines high
 set encoding=utf-8
 set title 		        " Set the title of the window in the terminal to the file
+set cursorline
 
 set tabstop=4	        " stops in a tab
 set shiftwidth=4        " width of indent
@@ -47,14 +52,14 @@ hi User7 gui=NONE ctermfg=White ctermbg=Yellow guifg=#ffff00 guibg=#333333
 hi User8 gui=NONE ctermfg=Magenta ctermbg=DarkGray guifg=#99a0f9 guibg=#333333 " Position
 
 " Show trailing Whitespaces
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+hi ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 set pastetoggle=<F12>  " disable autoindent (for pasting)
-autocmd FileType make setlocal noexpandtab " for makefile, no expand tab
-
+au FileType make setlocal noexpandtab " for makefile, no expand tab
+au BufReadPost .bash_aliases set syntax=sh
 
 " Stop that stupid window from popping up
 map q: :q

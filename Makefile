@@ -1,49 +1,38 @@
 
-#=== VARIABLES ===
-NAME = PROG_NAME
-INC_DIR = includes/
-SRCS_DIR = srcs/
-SRCS =	main.c
-OBJ = $(SRCS:.c=.o)
-OBJ_DIR = obj/
-INCLUDE = #-I/usr/local/include/SDL2
-LIBS = #-L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx
+NAME := a.out
+INCS_DIR := incs/
+SRCS_DIR := srcs/
+SRCS := $(notdir $(wildcard $(SRCS_DIR)/*.c))
+OBJS_DIR := obj/
+OBJS := $(SRCS:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -I $(INC_DIR) $(INCLUDE)
+CWARNINGS := -Wall -Wextra -pedantic \
+	-Wcast-align -Wfloat-equal -Winit-self -Wmissing-prototypes -Wshadow \
+	-Wswitch-default -Wswitch-enum  -Wunreachable-code -Wuninitialized \
+	-Wstrict-prototypes
+CINCS := #-I/usr/local/include/SDL2
+CLIBS := #-L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx
+CFLAGS := $(CWARNINGS) -I $(INCS_DIR) $(CINCS) -std=c99 -g-O2
 
-#=== SPECIAL ===
-.PHONY: all, clean, mrproper, re, cls
+CC := gcc
+
+.PHONY: all, clean_bin, clean_obj re
 .SUFFIXES:
 
-#=== REGLES BINAIRES ===
-all: $(NAME)
+all: clean_bin $(NAME)
 
-$(NAME): $(addprefix $(OBJ_DIR), $(OBJ))
-	@echo "building app"
-	@$(CC) $(CFLAGS) $(LIBS) $^ -o $@
+$(NAME): $(addprefix $(OBJS_DIR), $(OBJS))
+	$(CC) $(CFLAGS) $^ -o $@ $(CLIBS)
 
-$(OBJ_DIR)%.o: $(SRCS_DIR)%.c $(INC_DIR)constantes.h $(INC_DIR)%.h
-	@echo "building $@"
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ_DIR)%.o: $(SRCS_DIR)%.c  $(INCS_DIR)%.h
+	@mkdir -p $(OBJS_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR)main.o: $(SRCS_DIR)main.c $(INC_DIR)constantes.h
-	@echo "building $@"
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+clean_bin:
+	rm -f $(NAME)
 
-#=== REGLES SPECIALES ===
-cls:
-	clear
+clean_obj:
+	rm -f $(OBJS_DIR)/*
 
-clean:
-	@echo "cleaning directory (*.obj)"
-	@rm -f $(addprefix $(OBJ_DIR), $(OBJ))
+re: clean_obj all
 
-mrproper: clean
-	@echo "cleaning directory (app + *.obj)"
-	@rm -f $(NAME)
-
-re: cls mrproper all
-	@echo "re"
