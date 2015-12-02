@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".bash_aliases .vimrc .gitconfig .git_template/"
+FILES=".bash_aliases .coveragerc .vimrc .gitconfig .git_template/"
 
 check_git () {
     if [ -n "$(git status -s -uno)" ];
