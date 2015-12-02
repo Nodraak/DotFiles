@@ -5,6 +5,20 @@
 #set -u # exit when your script tries to use undeclared variables
 
 #
+# Set title of terminal, used by PS1 and some alias
+#
+
+set_xtitle () {
+    case "$TERM" in
+        *term* | rxvt)
+            echo -en "\033]0;$@\007"
+            ;;
+        *)
+            ;;
+    esac
+}
+
+#
 # Color definitions - for fancy prompt PS1 or colored man
 #
 
@@ -72,7 +86,7 @@ _ps1_update () {
     PS1=""
 
     # window title
-    PS1+=$(printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}")
+    set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
 
     # date
     PS1+="${Cyan}\t${NC} "
@@ -82,7 +96,7 @@ _ps1_update () {
     if [[ "$tmp" = "nodraak@macbian8" ]]; then
         PS1+="${Green}$tmp${NC} "
     else
-        PS1+="${Yellow}$tmp${NC} "
+        PS1+="${Red}$tmp${NC} "
     fi
 
     # last cmd ret
@@ -91,16 +105,20 @@ _ps1_update () {
     fi
 
     # git
-    tmp="$(__git_ps1 "[%s]")"
-    if [[ -n "$tmp" ]]; then
-        PS1+="${Yellow}$tmp${NC} "
+    if [[ "$(type -t __git_ps1)" = "" ]]; then
+        PS1+="${Red}gitNotFound${NC} "
+    else
+        tmp="$(__git_ps1 "[%s]")"
+        if [[ -n "$tmp" ]]; then
+            PS1+="${Yellow}$tmp${NC} "
+        fi
     fi
 
     # cwd
     PS1+="${Blue}\w${NC} "
 
     # finally, new line + user/root prompt
-    PS1+="\n\$ "
+    PS1+="\n\\$ "
 
     # no "export PS1" needed
 }
@@ -115,30 +133,35 @@ export GIT_PS1_SHOWUPSTREAM="auto verbose git"
 #
 
 # basic
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
 alias ll='ls -lGh'
 alias la='ls -lGha'
 alias lla='la'
 alias grep='grep --color'
+alias du='du -kh'
+alias df='df -khT'
 
-alias py='python'
-alias py3='python3'
 alias ipy='ipython'
+alias py3='python3'
 alias pip3='python3 -m pip'
 
 # dev
 alias gcc='gcc -fdiagnostics-color=auto'
 alias g='git'  # now this is what I call 'lazy'
 complete -o default -o nospace -F _git g
-alias gg='gitg'
+alias gg='set_xtitle "gitg" ; gitg'
 alias sba='source ../bin/activate'
 alias cc='compass compile'
 complete -o nospace -F _filedir_xspec cc
-alias pmr='python manage.py runserver'
+alias pmr='set_xtitle "python manage.py runserver" ; python manage.py runserver'
 alias pylint='pylint --comment=y'
 complete -o nospace -F _filedir_xspec pylint
 alias pylintd='pylint --load-plugins pylint_django'
 
 cvg () {
+    set_xtitle "coverage"
     coverage erase
     echo "Starting tests ..."
     coverage run ./manage.py test
@@ -147,9 +170,12 @@ cvg () {
 }
 
 # misc
-alias pdflatex='pdflatex -file-line-error -halt-on-error'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+_pdflatex () {
+    set_xtitle "pdfLaTeX - $@"
+    /usr/bin/env pdflatex -file-line-error -halt-on-error "$@"
+}
+alias pdflatex='_pdflatex'
+
 HISTIGNORE='jrnl *'  # no export needed
 eval "$(thefuck-alias)"  # pip thefuck
 bind Space:magic-space  # expand !!, ^old^new, etc
@@ -157,70 +183,84 @@ bind Space:magic-space  # expand !!, ^old^new, etc
 #
 # Misc stuff
 #
-
+alias htop='set_xtitle "htop - ${HOSTNAME}" ; htop'
 alias texspell="aspell -d en -t -c MiniProject.tex --extra-dicts=custom.rws"
 # sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt
 
 export EDITOR="vim"  # for git, crontab, ...
 
 o () {
-    local file ext cmd
+    local cmd
 
-    if [ $# -eq 0 ];
-    then
-        echo 'No arg, I need something to open.'
+    if [[ $# -eq 0 ]]; then
+        echo 'Error: argument expected.'
         exit 1
     fi
 
-    file="$1"
-    ext="${file##*.}"
+    cmd=""
 
-    case $ext in
-        png|jpg|jpeg )
+    case $1 in
+        *.png|*.jpg|*.jpeg )
             cmd="eog"
             ;;
-        mp3|flac|mp4|mkv|avi )
+        *.mp3|*.flac|*.mp4|*.mkv|*.avi )
             cmd="vlc"
             ;;
-        pdf )
+        *.pdf )
             #cmd="evince"
             cmd="zathura"
             ;;
-        txt|md|tex|c|h|py|css|scss|js|json|sh )
+        *.txt|*.md|*.tex|*.c|*.h|*.py|*.css|*.scss|*.js|*.json|*.sh )
             cmd="sublime"
             ;;
-        html )
+        *.html )
             cmd="firefox"
             ;;
         * )
             if [ $# -eq 1 ];
             then
-                case $ext in
-                    zip )
-                        cmd="unzip"
-                        ;;
-                    gz )
-                        cmd="tar -xzf"
-                        ;;
-                    * )
-                        echo "unknown extension ($ext), or tricky cmd (gz, ...), using caja for opening $@"
-                        cmd="caja"
-                        ;;
+                case $1 in
+                    *.tar.bz2)  cmd="tar xvjf"      ;;
+                    *.tar.gz)   cmd="tar xvzf"      ;;
+                    *.bz2)      cmd="bunzip2"       ;;
+                    *.rar)      cmd="unrar x"       ;;
+                    *.gz)       cmd="gunzip"        ;;
+                    *.tar)      cmd="tar xvf"       ;;
+                    *.tbz2)     cmd="tar xvjf"      ;;
+                    *.tgz)      cmd="tar xvzf"      ;;
+                    *.zip)      cmd="unzip"         ;;
+                    *.Z)        cmd="uncompress"    ;;
+                    *.7z)       cmd="7z x"          ;;
                 esac
-            else
-                echo "unknown extension ($ext), or tricky cmd (gz, ...), using caja for opening $@"
-                cmd="caja"
             fi
             ;;
     esac
+
+    if [[ "$cmd" = "" ]]; then
+        echo 'Error: unknown extension "$ext", using caja for opening "$@"'
+        cmd="caja"
+    fi
 
     exec "$cmd" "$@" &
 }
 complete -o nospace -F _filedir_xspec o
 
+# how can I make this more generic ?
+py () {
+    set_xtitle "python - $@"
+    /usr/bin/env python "$@"
+}
 ssh () {
-    echo -n -e "\e]0;ssh - $@\a"
-    /usr/bin/ssh "$@"
+    set_xtitle "ssh - $@"
+    /usr/bin/env ssh "$@"
+}
+man () {
+    set_xtitle "man - $@"
+    /usr/bin/env man "$@"
+}
+sublime () {
+    set_xtitle "sublime - $@"
+    /usr/bin/env sublime "$@"
 }
 
 export GOPATH=~/gopath
@@ -228,7 +268,7 @@ export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
 #
-# Unused
+# Tmp / unused stuff (to be deleted at the end of the year)
 #
 
 #alias netmap='nmap -v -sn'
@@ -237,10 +277,7 @@ export DRIVE_GOMAXPROCS=8
 #alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
 #alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
 
-#
-# Tmp stuff (to be deleted at the end of the year)
-#
-
+# aau
 alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 90%"
 alias tamere='klog achard15'
 
@@ -254,69 +291,3 @@ alias tamere='klog achard15'
 if [ -x /usr/games/fortune ]; then
     /usr/games/fortune -s
 fi
-
-# Makes a more readable output.
-alias du='du -kh'
-alias df='df -kTh'
-
-function xtitle()
-{
-    case "$TERM" in
-    *term* | rxvt)
-        echo -en  "\e]0;$*\a" ;;
-    *)  ;;
-    esac
-}
-
-
-# Aliases that use xtitle
-alias top='xtitle Processes on $HOST && top'
-alias make='xtitle Making $(basename $PWD) ; make'
-
-__no_exe__ () {
-
-# .. and functions
-function man()
-{
-    for i ; do
-        xtitle The $(basename $1|tr -d .[:digit:]) manual
-        command man -a "$i"
-    done
-}
-
-function extract()      # Handy Extract Program
-{
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2)   tar xvjf $1     ;;
-            *.tar.gz)    tar xvzf $1     ;;
-            *.bz2)       bunzip2 $1      ;;
-            *.rar)       unrar x $1      ;;
-            *.gz)        gunzip $1       ;;
-            *.tar)       tar xvf $1      ;;
-            *.tbz2)      tar xvjf $1     ;;
-            *.tgz)       tar xvzf $1     ;;
-            *.zip)       unzip $1        ;;
-            *.Z)         uncompress $1   ;;
-            *.7z)        7z x $1         ;;
-            *)           echo "'$1' cannot be extracted via >extract<" ;;
-        esac
-    else
-        echo "'$1' is not a valid file!"
-    fi
-}
-
-# Multimedia
-complete -f -o default -X \
-'!*.+(gif|GIF|jp*g|JP*G|bmp|BMP|xpm|XPM|png|PNG)' xv gimp ee gqview
-complete -f -o default -X '!*.+(mp3|MP3)' mpg123 mpg321
-complete -f -o default -X '!*.+(ogg|OGG)' ogg123
-complete -f -o default -X \
-'!*.@(mp[23]|MP[23]|ogg|OGG|wav|WAV|pls|\
-m3u|xm|mod|s[3t]m|it|mtm|ult|flac)' xmms
-complete -f -o default -X '!*.@(mp?(e)g|MP?(E)G|wma|avi|AVI|\
-asf|vob|VOB|bin|dat|vcd|ps|pes|fli|viv|rm|ram|yuv|mov|MOV|qt|\
-QT|wmv|mp3|MP3|ogg|OGG|ogm|OGM|mp4|MP4|wav|WAV|asx|ASX)' xine
-
-}
-
