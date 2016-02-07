@@ -88,6 +88,16 @@ _ps1_update () {
     # window title
     set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
 
+    # virtual env
+    if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ];
+    then
+        virtual_env=$(basename "$VIRTUAL_ENV")
+        if [ "$virtual_env" != "" ];
+        then
+            PS1+="($virtual_env) "
+        fi
+    fi
+
     # date
     PS1+="${Cyan}\t${NC} "
 
@@ -106,7 +116,7 @@ _ps1_update () {
 
     # git
     if [[ "$(type -t __git_ps1)" = "" ]]; then
-        PS1+="${Red}gitNotFound${NC} "
+        PS1+="${Red}gitPS1NotFound${NC} "
     else
         tmp="$(__git_ps1 "[%s]")"
         if [[ -n "$tmp" ]]; then
@@ -136,6 +146,7 @@ export GIT_PS1_SHOWUPSTREAM="auto verbose git"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+alias ls='ls --color'
 alias ll='ls -lGh'
 alias la='ls -lGha'
 alias lla='la'
@@ -149,8 +160,11 @@ alias pip3='python3 -m pip'
 
 # dev
 alias gcc='gcc -fdiagnostics-color=auto'
+
 alias g='git'  # now this is what I call 'lazy'
 complete -o default -o nospace -F _git g
+source /usr/share/bash-completion/completions/git
+
 alias gg='set_xtitle "gitg" ; gitg'
 alias sba='source ../bin/activate'
 alias cc='compass compile'
@@ -175,17 +189,24 @@ _pdflatex () {
     /usr/bin/env pdflatex -file-line-error -halt-on-error "$@"
 }
 alias pdflatex='_pdflatex'
-
 HISTIGNORE='jrnl *'  # no export needed
-eval "$(thefuck-alias)"  # pip thefuck
 bind Space:magic-space  # expand !!, ^old^new, etc
+
+# https://github.com/nvbn/thefuck
+eval "$(thefuck-alias)"
+alias please='fuck'
+
 
 #
 # Misc stuff
 #
 alias htop='set_xtitle "htop - ${HOSTNAME}" ; htop'
-alias texspell="aspell -d en -t -c MiniProject.tex --extra-dicts=custom.rws"
-# sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt
+texspell () {
+    for f in $(find $1 | grep "\.tex$"); do
+        aspell -d en -t -c $f --extra-dicts=custom.rws
+    done
+}
+alias texdic="sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt"
 
 export EDITOR="vim"  # for git, crontab, ...
 
@@ -194,7 +215,13 @@ o () {
 
     if [[ $# -eq 0 ]]; then
         echo 'Error: argument expected.'
-        exit 1
+        return 1
+    fi
+
+    file -E "$1"
+    if [[ $?  -ne 0 ]]; then
+        echo 'Error: File not found.'
+        return 2
     fi
 
     cmd=""
@@ -237,11 +264,11 @@ o () {
     esac
 
     if [[ "$cmd" = "" ]]; then
-        echo 'Error: unknown extension "$ext", using caja for opening "$@"'
+        echo Error: unknown extension "$ext", using caja for opening "$@"
         cmd="caja"
     fi
 
-    exec "$cmd" "$@" &
+    exec $cmd "$@" &
 }
 complete -o nospace -F _filedir_xspec o
 
@@ -278,7 +305,7 @@ export DRIVE_GOMAXPROCS=8
 #alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
 
 # aau
-alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 90%"
+alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
 alias tamere='klog achard15'
 
 #
@@ -289,5 +316,30 @@ alias tamere='klog achard15'
 
 # Makes our day a bit more fun !
 if [ -x /usr/games/fortune ]; then
-    /usr/games/fortune -s
+    /usr/games/fortune -s | cowsay
 fi
+
+#
+# ----------------------------------
+#
+
+grepdf () {
+    if [ $# -ne 2 ] && [ $# -ne 3 ]; then
+        echo "Usage: grepdf <pattern> <path> [<grep opt>]"
+        return 0
+    fi
+
+    pattern=$1
+    path=$2
+    grepopt=""
+    if [ $# -eq 3 ]; then
+        grepopt=$3
+    fi
+
+    find_cmd="pdftotext -q '{}' - | grep $grepopt --with-filename --label='{}' --color \"$pattern\""
+    find "$path" -name "*.pdf" -exec sh -c "$find_cmd" \;
+}
+
+whereispylib () {
+    py -c "import $1; print $1.__path__"
+}

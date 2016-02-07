@@ -3,6 +3,7 @@
 " hi = highlight
 
 syntax on
+filetype plugin indent on
 
 set ruler               " Show row and column ruler information
 set laststatus=2 	    " Always show the statusline
@@ -41,7 +42,9 @@ set statusline+=%P " percentage of file
 set statusline+=%#warningmsg#
 set statusline+=%*
 
+"""""
 " Pimping colors
+"""""
 hi User1 gui=NONE ctermfg=White ctermbg=DarkGray guifg=#a7dfff guibg=#333333 " File name
 hi User2 gui=NONE ctermfg=LightRed ctermbg=DarkGray guifg=#ff9999 guibg=#333333 " File Flag
 hi User3 gui=NONE ctermfg=White ctermbg=DarkGray guifg=#ffffff guibg=#333333 " File type
@@ -57,10 +60,23 @@ au BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 hi ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
+"""""
+" Misc
+"""""
 set pastetoggle=<F12>  " disable autoindent (for pasting)
 au FileType make setlocal noexpandtab " for makefile, no expand tab
 au BufReadPost .bash_aliases set syntax=sh
 
 " Stop that stupid window from popping up
 map q: :q
+
+"""""
+" pathogen (vim plugins)
+"""""
+execute pathogen#infect()
+
+set updatetime=250
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+let g:gitgutter_escape_grep = 1  " use original grep, not the user's aliase
 
