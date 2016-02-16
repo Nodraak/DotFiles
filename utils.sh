@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".bash_aliases .coveragerc .vimrc .gitconfig .git_template/ .gdbinit .ipython/profile_default/ipython_config.py"
+FILES=".bash_aliases .coveragerc .vimrc .gitconfig .git_template/ .gdbinit .ipython/profile_default/ipython_config.py .conky/"
 
 check_git () {
     if [ -n "$(git status -s -uno)" ];
