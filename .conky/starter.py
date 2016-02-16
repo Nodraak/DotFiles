@@ -3,6 +3,7 @@
 
 from os import system, chdir
 
+home_dir = '/home/nodraak/.conky/'
 configs = (
     '0_bg',
     '1_header',
@@ -11,7 +12,8 @@ configs = (
     '4_network',
 )
 
-chdir('/home/nodraak/.conky/')
+print('Moving to "%s"' % home_dir)
+chdir(home_dir)
 
 # make config files
 for config in configs:
