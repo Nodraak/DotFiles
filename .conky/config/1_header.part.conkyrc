@@ -1,0 +1,15 @@
+gap_x 0
+gap_y 30
+minimum_size 260 130
+update_interval 1
+own_window_transparent yes
+
+TEXT
+${hr 2}
+${font Monospace:size=20}${alignc}${time %H:%M:%S}${font}
+${alignc}${time %Y-%m-%d}
+${font Monospace:size=12}${alignc}${color0}${execi 3600 whoami}@${nodename}${color}${font}
+${hr 2}
+${battery} - ${battery_time}
+${color 666}${battery_bar 8, 260}${color}
+
