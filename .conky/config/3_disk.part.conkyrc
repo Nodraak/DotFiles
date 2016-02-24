@@ -1,6 +1,6 @@
-gap_x 0
-gap_y 500
-minimum_size 260 95
+gap_x 600
+gap_y 640
+minimum_size 250 100
 update_interval 30
 own_window_transparent yes
 
@@ -20,4 +20,3 @@ ${if_match ${fs_used_perc /media/Media} < 75}${color1}${else}${color2}${endif}\
 Media ${fs_used_perc /media/Media}% - ${fs_used /media/Media} / ${fs_size /media/Media}
 ${fs_bar 8,260 /media/Media}\
 ${color}\
-

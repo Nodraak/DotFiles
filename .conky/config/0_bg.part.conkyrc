@@ -1,12 +1,12 @@
 gap_x 0
-gap_y 0
-minimum_size 260 1000
+gap_y 640
+minimum_size 1280 160
 update_interval 3600
 own_window_transparent yes
 
 own_window_colour 222
 own_window_transparent no
-own_window_argb_value 230
+own_window_argb_value 250
 
 TEXT
 

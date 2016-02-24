@@ -1,6 +1,6 @@
-gap_x 0
-gap_y 175
-minimum_size 260 320
+gap_x 300
+gap_y 640
+minimum_size 250 100
 update_interval 2
 own_window_transparent yes
 
@@ -8,16 +8,7 @@ own_window_transparent yes
 #$cached
 
 TEXT
-${color0}SYSTEM ${hr 2}${color}
-Up    ${uptime}
-Load  ${loadavg}
-Fan   ${execi 2 sensors|grep Exhaust|cut -b 17-24 }
-
-CPU1  ${freq_g 1} ${acpitemp} ${cpu cpu1}% ${cpubar cpu1 10,100}
-CPU2  ${freq_g 2} ${acpitemp} ${cpu cpu2}% ${cpubar cpu2 10,100}
-CPU3  ${freq_g 3} ${acpitemp} ${cpu cpu3}% ${cpubar cpu3 10,100}
-CPU4  ${freq_g 4} ${acpitemp} ${cpu cpu4}% ${cpubar cpu4 10,100}
-
+${color0}PROCESSES ${hr 2}${color}
 ${top name 1}${goto 110}${top pid 1}${goto 150}${top cpu 1}${goto 210}${top mem_res 1}
 ${top name 2}${goto 110}${top pid 2}${goto 150}${top cpu 2}${goto 210}${top mem_res 2}
 ${top name 3}${goto 110}${top pid 3}${goto 150}${top cpu 3}${goto 210}${top mem_res 3}
@@ -25,14 +16,3 @@ ${top name 3}${goto 110}${top pid 3}${goto 150}${top cpu 3}${goto 210}${top mem_
 ${top_mem name 1}${goto 110}${top_mem pid 1}${goto 150}${top_mem cpu 1}${goto 210}${top_mem mem_res 1}
 ${top_mem name 2}${goto 110}${top_mem pid 2}${goto 150}${top_mem cpu 2}${goto 210}${top_mem mem_res 2}
 ${top_mem name 3}${goto 110}${top_mem pid 3}${goto 150}${top_mem cpu 3}${goto 210}${top_mem mem_res 3}
-
-${if_match $memperc < 45}${color1}${else}${if_match $memperc < 75}${color3}${else}${color2}${endif}${endif}\
-RAM ${alignr}${memperc}% - ${mem} / ${memmax}
-${membar 8,260}\
-${color}\
-
-${if_match $swapperc == 0}${color1}${else}${if_match $swapperc < 5}${color3}${else}${color2}${endif}${endif}\
-SWAP ${alignr}${swapperc}% - ${swap} / ${swapmax}
-${swapbar 8,260}
-${color}\
-

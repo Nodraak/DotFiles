@@ -18,6 +18,7 @@ OBJECTS = [
     ['.gitconfig'],
     ['.ipython/profile_default/ipython_config.py', 'ipython_config.py'],
     ['.vimrc'],
+    ['.xsession'],
 ]
 
 

@@ -202,8 +202,29 @@ alias please='fuck'
 #
 alias htop='set_xtitle "htop - ${HOSTNAME}" ; htop'
 texspell () {
-    for f in $(find $1 | grep "\.tex$"); do
-        aspell -d en -t -c $f --extra-dicts=custom.rws
+    if [ $# -eq 0 ]
+    then
+        echo "Usage: texspell <lang> [file or dir]"
+        return 0
+    fi
+
+    lang="$1"
+    if [ $# -eq 2 ]
+    then
+        dir="$2"
+    else
+        dir="."
+    fi
+    if [ -f /usr/lib/aspell/custom_${lang}.rws ]
+    then
+        dict="--extra-dicts=custom_${lang}.rws"
+    else
+        dict=""
+    fi
+
+    for f in $(find $dir | grep "\.tex$"); do
+        echo "aspell $lang $f $dict"
+        aspell -d $lang -t -c $f $dict
     done
 }
 alias texdic="sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt"
@@ -309,7 +330,7 @@ alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
 alias tamere='klog achard15'
 
 #
-# Finally, stuff that print something
+# Finally, stuff that prints something
 #
 
 #linuxlogo
@@ -343,3 +364,8 @@ grepdf () {
 whereispylib () {
     py -c "import $1; print $1.__path__"
 }
+
+airdroid_proxy () {
+    mitmproxy -s test_mtimproxy.py -R https://192.168.87.101:8890/ -b 127.0.0.1 -p 8080
+}
+
