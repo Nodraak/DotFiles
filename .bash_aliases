@@ -227,7 +227,9 @@ texspell () {
         aspell -d $lang -t -c $f $dict
     done
 }
-alias texdic="sudo aspell --lang=en create master /usr/lib/aspell/custom.rws < ./dic.txt"
+#texdic () {
+#    sudo aspell --lang=en create master /usr/lib/aspell/custom_en.rws < ./dic.txt
+#}
 
 export EDITOR="vim"  # for git, crontab, ...
 

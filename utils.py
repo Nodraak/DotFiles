@@ -18,6 +18,11 @@ OBJECTS = [
     ['.gitconfig'],
     ['.ipython/profile_default/ipython_config.py', 'ipython_config.py'],
     ['.vimrc'],
+    ['.vim/minivim_color_statusbar.vim'],
+    ['.vim/minivim_keybindings.vim'],
+    ['.vim/bundle/vim-gitgutter/autoload/'],
+    ['.vim/bundle/vim-gitgutter/plugin/gitgutter.vim'],
+    ['.vim/autoload/'],
     ['.xsession'],
 ]
 

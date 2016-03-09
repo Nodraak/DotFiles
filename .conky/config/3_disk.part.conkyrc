@@ -1,5 +1,5 @@
 gap_x 600
-gap_y 640
+gap_y 0
 minimum_size 250 100
 update_interval 30
 own_window_transparent yes

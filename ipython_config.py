@@ -35,6 +35,7 @@ c.InteractiveShellApp.exec_lines = [
     'import cv2',
     'import numpy as np',
     'from numpy import linspace',
+    'h = help',
 ]
 
 # Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
@@ -69,6 +70,7 @@ c.InteractiveShellApp.exec_lines = [
 
 # List of files to run at IPython startup.
 #c.InteractiveShellApp.exec_files = [
+#    '/home/nodraak/Documents/AAU/S6/matrix.py',
 #    '/home/nodraak/Documents/AAU/Exam/Signal proc/utils.py',
 #    '/home/nodraak/Documents/AAU/Exam/CommunicationInElectronicSystems/utils.py',
 #]
