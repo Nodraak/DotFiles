@@ -6,17 +6,10 @@ own_window_transparent yes
 
 TEXT
 ${color0}DISK ${hr 2}${color}
-${if_match ${fs_used_perc /} < 75}${color1}${else}${color2}${endif}\
 Sys   ${fs_used_perc /}% - ${fs_used /} / ${fs_size /}
-${fs_bar 8,260 /}\
-${color}\
-
-${if_match ${fs_used_perc /home} < 50}${color1}${else}${color2}${endif}\
+${fs_bar 8,260 /}
 Home  ${fs_used_perc /home}% - ${fs_used /home} / ${fs_size /home}
-${fs_bar 8,260 /home}\
-${color}\
-
-${if_match ${fs_used_perc /media/Media} < 75}${color1}${else}${color2}${endif}\
+${fs_bar 8,260 /home}
 Media ${fs_used_perc /media/Media}% - ${fs_used /media/Media} / ${fs_size /media/Media}
-${fs_bar 8,260 /media/Media}\
-${color}\
+${fs_bar 8,260 /media/Media}
+

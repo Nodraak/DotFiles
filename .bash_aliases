@@ -312,6 +312,10 @@ sublime () {
     set_xtitle "sublime - $@"
     /usr/bin/env sublime "$@"
 }
+gitsh () {
+    set_xtitle "gitsh"
+    /usr/bin/env gitsh "$@"
+}
 
 export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
@@ -369,5 +373,9 @@ whereispylib () {
 
 airdroid_proxy () {
     mitmproxy -s test_mtimproxy.py -R https://192.168.87.101:8890/ -b 127.0.0.1 -p 8080
+}
+
+getlyrics () {
+    kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"
 }
 

@@ -4,20 +4,18 @@ minimum_size 250 100
 update_interval 1
 own_window_transparent yes
 
-#${battery} - ${battery_time}
-#Up    ${uptime}
-#Fan   ${execi 2 sensors|grep Exhaust|cut -b 17-24 }
-
 TEXT
 ${color0}SYSTEM ${hr 2}${color}
-${battery} ${alignr}${color 666}${battery_bar 10, 100}${color}
-Load  ${loadavg}
+CPUs
+1 ${freq_g 1} ${cpu cpu1}% ${cpubar cpu1 10,50} | Up ${uptime}
+2 ${freq_g 2} ${cpu cpu2}% ${cpubar cpu2 10,50} | Temp ${acpitemp}°
+3 ${freq_g 3} ${cpu cpu3}% ${cpubar cpu3 10,50} | Fan ${execi 2 sensors | grep Exhaust | cut -b 17-24}
+4 ${freq_g 4} ${cpu cpu4}% ${cpubar cpu4 10,50} | Load ${execi 2 cat /proc/loadavg | cut -d " " -f 1}
 
-CPU1  ${freq_g 1} ${acpitemp} ${cpu cpu1}% ${cpubar cpu1 10,100}
-CPU2  ${freq_g 2} ${acpitemp} ${cpu cpu2}% ${cpubar cpu2 10,100}
-CPU3  ${freq_g 3} ${acpitemp} ${cpu cpu3}% ${cpubar cpu3 10,100}
-CPU4  ${freq_g 4} ${acpitemp} ${cpu cpu4}% ${cpubar cpu4 10,100}
 ${if_match $memperc < 45}${color1}${else}${if_match $memperc < 75}${color3}${else}${color2}${endif}${endif}\
 RAM    ${mem} ${memperc}% ${alignr}${membar 10,100}${color}
 ${if_match $swapperc == 0}${color1}${else}${if_match $swapperc < 5}${color3}${else}${color2}${endif}${endif}\
 SWAP   ${swap} ${swapperc}% ${alignr}${swapbar 10,100}${color}
+
+${battery} ${alignr}${color 666}${battery_bar 10, 100}${color}
+

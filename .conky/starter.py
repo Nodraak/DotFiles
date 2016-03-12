@@ -6,9 +6,9 @@ from os import system, chdir
 home_dir = '/home/nodraak/.conky/'
 configs = (
     '0_bg',
-    '1_header',
-    '2_system',
-    '3_disk',
+    '1_system',
+    '2_processes',
+    '3_disks',
     '4_network',
 )
 
