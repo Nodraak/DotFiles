@@ -5,25 +5,24 @@ import subprocess
 import sys
 
 # your home dir where all your dot files are. Usually corresponding to ~/
-HOME_DIR = '/home/nodraak'
+HOME_DIR = '/home/nodraak/'
 
-# list of objects to backup and/or deploy. Each item can be a two elements list
-# [source, target], or a one element [source] list if source == target.
+# list of objects to backup and/or deploy. Directories must end with a "/".
 OBJECTS = [
-    ['.bash_aliases'],
-    ['.conky/'],
-    ['.coveragerc'],
-    ['.gdbinit'],
-    ['.git_template/'],
-    ['.gitconfig'],
-    ['.ipython/profile_default/ipython_config.py', 'ipython_config.py'],
-    ['.vimrc'],
-    ['.vim/minivim_color_statusbar.vim'],
-    ['.vim/minivim_keybindings.vim'],
-    ['.vim/bundle/vim-gitgutter/autoload/'],
-    ['.vim/bundle/vim-gitgutter/plugin/gitgutter.vim'],
-    ['.vim/autoload/'],
-    ['.xsession'],
+    '.bash_aliases',
+    '.conky/',
+    '.coveragerc',
+    '.gdbinit',
+    '.git_template/',
+    '.gitconfig',
+    '.ipython/profile_default/ipython_config.py',
+    '.vimrc',
+    '.vim/minivim_color_statusbar.vim',
+    '.vim/minivim_keybindings.vim',
+    '.vim/bundle/vim-gitgutter/autoload/',
+    '.vim/bundle/vim-gitgutter/plugin/gitgutter.vim',
+    '.vim/autoload/',
+    '.xsession',
 ]
 
 
@@ -32,35 +31,21 @@ def print_usage():
 
 
 def check_git():
-    if subprocess.check_output(['git', 'status', '-s', '-uno']):
+    if subprocess.check_output(['git', 'status', '-suno']):
         print('Some changes are not commited, exiting ...')
         exit(1)
 
 
-def get_cmd_chunks(f, backup=True):
-    if len(f) == 1:
-        source, target = f[0], f[0]
-    elif len(f) == 2:
-        source, target = f
-    else:
-        print('Error, "%s" is wrongly formatted.' % f)
-        exit(1)
+def get_cmd_chunks(f, home_dir_source, home_dir_target):
+    is_file = not f.endswith('/')
 
-    is_file = not source.endswith('/')
+    directory = '%s%s' % (home_dir_target, '/'.join(f.split('/')[:-1]))
+    if directory != home_dir_target:
+        print 'mkdir -p %s' % directory
+        subprocess.call(['mkdir', '-p', directory])
 
-    # set source and target
-
-    if backup:
-        source = '%s/%s' % (HOME_DIR, source)
-        if is_file:  # file
-            target = './%s' % target
-        else:  # dir
-            target = './'
-    else:
-        source, target = target, source
-        target = '%s/' % HOME_DIR
-
-    # build cmd
+    source = '%s%s%s' % (home_dir_source, f, '*' if not is_file else '')
+    target = '%s%s' % (home_dir_target, f)
 
     cmd = ['cp']
     if not is_file:
@@ -68,17 +53,18 @@ def get_cmd_chunks(f, backup=True):
     cmd.append(source)
     cmd.append(target)
 
-    return cmd
+    return ' '.join(cmd)
 
 
 def do_it(what):
     print('== %s ==' % what)
     for f in OBJECTS:
-        cmd = get_cmd_chunks(f, what == 'Backup')
+        if what == 'Backup':
+            cmd = get_cmd_chunks(f, HOME_DIR, './')
+        else:
+            cmd = get_cmd_chunks(f, './', HOME_DIR)
         print('\t%s' % cmd)
-        subprocess.call(cmd)
-    if what == 'Deploy':
-        print('conky may have been messed up, run "bash -c \'cd %s/.conky/ && ./starter.py" to restart\'' % HOME_DIR)
+        subprocess.call(cmd, shell=True)
 
 
 def main():
@@ -95,6 +81,10 @@ def main():
             check_git()
             print('Everything seems fine, I can deploy.')
             do_it('Deploy')
+            print('\n'.join((
+                'Bash: make sur "if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi" is present in .bashrc',
+                'Conky: run "cd %s/.conky/ && ./starter.py"' % HOME_DIR,
+            )))
         else:
             print_usage()
 
