@@ -1,0 +1,12 @@
+[BASIC]
+good-names=c,i,j,k,_,ex,qs,Run
+
+[FORMAT]
+max-line-length=120
+
+[MASTER]
+load-plugins=pylint_django
+
+[TYPECHECK]
+ignored-modules=cv2, numpy
+

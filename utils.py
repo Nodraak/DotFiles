@@ -16,6 +16,7 @@ OBJECTS = [
     '.git_template/',
     '.gitconfig',
     '.ipython/profile_default/ipython_config.py',
+    '.pylintrc',
     '.vimrc',
     '.vim/minivim_color_statusbar.vim',
     '.vim/minivim_keybindings.vim',

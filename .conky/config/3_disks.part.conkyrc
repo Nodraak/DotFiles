@@ -1,15 +1,16 @@
-gap_x 600
+gap_x 580
 gap_y 0
 minimum_size 250 100
-update_interval 30
+update_interval 15
 own_window_transparent yes
 
 TEXT
 ${color0}DISK ${hr 2}${color}
-Sys   ${fs_used_perc /}% - ${fs_used /} / ${fs_size /}
-${fs_bar 8,260 /}
-Home  ${fs_used_perc /home}% - ${fs_used /home} / ${fs_size /home}
-${fs_bar 8,260 /home}
-Media ${fs_used_perc /media/Media}% - ${fs_used /media/Media} / ${fs_size /media/Media}
-${fs_bar 8,260 /media/Media}
+Mountpoint       Used  Used  Free  Size
+${execi 15 printf "%-15s%6s%6s%6s%6s\n" $(df -h --output=target,pcent,used,avail,size / | tail -n +2)}
+${execibar 15 df -h --output=pcent / | tail -n +2}
+${execi 15 printf "%-15s%6s%6s%6s%6s\n" $(df -h --output=target,pcent,used,avail,size /home | tail -n +2)}
+${execibar 15 df -h --output=pcent /home | tail -n +2}
+${execi 15 printf "%-15s%6s%6s%6s%6s\n" $(df -h --output=target,pcent,used,avail,size /media/Media | tail -n +2)}
+${execibar 15 df -h --output=pcent /media/Media | tail -n +2}
 

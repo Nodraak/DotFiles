@@ -109,11 +109,6 @@ _ps1_update () {
         PS1+="${Red}$tmp${NC} "
     fi
 
-    # last cmd ret
-    if [[ "$last_cmd_ret" != "0" ]]; then
-        PS1+="${Red}$last_cmd_ret${NC} "
-    fi
-
     # git
     if [[ "$(type -t __git_ps1)" = "" ]]; then
         PS1+="${Red}gitPS1NotFound${NC} "
@@ -122,6 +117,11 @@ _ps1_update () {
         if [[ -n "$tmp" ]]; then
             PS1+="${Yellow}$tmp${NC} "
         fi
+    fi
+
+    # last cmd ret
+    if [[ "$last_cmd_ret" != "0" ]]; then
+        PS1+="${Red}$last_cmd_ret${NC} "
     fi
 
     # cwd
@@ -156,7 +156,6 @@ alias df='df -khT'
 
 alias ipy='ipython'
 alias py3='python3'
-alias pip3='python3 -m pip'
 
 # dev
 alias gcc='gcc -fdiagnostics-color=auto'
@@ -215,7 +214,7 @@ texspell () {
     else
         dir="."
     fi
-    if [ -f /usr/lib/aspell/custom_${lang}.rws ]
+    if [ -f "/usr/lib/aspell/custom_${lang}.rws" ]
     then
         dict="--extra-dicts=custom_${lang}.rws"
     else
@@ -224,7 +223,7 @@ texspell () {
 
     for f in $(find $dir | grep "\.tex$"); do
         echo "aspell $lang $f $dict"
-        aspell -d $lang -t -c $f $dict
+        aspell -d "$lang" -t "$dict" -c "$f"
     done
 }
 #texdic () {
@@ -287,7 +286,7 @@ o () {
     esac
 
     if [[ "$cmd" = "" ]]; then
-        echo Error: unknown extension "$ext", using caja for opening "$@"
+        echo Error: unknown extension, using caja for opening "$@"
         cmd="caja"
     fi
 
