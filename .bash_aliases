@@ -378,3 +378,4 @@ getlyrics () {
     kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"
 }
 
+alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme

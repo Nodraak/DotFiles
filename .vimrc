@@ -3,10 +3,12 @@
 " hi = highlight
 
 syntax on
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 set encoding=utf-8              " The encoding displayed.
 set fileencoding=utf-8          " The encoding written to file.
+set autoread                    " Set to auto read when a file is changed from the outside
 set title                       " Set the title of the window in the terminal to the file
 set mouse=a                     " enable mouse support
 set ruler                       " Show row and column ruler information
@@ -20,6 +22,7 @@ set scrolloff=5                 " Keep 5 lines below the last line when scrollin
 set sidescrolloff=15
 set showtabline=2               " always show window tabs
 set updatetime=500
+set lazyredraw                  " Don't redraw while executing macros (good performance config)
 
 set expandtab                   " convert tabs to spaces
 set tabstop=4                   " stops in a tab
@@ -76,6 +79,7 @@ execute pathogen#infect()
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_escape_grep = 1  " use original grep, not the user's aliase
+let g:gitgutter_override_sign_column_highlight = 0
 
 source ~/.vim/minivim_keybindings.vim
 source ~/.vim/minivim_color_statusbar.vim

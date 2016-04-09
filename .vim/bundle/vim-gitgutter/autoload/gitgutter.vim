@@ -2,8 +2,7 @@
 
 function! gitgutter#all()
   for buffer_id in tabpagebuflist()
-      call gitgutter#process_buffer(buffer_id, 0)
-    endif
+    call gitgutter#process_buffer(buffer_id, 0)
   endfor
 endfunction
 

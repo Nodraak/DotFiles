@@ -16,6 +16,7 @@ print('Moving to "%s"' % home_dir)
 chdir(home_dir)
 
 # make config files
+system('rm build/*')
 for config in configs:
     system('cat config/base_settings.conkyrc config/%s.part.conkyrc > build/%s.conkyrc' % (config, config))
 
