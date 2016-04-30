@@ -67,5 +67,10 @@ if ($status eq 'Discharging') {
 		exit(33);
 	}
 }
+else {
+    if ($percent > 95) {
+		print "#00A000\n";  # green
+    }
+}
 
 exit(0);

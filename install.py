@@ -14,6 +14,7 @@ FILELIST = (
     ('bash_aliases', '.bash_aliases'),
     ('config/dunst', '.config/dunst'),
     ('config/i3', '.config/i3'),
+    ('config/i3lock', '.config/i3lock'),
     ('config/i3blocks', '.config/i3blocks'),
     ('conky', '.conky'),
     ('coveragerc', '.coveragerc'),

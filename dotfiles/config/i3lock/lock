@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+cd $(dirname $(realpath $0))
+
+scrot -e 'mv $f lockbg.png'
+convert -blur 10x10 lockbg.png lockbg.png
+convert \
+    -family Hack -fill '#808080' -pointsize 28 -gravity center \
+    -annotate +0+150 'Type password to unlock' \
+    lockbg.png lockbg.png
+
+i3lock -e -t -i lockbg.png
+
+# prevent possible race conditions with suspend
+sleep 1
