@@ -70,6 +70,14 @@ au BufReadPost .bash_aliases set syntax=sh
 
 map q: :q " Stop that stupid window from popping up
 
+imap <ESC> <ESC>l
+
+imap <ESC>oA <ESC>ki
+imap <ESC>oB <ESC>ji
+imap <ESC>oC <ESC>li
+imap <ESC>oD <ESC>hi
+
+"inoremap <silent> <Esc> <C-O>:stopinsert<CR>  " dont move one char back when hitting ESC
 
 """""
 " pathogen (vim plugins)
@@ -83,3 +91,4 @@ let g:gitgutter_override_sign_column_highlight = 0
 
 source ~/.vim/minivim_keybindings.vim
 source ~/.vim/minivim_color_statusbar.vim
+

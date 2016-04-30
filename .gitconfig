@@ -1,6 +1,7 @@
 [user]
     name = Adrien Chardon
     email = adrienchardon@mailoo.org
+	signingkey = BB79836B
 [alias]
     a = add
     b = branch
@@ -8,6 +9,8 @@
     s = status -s -b
     c = commit
     cm = commit -m
+    ca = commit --amend
+    cl = clone
     ck = checkout
     pulledcode = log -p --reverse --no-merges --stat @{1}..
     pulledcommit = log --reverse --no-merges --stat @{1}..

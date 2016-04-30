@@ -156,6 +156,7 @@ alias df='df -khT'
 
 alias ipy='ipython'
 alias py3='python3'
+alias vd='vimdiff'
 
 # dev
 alias gcc='gcc -fdiagnostics-color=auto'
@@ -377,5 +378,11 @@ airdroid_proxy () {
 getlyrics () {
     kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"
 }
+
+prettyjson() {
+    python -m json.tool $@ | pygmentize -l javascript
+}
+
+alias sl='sl -e'
 
 alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
