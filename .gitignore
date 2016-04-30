@@ -1,1 +1,14 @@
-.conky/build
+dotfiles/conky/build/
+dotfiles/ipython/README
+dotfiles/ipython/profile_default/db/
+dotfiles/ipython/profile_default/history.sqlite
+dotfiles/ipython/profile_default/ipython_nbconvert_config.py
+dotfiles/ipython/profile_default/security/
+dotfiles/ipython/profile_default/startup/
+dotfiles/vim/vim/.netrwhist
+dotfiles/vim/vim/bundle/vim-gitgutter/dot_git/
+dotfiles/vim/vim/bundle/vim-gitgutter/test/
+dotfiles/vim/vim/bundle/vim-gitgutter/.gitignore
+dotfiles/vim/vim/bundle/vim-gitgutter/README.mkd
+dotfiles/vim/vim/bundle/vim-gitgutter/doc/
+dotfiles/vim/vim/bundle/vim-gitgutter/screenshot.png
