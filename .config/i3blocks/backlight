@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+MON=$(xbacklight -get | cut -d '.' -f 1)
+KBD=$(($(cat /sys/class/leds/smc\:\:kbd_backlight/brightness) * 100 / 255))
+
+echo "Mon $MON% - Kbd $KBD%"
+

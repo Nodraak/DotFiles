@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+DATA=$(amixer get Master | tail -n 1)
+VOL=$(echo $DATA | grep -E -o '[0-9]+%')
+MUT=$(echo $DATA | grep -E -o 'off')
+
+if [ "$MUT" == "off" ]
+then
+    # full_text / short_text / color
+    echo "MUT ($VOL)"
+    echo "MUT ($VOL)"
+    echo \#27AE60  # green
+else
+    echo $VOL
+fi
+
