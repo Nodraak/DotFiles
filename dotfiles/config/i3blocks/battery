@@ -54,6 +54,9 @@ print "$short_text\n";
 
 # consider color and urgent flag only on discharge
 if ($status eq 'Discharging') {
+    if ($percent < 5) {
+        system("notify-send", "-u", "critical", "Power is low");
+    }
 
     if ($percent < 10) {
 		print "#FF0000\n";  # red

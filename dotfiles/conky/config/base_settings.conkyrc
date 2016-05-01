@@ -42,6 +42,6 @@ net_avg_samples 3
 alignment top_left
 
 color0 588 # light blue - title
-color1 060 # dark green
-color2 600 # dark red
+color1 0A0 # dark green
+color2 A00 # dark red
 color3 orange
