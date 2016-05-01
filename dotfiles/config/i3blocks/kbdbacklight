@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "$(($(cat /sys/class/leds/smc\:\:kbd_backlight/brightness) * 100 / 255))%"
+

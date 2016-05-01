@@ -6,41 +6,49 @@
 # Global properties
 separator_block_width=15
 
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+color=#ffffff
+interval=1
+
 [wireless]
-label=W
+label=wlan0
 instance=wlan0
 command=/usr/share/i3blocks/network
 color=#00FF00
 interval=10
 
 [ethernet]
-label=E
+label=eth0
 instance=eth0
 command=/usr/share/i3blocks/network
 color=#00FF00
 interval=10
 
-[time]
-command=date '+%Y-%m-%d %H:%M:%S'
-interval=1
+[battery]
+label=Bat
+command=~/.config/i3blocks/battery
+interval=30
 
 [volume]
-label=♪
+label=Vol
+#♪
 instance=Master
 command=~/.config/i3blocks/volume
 signal=1
 interval=once
 # interval=once, update on SIGRTMIN+1
 
-[battery]
-label=BAT
-command=~/.config/i3blocks/battery
-interval=30
-
-[backlight]
-label=Backlights:
-command=~/.config/i3blocks/backlight
+[xbacklight]
+label=Mon
+command=~/.config/i3blocks/xbacklight
 interval=once
 signal=2
 # interval=once, update on SIGRTMIN+2
 
+[kbdbacklight]
+label=Kbd
+command=~/.config/i3blocks/kbdbacklight
+interval=once
+signal=3
+# interval=once, update on SIGRTMIN+3

@@ -113,17 +113,17 @@ bindsym $mod+r mode "resize"
 ########################################
 
 # sound
-bindsym XF86AudioRaiseVolume exec "amixer -q set Master 10%+ unmute && pkill -RTMIN+1 i3blocks"
-bindsym XF86AudioLowerVolume exec "amixer -q set Master 10%- unmute && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioRaiseVolume exec "amixer -q set Master 5%+ unmute && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioLowerVolume exec "amixer -q set Master 5%- unmute && pkill -RTMIN+1 i3blocks"
 bindsym XF86AudioMute exec "amixer -q set Master toggle && pkill -RTMIN+1 i3blocks"
 
 # screen light
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10 && pkill -RTMIN+2 i3blocks"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10 && pkill -RTMIN+2 i3blocks"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 && pkill -RTMIN+2 i3blocks"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 && pkill -RTMIN+2 i3blocks"
 
 # kb backlight
-bindsym XF86KbdBrightnessUp exec "~/.config/i3/kbdbacklight inc 26 && pkill -RTMIN+2 i3blocks"
-bindsym XF86KbdBrightnessDown exec "~/.config/i3/kbdbacklight dec 26 && pkill -RTMIN+2 i3blocks"
+bindsym XF86KbdBrightnessUp exec "~/.config/i3/kbdbacklight inc 10 && pkill -RTMIN+3 i3blocks"
+bindsym XF86KbdBrightnessDown exec "~/.config/i3/kbdbacklight dec 10 && pkill -RTMIN+3 i3blocks"
 
 # system: lock, logout, suspend, poweroff
 set $mode_system lock (l) - logout (o) - suspend (s) - hibernate (h) - poweroff (p) - reboot (r)
