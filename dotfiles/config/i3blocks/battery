@@ -29,7 +29,7 @@ close(ACPI);
 
 # fail on unexpected output
 if ($acpi !~ /: (\w+), (\d+)%/) {
-	die "$acpi\n";
+    die "$acpi\n";
 }
 
 $status = $1;
@@ -37,15 +37,15 @@ $percent = $2;
 $full_text = "$percent%";
 
 if ($status eq 'Discharging') {
-	$full_text .= ' DIS';
+    $full_text .= ' DIS';
 } elsif ($status eq 'Charging') {
-	$full_text .= ' CHR';
+    $full_text .= ' CHR';
 }
 
 $short_text = $full_text;
 
 if ($acpi =~ /(\d\d:\d\d):/) {
-	$full_text .= " ($1)";
+    $full_text .= " ($1)";
 }
 
 # print text
@@ -54,25 +54,32 @@ print "$short_text\n";
 
 # consider color and urgent flag only on discharge
 if ($status eq 'Discharging') {
-    if ($percent < 5) {
-        system("notify-send", "-u", "critical", "Power is low");
-    }
-
+    # color
     if ($percent < 10) {
-		print "#FF0000\n";  # red
-	} elsif ($percent < 20) {
-		print "#FFAE00\n";  # orange
-	} elsif ($percent < 30) {
-		print "#CFC600\n";  # yellow
+        print "#FF0000\n";  # red
+    } elsif ($percent < 20) {
+        print "#FFAE00\n";  # orange
+    } elsif ($percent < 30) {
+        print "#CFC600\n";  # yellow
     }
 
-	if ($percent < 5) {
-		exit(33);
-	}
+    # notification
+    if ($percent < 5) {
+        system("notify-send", "-u", "critical", "Battery is critical !");
+    } elsif ($percent == 10) {
+        system("notify-send",  "Battery is low ($percent%)");
+    } elsif ($percent == 20) {
+        system("notify-send",  "Battery is low ($percent%)");
+    }
+
+    if ($percent < 5) {
+        exit(33);
+    }
 }
 else {
-    if ($percent > 95) {
-		print "#00A000\n";  # green
+    if ($percent > 98) {
+        print "#00A000\n";  # green
+        system("notify-send",  "Battery is full");
     }
 }
 

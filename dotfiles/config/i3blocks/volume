@@ -9,8 +9,13 @@ then
     # full_text / short_text / color
     echo "MUT ($VOL)"
     echo "MUT ($VOL)"
-    echo \#27AE60  # green
+    echo \#00C000
 else
     echo $VOL
+    echo $VOL
+    if [ "$VOL" == "0%" ]
+    then
+        echo \#00C000
+    fi
 fi
 
