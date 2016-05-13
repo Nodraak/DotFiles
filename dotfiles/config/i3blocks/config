@@ -7,7 +7,7 @@
 separator_block_width=15
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%H:%M:%S %a %Y-%m-%d'
 color=#ffffff
 interval=1
 

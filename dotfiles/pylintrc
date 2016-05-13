@@ -9,4 +9,5 @@ load-plugins=pylint_django
 
 [TYPECHECK]
 ignored-modules=cv2, numpy
+extension-pkg-whitelist = numpy,scipy,cv2,tensorflow
 

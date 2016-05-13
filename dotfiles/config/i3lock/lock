@@ -5,7 +5,7 @@ cd $(dirname $(realpath $0))
 scrot -e 'mv $f lockbg.png'
 convert lockbg.png \
     -blur 15x15 \
-    -family Hack -fill '#C0C0C0' -stroke black -strokewidth 1 -pointsize 32 \
+    -family Hack -fill '#FFFFFF' -stroke black -strokewidth 1 -pointsize 32 \
     -gravity center -annotate +0+250 'Type password to unlock' \
     debian.png -gravity center -composite lockbg.png
 
