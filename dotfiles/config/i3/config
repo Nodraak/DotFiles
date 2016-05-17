@@ -23,7 +23,17 @@ bindsym $mod+Shift+r restart
 bar {
     status_command i3blocks
     position top
-    #tray_output primary # show only on main monitor
+    binding_mode_indicator no
+
+    colors {
+        statusline #A0A0A0
+    }
+}
+
+bar {
+    status_command i3blocks -c ~/.config/i3blocks/config_windowname
+    position top
+    workspace_buttons no
 
     colors {
         statusline #A0A0A0

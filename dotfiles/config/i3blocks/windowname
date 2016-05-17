@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+id=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)" | cut -b 41-)
+if [ "$id" != "0x0" ]
+then
+    app=$(xprop -id $id | grep "WM_CLASS(STRING)" | cut -d '"' -f 4)
+    title=$(xprop -id $id | grep "WM_NAME(STRING)" | cut -d '"' -f 2)
+    echo "$app - $title"
+else
+    echo "-"
+fi
+
