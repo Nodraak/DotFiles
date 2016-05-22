@@ -5,6 +5,10 @@ if [ "$id" != "0x0" ]
 then
     app=$(xprop -id $id | grep "WM_CLASS(STRING)" | cut -d '"' -f 4)
     title=$(xprop -id $id | grep "WM_NAME(STRING)" | cut -d '"' -f 2)
+    if [ "$title" == "" ]
+    then
+        title=$(xprop -id $id | grep "WM_NAME(COMPOUND_TEXT)" | cut -d '"' -f 2)
+    fi
     echo "$app - $title"
 else
     echo "-"

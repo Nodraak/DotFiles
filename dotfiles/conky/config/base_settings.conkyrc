@@ -28,7 +28,7 @@ border_width 0
 
 # Use Xft (anti-aliased font and stuff)
 use_xft yes
-xftfont Monospace:size=10
+xftfont Hack:size=8
 #text_buffer_size 2048
 override_utf8_locale yes
 use_spacer left # Adds spaces around certain objects to stop them from moving other things around

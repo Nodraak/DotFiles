@@ -23,22 +23,22 @@ bindsym $mod+Shift+r restart
 bar {
     status_command i3blocks
     position top
-    binding_mode_indicator no
+#binding_mode_indicator no
 
     colors {
         statusline #A0A0A0
     }
 }
 
-bar {
-    status_command i3blocks -c ~/.config/i3blocks/config_windowname
-    position top
-    workspace_buttons no
-
-    colors {
-        statusline #A0A0A0
-    }
-}
+#bar {
+#    status_command i3blocks -c ~/.config/i3blocks/config_windowname
+#    position top
+#    workspace_buttons no
+#
+#    colors {
+#        statusline #A0A0A0
+#    }
+#}
 
 ########################################
 # windows / panes / workspaces
@@ -76,9 +76,10 @@ bindsym $mod+f fullscreen
 bindsym $mod+space floating toggle; resize shrink width 10000px; resize grow width 1100px; resize shrink height 10000px; resize grow height 700px; move position 40 40
 
 # border width
-new_window pixel 3
+#new_window pixel 3
 new_float pixel 5
 hide_edge_borders both
+#for_window [class="urxvt"] border pixel 1
 
 # switch to workspace
 bindsym $mod+ampersand workspace 1

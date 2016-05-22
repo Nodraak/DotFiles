@@ -155,7 +155,9 @@ alias du='du -kh'
 alias df='df -khT'
 
 alias ipy='ipython'
+alias py='python'
 alias py3='python3'
+alias diff='colordiff'
 alias vd='vimdiff'
 
 # dev
@@ -165,30 +167,23 @@ alias g='git'  # now this is what I call 'lazy'
 complete -o default -o nospace -F _git g
 source /usr/share/bash-completion/completions/git
 
-alias gg='set_xtitle "gitg" ; gitg'
+alias gg='gitg'
 alias sba='source ../bin/activate'
 alias cc='compass compile'
 complete -o nospace -F _filedir_xspec cc
-alias pmr='set_xtitle "python manage.py runserver" ; python manage.py runserver'
+alias pmr='python manage.py runserver'
 alias pylint='pylint --comment=y'
 complete -o nospace -F _filedir_xspec pylint
 alias pylintd='pylint --load-plugins pylint_django'
 
-cvg () {
-    set_xtitle "coverage"
-    coverage erase
-    echo "Starting tests ..."
-    coverage run ./manage.py test
-    echo "Generating html report ..."
-    coverage html
-}
+# dual monitor enable / disable
+
+alias dmen='xrandr --output DP1 --above LVDS1 --auto'
+alias dmdis='xrandr --output DP1 --off'
 
 # misc
-_pdflatex () {
-    set_xtitle "pdfLaTeX - $@"
-    /usr/bin/env pdflatex -file-line-error -halt-on-error "$@"
-}
-alias pdflatex='_pdflatex'
+
+alias pdflatex='pdflatex -file-line-error -halt-on-error'
 HISTIGNORE='jrnl *'  # no export needed
 bind Space:magic-space  # expand !!, ^old^new, etc
 
@@ -196,42 +191,66 @@ bind Space:magic-space  # expand !!, ^old^new, etc
 eval "$(thefuck-alias)"
 alias please='fuck'
 
+alias ports='netstat -tulanp'
+alias getlyrics='kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"'
+alias sl='sl -e'
+alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
+
+
+export EDITOR="vim"  # for git, crontab, ...
+
+export GOPATH=~/gopath
+export PATH=$GOPATH:$GOPATH/bin:${PATH}
+export DRIVE_GOMAXPROCS=8
 
 #
-# Misc stuff
+# Functions
 #
-alias htop='set_xtitle "htop - ${HOSTNAME}" ; htop'
+
+cvg () {
+    coverage erase
+    echo "Starting tests ..."
+    coverage run ./manage.py test
+    echo "Generating html report ..."
+    coverage html
+}
+
 texspell () {
-    if [ $# -eq 0 ]
+    if [ $# -ne 2 ]
     then
-        echo "Usage: texspell <lang> [file or dir]"
+        echo "Usage: texspell <lang> <file or dir>"
         return 0
     fi
 
     lang="$1"
-    if [ $# -eq 2 ]
-    then
-        dir="$2"
-    else
-        dir="."
-    fi
+    dir="$2"
     if [ -f "/usr/lib/aspell/custom_${lang}.rws" ]
     then
-        dict="--extra-dicts=custom_${lang}.rws"
+        extradict="--extra-dicts=custom_${lang}.rws"
+        echo "Using extra dic \"custom_${lang}.rws\""
     else
-        dict=""
+        extradict=""
+    fi
+    if [ -f "./aspell_dict.txt" ]
+    then
+        echo "Using personal dict \"./aspell_dict.txt\""
+        pdict="--personal=./aspell_dict.txt"
+    else
+        pdict=""
     fi
 
-    for f in $(find $dir | grep "\.tex$"); do
-        echo "aspell $lang $f $dict"
-        aspell -d "$lang" -t "$dict" -c "$f"
+    for f in $(find "$dir" | grep "\.tex$")
+    do
+        for word in $(cat "$f" | aspell --lang="$lang" --mode=tex $extradict $pdict list)
+        do
+            grep --with-filename --line-number "$word" "$f"
+        done
     done
 }
+
 #texdic () {
 #    sudo aspell --lang=en create master /usr/lib/aspell/custom_en.rws < ./dic.txt
 #}
-
-export EDITOR="vim"  # for git, crontab, ...
 
 o () {
     local cmd
@@ -295,60 +314,16 @@ o () {
 }
 complete -o nospace -F _filedir_xspec o
 
-# how can I make this more generic ?
-py () {
-    set_xtitle "python - $@"
-    /usr/bin/env python "$@"
-}
-ssh () {
-    set_xtitle "ssh - $@"
-    /usr/bin/env ssh "$@"
-}
-man () {
-    set_xtitle "man - $@"
-    /usr/bin/env man "$@"
-}
-sublime () {
-    set_xtitle "sublime - $@"
-    /usr/bin/env sublime "$@"
-}
-gitsh () {
-    set_xtitle "gitsh"
-    /usr/bin/env gitsh "$@"
+whereispylib () {
+    for lib in $@
+    do
+        py -c "import $lib; print $lib.__path__"
+    done
 }
 
-export GOPATH=~/gopath
-export PATH=$GOPATH:$GOPATH/bin:${PATH}
-export DRIVE_GOMAXPROCS=8
-
-#
-# Tmp / unused stuff (to be deleted at the end of the year)
-#
-
-#alias netmap='nmap -v -sn'
-
-# ece - fpga basys2
-#alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
-#alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
-
-# aau
-alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
-alias tamere='klog achard15'
-
-#
-# Finally, stuff that prints something
-#
-
-#linuxlogo
-
-# Makes our day a bit more fun !
-if [ -x /usr/games/fortune ]; then
-    /usr/games/fortune -s | cowsay
-fi
-
-#
-# ----------------------------------
-#
+prettyjson() {
+    python -m json.tool $@ | pygmentize -l javascript
+}
 
 grepdf () {
     if [ $# -ne 2 ] && [ $# -ne 3 ]; then
@@ -367,22 +342,35 @@ grepdf () {
     find "$path" -name "*.pdf" -exec sh -c "$find_cmd" \;
 }
 
-whereispylib () {
-    py -c "import $1; print $1.__path__"
-}
 
 airdroid_proxy () {
     mitmproxy -s test_mtimproxy.py -R https://192.168.87.101:8890/ -b 127.0.0.1 -p 8080
 }
 
-getlyrics () {
-    kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"
-}
 
-prettyjson() {
-    python -m json.tool $@ | pygmentize -l javascript
-}
+#
+# Tmp / unused stuff (to be deleted at the end of the year)
+#
 
-alias sl='sl -e'
+# ece - fpga basys2
+#alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
+#alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
 
-alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
+# aau
+alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
+alias tamere='klog achard15'
+
+#
+# Finally, stuff that prints something
+#
+
+# Start tmux on every shell login
+#[[ $- != *i* ]] && return  # If not running interactively, do not do anything
+#[[ -z "$TMUX" ]] && TERM=screen-256color exec tmux
+
+# linuxlogo
+
+# Makes our day a bit more fun !
+# if [ -x /usr/games/fortune ]; then
+#     /usr/games/fortune -s | cowsay
+# fi

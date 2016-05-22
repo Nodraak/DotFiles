@@ -29,9 +29,9 @@ set tabstop=4                   " stops in a tab
 set shiftwidth=4                " width of indent
 set softtabstop=4               " Number of spaces per Tab
 set autoindent                  " Auto-indent new lines
-set smartindent
+"set smartindent
 set smarttab
-set cindent                     " Use 'C' style program indenting
+"set cindent                     " Use 'C' style program indenting
 set nowrap                      " Line wrapping off
 set showmatch                   " show matching {} and [] and ()
 set backspace=indent,eol,start  " The normal behaviour of backspace

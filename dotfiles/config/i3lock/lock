@@ -6,8 +6,8 @@ scrot -e 'mv $f lockbg.png'
 convert lockbg.png \
     -blur 15x15 \
     -family Hack -fill '#FFFFFF' -stroke black -strokewidth 1 -pointsize 32 \
-    -gravity center -annotate +0+250 'Type password to unlock' \
-    debian.png -gravity center -composite lockbg.png
+    -gravity south -annotate +0+200 'Type password to unlock' \
+    debian.png -geometry +0+0 -composite lockbg.png
 
 i3lock -e -t -i lockbg.png
 
