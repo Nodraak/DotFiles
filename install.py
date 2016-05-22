@@ -16,6 +16,7 @@ FILELIST = (
     ('config/i3', '.config/i3'),
     ('config/i3lock', '.config/i3lock'),
     ('config/i3blocks', '.config/i3blocks'),
+    ('config/redshift.conf', '.config/redshift.conf'),
     ('conky', '.conky'),
     ('coveragerc', '.coveragerc'),
     ('gdbinit', '.gdbinit'),
