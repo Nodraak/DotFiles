@@ -29,13 +29,14 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [
+    'h = help',
     'from math import cos, sin, cosh, sinh, tanh, acosh, asinh, pi, sqrt, log, log10',
-    'from scipy import signal, fftpack',
-    'from matplotlib import pyplot as plt',
-    'import cv2',
     'import numpy as np',
     'from numpy import linspace',
-    'h = help',
+    'from scipy import signal, fftpack',
+    'from scipy.stats import norm',
+    'from matplotlib import pyplot as plt',
+    'import cv2',
 ]
 
 # Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',

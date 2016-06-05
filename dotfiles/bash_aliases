@@ -83,7 +83,9 @@ _ps1_update () {
     local last_cmd_ret="$?"  # must be first
 
     local tmp
+    local user_hostname
     PS1=""
+    user_hostname="${USER}@${HOSTNAME}"
 
     # window title
     set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
@@ -102,11 +104,10 @@ _ps1_update () {
     PS1+="${Cyan}\t${NC} "
 
     # login + hostname
-    tmp="${USER}@${HOSTNAME}"
-    if [[ "$tmp" = "nodraak@macbian8" ]]; then
-        PS1+="${Green}$tmp${NC} "
+    if [[ "$user_hostname" = "nodraak@macbian8" ]]; then
+        PS1+="${Green}$user_hostname${NC} "
     else
-        PS1+="${Red}$tmp${NC} "
+        PS1+="${Red}$user_hostname${NC} "
     fi
 
     # git

@@ -15,7 +15,7 @@ set ruler                       " Show row and column ruler information
 set number                      " Line numbers on
 set cursorline
 set laststatus=2                " Always show the statusline
-set cmdheight=2                 " Make the command area two lines high
+"set cmdheight=2                 " Make the command area two lines high
 set virtualedit=onemore         " Allow the cursor to move just past the end of the line
 set colorcolumn=80,120          " color 80th and 120th columns
 set scrolloff=5                 " Keep 5 lines below the last line when scrolling

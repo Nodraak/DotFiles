@@ -8,9 +8,9 @@
     d = diff
     fp = fetch -p
     s = status -s -b
-    c = commit
-    cm = commit -m
-    ca = commit --amend
+    c = commit -S
+    cm = commit -S -m
+    ca = commit -S --amend
     cl = clone
     ck = checkout
     ph = push

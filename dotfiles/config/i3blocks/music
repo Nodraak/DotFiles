@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import dbus
+
+
+bus = dbus.SessionBus()
+amarok = bus.get_object('org.kde.amarok', '/Player')
+metadata = amarok.GetMetadata()
+status = amarok.GetStatus()[0]  # 0=playing, 1=paused, 2=stopped
+
+if status == 0:
+    LENGTH = 70
+    lt = len(metadata['title'])
+    la = len(metadata['artist'])
+
+    if lt+la < LENGTH:  pass
+    elif lt < LENGTH/2: la = LENGTH-lt
+    elif la < LENGTH/2: lt = LENGTH-la
+    else:               lt, la = LENGTH/2, LENGTH/2
+
+    print('%s - %s' % (metadata['title'][:lt], metadata['artist'][:la]))
+elif status == 1:
+    print('Paused')
+elif status == 2:
+    print('Stopped')
+else:
+    print('Unknown')
+

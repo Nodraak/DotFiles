@@ -6,6 +6,13 @@
 # Global properties
 separator_block_width=15
 
+[musiq]
+label=♪
+command=~/.config/i3blocks/music
+interval=once
+signal=4
+# interval=once, update on SIGRTMIN+4
+
 [time]
 command=date '+%H:%M:%S %a %Y-%m-%d'
 color=#ffffff

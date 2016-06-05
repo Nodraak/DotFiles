@@ -165,4 +165,5 @@ exec --no-startup-id feh --bg-max '/home/nodraak/Images/Wallpaper_debian/gdm_wal
 exec --no-startup-id redshift &
 exec --no-startup-id /home/nodraak/.conky/starter.py &
 exec --no-startup-id /home/nodraak/.dropbox-dist/dropboxd &
+exec --no-startup-id /home/nodraak/.config/i3blocks/music_must_update &
 

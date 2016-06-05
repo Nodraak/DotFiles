@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import signal
+
+import dbus
+import gobject
+from dbus.mainloop.glib import DBusGMainLoop
+
+
+def message_callback(*args):
+    if len(args) != 3 or args[0] != 'org.mpris.MediaPlayer2.Player':
+        return
+
+    """
+    _, data, _ = args
+
+    playback_status = data.get('PlaybackStatus', None)
+    if 'Metadata' not in data:
+        title, artist = None, None
+    else:
+        metadata = data['Metadata']
+        if 'xesam:title' not in metadata:
+            title = None
+        else:
+            title = metadata['xesam:title']
+        if 'xesam:artist' not in metadata or len(metadata['xesam:artist']) != 1:
+            artist = None
+        else:
+            artist = metadata['xesam:artist']
+
+    print playback_status  # Playing Paused Stopped
+    print title
+    print artist
+    print ''
+    """
+
+    os.system('pkill -RTMIN+4 i3blocks')
+
+
+def main():
+    dbus_loop = DBusGMainLoop(set_as_default=True)
+
+    session = dbus.SessionBus(mainloop=dbus_loop)
+    session.add_signal_receiver(message_callback, bus_name='org.kde.amarok')
+
+    loop = gobject.MainLoop()
+    loop.run()
+
+
+main()
+
