@@ -6,13 +6,6 @@
 # Global properties
 separator_block_width=15
 
-[musiq]
-label=♪
-command=~/.config/i3blocks/music
-interval=once
-signal=4
-# interval=once, update on SIGRTMIN+4
-
 [time]
 command=date '+%H:%M:%S %a %Y-%m-%d'
 color=#ffffff
@@ -35,9 +28,17 @@ label=Bat
 command=~/.config/i3blocks/battery
 interval=30
 
+[musiq]
+label=♪
+command=~/.config/i3blocks/music
+color=#ffffff
+interval=60
+signal=4
+# interval=60, update on SIGRTMIN+4
+# (apparently we don't get the signal when amarok exits)
+
 [volume]
 label=Vol
-#♪
 instance=Master
 command=~/.config/i3blocks/volume
 signal=1

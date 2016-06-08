@@ -3,6 +3,7 @@
 
 import os
 import signal
+import time
 
 import dbus
 import gobject
@@ -10,6 +11,10 @@ from dbus.mainloop.glib import DBusGMainLoop
 
 
 def message_callback(*args):
+    if len(args) == 0:  # we assume amarok is exiting
+        time.sleep(0.250)  # give some time to amarok to quit
+        os.system('pkill -RTMIN+4 i3blocks')
+
     if len(args) != 3 or args[0] != 'org.mpris.MediaPlayer2.Player':
         return
 

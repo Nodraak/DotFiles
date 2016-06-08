@@ -5,12 +5,16 @@ import dbus
 
 
 bus = dbus.SessionBus()
-amarok = bus.get_object('org.kde.amarok', '/Player')
+try:
+    amarok = bus.get_object('org.kde.amarok', '/Player')
+except dbus.exceptions.DBusException:
+    print('X')
+    exit(0)
 metadata = amarok.GetMetadata()
 status = amarok.GetStatus()[0]  # 0=playing, 1=paused, 2=stopped
 
 if status == 0:
-    LENGTH = 70
+    LENGTH = 60
     lt = len(metadata['title'])
     la = len(metadata['artist'])
 
@@ -19,11 +23,12 @@ if status == 0:
     elif la < LENGTH/2: lt = LENGTH-la
     else:               lt, la = LENGTH/2, LENGTH/2
 
-    print('%s - %s' % (metadata['title'][:lt], metadata['artist'][:la]))
+    sep = ' - ' if lt and la else ''
+    print(sep.join((metadata['title'][:lt], metadata['artist'][:la])))
 elif status == 1:
-    print('Paused')
+    print('P')
 elif status == 2:
-    print('Stopped')
+    print('S')
 else:
-    print('Unknown')
+    print('?')
 
