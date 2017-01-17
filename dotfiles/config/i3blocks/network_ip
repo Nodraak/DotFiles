@@ -1,0 +1,12 @@
+#!/bin/sh
+
+IP=$(curl http://54.175.219.8/ip --silent | sed -n "2p" | cut -d "\"" -f 4)
+
+if [ -n "$http_proxy" ]; then
+    echo "$IP"
+    echo "$IP"
+else
+    echo "$IP"
+    echo "$IP"
+fi
+

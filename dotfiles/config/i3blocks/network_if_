@@ -38,3 +38,10 @@ else
     # color
     echo "#00C000"
 fi
+
+# if clicked, show network settings
+if [ "$BLOCK_BUTTON" != "" ]
+then
+    gnome-control-center
+fi
+

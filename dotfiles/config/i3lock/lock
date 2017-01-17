@@ -12,4 +12,4 @@ convert lockbg.png \
 i3lock -e -t -i lockbg.png
 
 # prevent possible race conditions with suspend
-sleep 1
+#sleep 1

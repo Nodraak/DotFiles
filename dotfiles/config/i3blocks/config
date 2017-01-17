@@ -7,20 +7,25 @@
 separator_block_width=15
 
 [time]
-command=date '+%H:%M:%S %a %Y-%m-%d'
+command=date '+%H:%M:%S %a %V %Y-%m-%d'
 color=#ffffff
 interval=1
 
 [wireless]
 label=wlan0
 instance=wlan0
-command=~/.config/i3blocks/network
+command=~/.config/i3blocks/network_if_
 interval=10
 
 [ethernet]
 label=eth0
 instance=eth0
-command=~/.config/i3blocks/network
+command=~/.config/i3blocks/network_if_
+interval=10
+
+[public_ip]
+label=ip
+command=~/.config/i3blocks/network_ip
 interval=10
 
 [battery]

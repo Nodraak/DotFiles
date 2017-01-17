@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import dbus
+import subprocess
+import os
 
+# on clic
+if os.environ.get('BLOCK_BUTTON', '') != '':
+    subprocess.Popen(['amarok'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 bus = dbus.SessionBus()
 try:
@@ -14,7 +19,7 @@ metadata = amarok.GetMetadata()
 status = amarok.GetStatus()[0]  # 0=playing, 1=paused, 2=stopped
 
 if status == 0:
-    LENGTH = 60
+    LENGTH = 40
     lt = len(metadata['title'])
     la = len(metadata['artist'])
 
