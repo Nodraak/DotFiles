@@ -24,21 +24,22 @@ bar {
     status_command i3blocks
     position top
 #binding_mode_indicator no
+    workspace_buttons yes
 
     colors {
         statusline #A0A0A0
     }
 }
 
-#bar {
-#    status_command i3blocks -c ~/.config/i3blocks/config_windowname
-#    position top
-#    workspace_buttons no
-#
-#    colors {
-#        statusline #A0A0A0
-#    }
-#}
+bar {
+    status_command i3blocks -c ~/.config/i3blocks/config_windowname
+    position bottom
+    workspace_buttons no
+
+    colors {
+        statusline #A0A0A0
+    }
+}
 
 ########################################
 # windows / panes / workspaces

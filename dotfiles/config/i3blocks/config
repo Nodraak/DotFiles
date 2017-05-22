@@ -7,7 +7,7 @@
 separator_block_width=15
 
 [time]
-command=date '+%H:%M:%S %a %V %Y-%m-%d'
+command=date '+%T %a %V %F'
 color=#ffffff
 interval=1
 
@@ -33,15 +33,6 @@ label=Bat
 command=~/.config/i3blocks/battery
 interval=30
 
-[musiq]
-label=♪
-command=~/.config/i3blocks/music
-color=#ffffff
-interval=60
-signal=4
-# interval=60, update on SIGRTMIN+4
-# (apparently we don't get the signal when amarok exits)
-
 [volume]
 label=Vol
 instance=Master
@@ -57,9 +48,3 @@ interval=once
 signal=2
 # interval=once, update on SIGRTMIN+2
 
-[kbdbacklight]
-label=Kbd
-command=~/.config/i3blocks/kbdbacklight
-interval=once
-signal=3
-# interval=once, update on SIGRTMIN+3

@@ -6,7 +6,16 @@
 # Global properties
 separator_block_width=15
 
+[musiq]
+label=♪
+command=~/.config/i3blocks/music
+color=#ffffff
+interval=60
+signal=4
+# interval=60, update on SIGRTMIN+4
+# (apparently we don't get the signal when amarok exits)
+
 [wn]
 command=~/.config/i3blocks/windowname
-interval=2
+interval=1
 

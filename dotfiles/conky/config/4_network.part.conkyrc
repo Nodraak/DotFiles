@@ -6,7 +6,7 @@ own_window_transparent yes
 
 TEXT
 ${color0}NETWORK ${hr 2}${color}
-Public ${execi 30 echo "$(curl http://54.175.219.8/ip --silent | sed -n "2p" | cut -d "\"" -f 4; echo)" "($(date --rfc-3339=second | cut -b 12-19))"}
+Public ${execi 30 echo "$(curl https://httpbin.org/ip --silent | sed -n "2p" | cut -d "\"" -f 4; echo)" "($(date --rfc-3339=second | cut -b 12-19))"}
 Eth0   ${addr eth0}
 Wlan0  ${if_up wlan0}${addr wlan0}
        ${wireless_essid wlan0} - ${wireless_link_qual_perc wlan0}${else}disabled${endif}
