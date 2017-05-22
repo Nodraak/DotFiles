@@ -1,0 +1,4 @@
+XKBMODEL="pc104"
+XKBLAYOUT="fr"
+XKBVARIANT="mac"
+BACKSPACE="guess"
