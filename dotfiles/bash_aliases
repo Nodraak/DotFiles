@@ -155,11 +155,12 @@ alias grep='grep --color'
 alias du='du -kh'
 alias df='df -khT'
 
-alias ipy='ipython'
-alias py='python'
-alias py3='python3'
+alias c='clear'
+alias ipy='ipython3'
+alias py='python3'
 alias diff='colordiff'
 alias vd='vimdiff'
+alias v="vim"
 
 # dev
 alias gcc='gcc -fdiagnostics-color=auto'
@@ -169,6 +170,7 @@ complete -o default -o nospace -F _git g
 source /usr/share/bash-completion/completions/git
 
 alias gg='gitg'
+alias gg.='gg .'
 alias sba='source ../bin/activate'
 alias cc='compass compile'
 complete -o nospace -F _filedir_xspec cc
@@ -204,6 +206,9 @@ export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
+export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin/
+export PATH=$GCCARMPATH:${PATH}
+
 #
 # Functions
 #
@@ -216,7 +221,29 @@ cvg () {
     coverage html
 }
 
+_texspell_file() {
+    if [ $# -ne 4 ]
+    then
+        echo "Usage: _texspell <lang> <file> <extradict> <localdict>"
+        return 1
+    fi
+
+    lang=$1
+    file=$2
+    extradict=$3
+    localdict=$4
+
+    for word in $(cat "$file" | aspell --lang="$lang" --mode=tex $extradict $localdict list | sort | uniq)
+    do
+        echo "$word"
+        #echo "== $word =="
+        #grep --with-filename --line-number " $word " "$file"
+    done
+}
+
 texspell () {
+    # args
+
     if [ $# -ne 2 ]
     then
         echo "Usage: texspell <lang> <file or dir>"
@@ -224,29 +251,39 @@ texspell () {
     fi
 
     lang="$1"
-    dir="$2"
+    file_or_dir="$2"
+
+    # options
+
+    extradict=""
+    localdict=""
     if [ -f "/usr/lib/aspell/custom_${lang}.rws" ]
     then
-        extradict="--extra-dicts=custom_${lang}.rws"
         echo "Using extra dic \"custom_${lang}.rws\""
-    else
-        extradict=""
+        extradict="--extra-dicts=custom_${lang}.rws"
     fi
     if [ -f "./aspell_dict.txt" ]
     then
         echo "Using personal dict \"./aspell_dict.txt\""
-        pdict="--personal=./aspell_dict.txt"
-    else
-        pdict=""
+        localdict="--personal=./aspell_dict.txt"
     fi
 
-    for f in $(find "$dir" | grep "\.tex$")
-    do
-        for word in $(cat "$f" | aspell --lang="$lang" --mode=tex $extradict $pdict list)
+    # now spell checking
+
+    if [ -d "$file_or_dir" ]
+    then
+        echo "Spell checking all .tex files in folder $file_or_dir"
+        for f in $(find "$file_or_dir" | grep "\.tex$")
         do
-            grep --with-filename --line-number "$word" "$f"
+            _texspell_file "$lang" "$f" "$extradict" "$localdict"
         done
-    done
+    fi
+
+    if [ -f "$file_or_dir" ]
+    then
+        echo "Spell checking file $file_or_dir"
+        _texspell_file "$lang" "$file_or_dir" "$extradict" "$localdict"
+    fi
 }
 
 #texdic () {
@@ -307,8 +344,8 @@ o () {
     esac
 
     if [[ "$cmd" = "" ]]; then
-        echo Error: unknown extension, using caja for opening "$@"
-        cmd="caja"
+        echo Error: unknown extension, using pcmanfm for opening "$@"
+        cmd="pcmanfm"
     fi
 
     exec $cmd "$@" &
@@ -343,6 +380,20 @@ grepdf () {
     find "$path" -name "*.pdf" -exec sh -c "$find_cmd" \;
 }
 
+pdf_extract_page() {
+    if [ $# -ne 4 ]
+    then
+        echo "usage: ./script infile outfile start stop"
+        return 1
+    fi
+
+    INFILE=$1
+    OUTFILE=$2
+    START=$3
+    STOP=$4
+
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dSAFER -dFirstPage=$START -dLastPage=$STOP -sOutputFile="$OUTFILE" "$INFILE"
+}
 
 airdroid_proxy () {
     mitmproxy -s test_mtimproxy.py -R https://192.168.87.101:8890/ -b 127.0.0.1 -p 8080
@@ -360,6 +411,11 @@ airdroid_proxy () {
 # aau
 alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
 alias tamere='klog achard15'
+
+
+alias disas='objdump -D -F -M intel'
+alias disasArm='~/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/arm-none-eabi/bin/objdump -D -F -M intel'
+
 
 #
 # Finally, stuff that prints something
