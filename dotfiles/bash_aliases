@@ -4,6 +4,10 @@
 
 #set -u # exit when your script tries to use undeclared variables
 
+# Fix undefined variables
+VIRTUAL_ENV_DISABLE_PROMPT=""
+VIRTUAL_ENV=""
+
 #
 # Set title of terminal, used by PS1 and some alias
 #
@@ -106,6 +110,8 @@ _ps1_update () {
     # login + hostname
     if [[ "$user_hostname" = "nodraak@macbian8" ]]; then
         PS1+="${Green}$user_hostname${NC} "
+    elif [[ "$user_hostname" = "nodraak@diamant" ]]; then
+        PS1+="${Cyan}$user_hostname${NC} "
     else
         PS1+="${Red}$user_hostname${NC} "
     fi
@@ -143,10 +149,11 @@ export GIT_PS1_SHOWUPSTREAM="auto verbose git"
 # Aliases
 #
 
-# basic
+# clipboard
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+# basic cmd
 alias ls='ls --color'
 alias ll='ls -lGh'
 alias la='ls -lGha'
@@ -155,50 +162,53 @@ alias grep='grep --color'
 alias du='du -kh'
 alias df='df -khT'
 
+# more advanced cmd
 alias c='clear'
-alias ipy='ipython3'
 alias py='python3'
+alias ipy='ipython3'
+alias v="vim"
 alias diff='colordiff'
 alias vd='vimdiff'
-alias v="vim"
 
 # dev
-alias gcc='gcc -fdiagnostics-color=auto'
-
 alias g='git'  # now this is what I call 'lazy'
 complete -o default -o nospace -F _git g
 source /usr/share/bash-completion/completions/git
-
 alias gg='gitg'
 alias gg.='gg .'
+alias gcc='gcc -fdiagnostics-color=auto'
+alias disas='objdump -D -F -M intel'
+alias disasArm='arm-none-eabi-objdump -D -F -M intel'
+
+# dev - techno specific utils
 alias sba='source ../bin/activate'
 alias cc='compass compile'
 complete -o nospace -F _filedir_xspec cc
 alias pmr='python manage.py runserver'
-alias pylint='pylint --comment=y'
+alias pylint='pylint3 --comment=y'
 complete -o nospace -F _filedir_xspec pylint
-alias pylintd='pylint --load-plugins pylint_django'
+alias pylintd='pylint3 --load-plugins pylint_django'
 
-# dual monitor enable / disable
-
+# dual monitor
 alias dmen='xrandr --output DP1 --above LVDS1 --auto'
 alias dmdis='xrandr --output DP1 --off'
 
 # misc
-
 alias pdflatex='pdflatex -file-line-error -halt-on-error'
 HISTIGNORE='jrnl *'  # no export needed
 bind Space:magic-space  # expand !!, ^old^new, etc
 
-# https://github.com/nvbn/thefuck
-eval "$(thefuck-alias)"
-alias please='fuck'
+alias sl='sl -e'
+alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
+alias dmesg=' dmesg -dTw'
 
 alias ports='netstat -tulanp'
 alias getlyrics='kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"'
-alias sl='sl -e'
-alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
 
+
+#
+# Env variables
+#
 
 export EDITOR="vim"  # for git, crontab, ...
 
@@ -206,7 +216,7 @@ export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
-export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin/
+export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin
 export PATH=$GCCARMPATH:${PATH}
 
 #
@@ -233,7 +243,7 @@ _texspell_file() {
     extradict=$3
     localdict=$4
 
-    for word in $(cat "$file" | aspell --lang="$lang" --mode=tex $extradict $localdict list | sort | uniq)
+    for word in $(aspell --lang="$lang" --mode=tex "$extradict" "$localdict" list < "$file" | sort | uniq)
     do
         echo "$word"
         #echo "== $word =="
@@ -324,8 +334,7 @@ o () {
             cmd="firefox"
             ;;
         * )
-            if [ $# -eq 1 ];
-            then
+            if [ $# -eq 1 ]; then
                 case $1 in
                     *.tar.bz2)  cmd="tar xvjf"      ;;
                     *.tar.gz)   cmd="tar xvzf"      ;;
@@ -353,14 +362,27 @@ o () {
 complete -o nospace -F _filedir_xspec o
 
 whereispylib () {
-    for lib in $@
+    for lib in "$@"
     do
-        py -c "import $lib; print $lib.__path__"
+        py -c "
+try:
+    import $lib
+    try:
+        if len($lib.__path__) == 1:
+            print($lib.__path__[0])
+        else:
+            print($lib.__path__)
+    except AttributeError:
+        print('$lib is a built-in module')
+except ImportError:
+    print('$lib is not installed')
+"
+
     done
 }
 
 prettyjson() {
-    python -m json.tool $@ | pygmentize -l javascript
+    python -m json.tool "$@" | pygmentize -l javascript
 }
 
 grepdf () {
@@ -392,7 +414,7 @@ pdf_extract_page() {
     START=$3
     STOP=$4
 
-    gs -sDEVICE=pdfwrite -dNOPAUSE -dSAFER -dFirstPage=$START -dLastPage=$STOP -sOutputFile="$OUTFILE" "$INFILE"
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dSAFER -dFirstPage="$START" -dLastPage="$STOP" -sOutputFile="$OUTFILE" "$INFILE"
 }
 
 airdroid_proxy () {
@@ -404,17 +426,8 @@ airdroid_proxy () {
 # Tmp / unused stuff (to be deleted at the end of the year)
 #
 
-# ece - fpga basys2
-#alias xilinx='env WINEPREFIX="/home/nodraak/.wine" wine C:\\windows\\command\\start.exe /Unix /home/nodraak/.wine/dosdevices/c:/users/Public/Bureau/Xilinx\ \ ISE\ 9.2i.lnk &> /dev/null'
-#alias tobasys='sudo djtgcfg prog -d Basys2 -i 0 -f'
 
-# aau
-alias gpsServer="rdesktop -u user -p user -a 16 192.168.1.104 -g 70%"
-alias tamere='klog achard15'
-
-
-alias disas='objdump -D -F -M intel'
-alias disasArm='~/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/arm-none-eabi/bin/objdump -D -F -M intel'
+alias youtube-dl-audio="youtube-dl --extract-audio --format 140"
 
 
 #
