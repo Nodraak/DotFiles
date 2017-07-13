@@ -12,13 +12,17 @@ ARGS="-Phav --delete --exclude-from=./backup_home.exclude.txt"
 # z: compress
 # --delete delete on dest if deleted on src
 
+rm -rf rsync_logs
+mkdir -p rsync_logs
+
+echo $(date --rfc-3339=seconds) >> rsync_logs/stdout
+
 # home - local
-#rsync $ARGS /home/nodraak /media/nodraak/Backdraak/macbian
-rsync $ARGS /home/nodraak /media/nodraak/Backup/Home
+rsync $ARGS /home/nodraak /media/nodraak/Backup/Home | tee -a rsync_logs/stdout
 
 # media - local
-#rsync $ARGS /media/Media /media/nodraak/Backup/
+rsync $ARGS /media/Media/Backup /media/nodraak/Backup/Media | tee -a rsync_logs/stdout
+rsync $ARGS /media/Media/PhotosEtImages /media/nodraak/Backup/Media | tee -a rsync_logs/stdout
 
+echo $(date --rfc-3339=seconds) >> rsync_logs/stdout
 
-#rsync $ARGS /home/nodraak nodraak@nodraak.fr:/media/Backup/Home/
-#rsync -Phavuz /home/eskimon/dossier eskimon@cible:/dossier/cible

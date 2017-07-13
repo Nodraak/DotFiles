@@ -71,16 +71,17 @@ set pastetoggle=<F12>                   " disable autoindent (for pasting)
 au FileType make setlocal noexpandtab   " for makefile, no expand tab
 au BufReadPost .bash_aliases set syntax=sh
 
-map q: :q " Stop that stupid window from popping up
+" Stop that stupid window from popping up
+map q: :q
 
 imap <ESC> <ESC>l
+"inoremap <silent> <Esc> <C-O>:stopinsert<CR>  " dont move one char back when hitting ESC
 
 imap <ESC>oA <ESC>ki
 imap <ESC>oB <ESC>ji
 imap <ESC>oC <ESC>li
 imap <ESC>oD <ESC>hi
 
-"inoremap <silent> <Esc> <C-O>:stopinsert<CR>  " dont move one char back when hitting ESC
 
 """""
 " pathogen (vim plugins)

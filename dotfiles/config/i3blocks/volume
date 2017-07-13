@@ -1,21 +1,29 @@
 #!/usr/bin/env bash
 
-DATA=$(amixer get Master | tail -n 1)
-VOL=$(echo $DATA | grep -E -o '[0-9]+%')
-MUT=$(echo $DATA | grep -E -o 'off')
+DATA="$(amixer get Master | tail -n 1)"
+VOL="$(echo "${DATA}" | grep -E -o '[0-9]+%')"
+MUT="$(echo "${DATA}" | grep -E -o 'off')"
 
-if [ "$MUT" == "off" ]
+# mutted
+if [ "${MUT}" == "off" ]
 then
     # full_text / short_text / color
-    echo "MUT ($VOL)"
-    echo "MUT ($VOL)"
-    echo \#00C000
+    echo "MUT (${VOL})"
+    echo "MUT (${VOL})"
+    echo "#00C000"
+# not mutted
 else
-    echo $VOL
-    echo $VOL
+    echo "${VOL}"
+    echo "${VOL}"
     if [ "$VOL" == "0%" ]
     then
-        echo \#00C000
+        echo "#00C000"
+    else
+        val=$(echo "${VOL}" | cut -d "%" -f 1)
+        if [ "${val}" -gt 40 ]
+        then
+            echo "#FFAE00"
+        fi
     fi
 fi
 

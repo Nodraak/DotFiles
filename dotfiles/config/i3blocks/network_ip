@@ -1,7 +1,16 @@
 #!/bin/sh
 
-IP=$(curl https://httpbin.org/ip --silent | sed -n "2p" | cut -d "\"" -f 4)
+DATA="$(curl --silent -w "\n%{http_code}\n" "https://httpbin.org/ip")"
 
-echo "$IP"
-echo "$IP"
+STATUS_CODE="$(echo "${DATA}" | tail -n 1)"
+if [ "${STATUS_CODE}" = "200" ]
+then
+    IP=$(echo "${DATA}" | sed -n "2p" | cut -d "\"" -f 4)
+
+    echo "$IP"
+    echo "$IP"
+else
+    echo "unknown (${STATUS_CODE})"
+    echo "unknown (${STATUS_CODE})"
+fi
 
