@@ -1,9 +1,11 @@
 #!/bin/bash
 
-set -e
+set -e  # exit if command fails
+set -u  # exit if var is undeclared
 
-ARGS="-Phav --delete --exclude-from=./backup_home.exclude.txt"
+LOG_FILE="backup_home.log"
 
+RSYNC_ARGS="-Phav --delete --exclude-from=./backup_home.exclude.txt"
 # P: --partial --progress (good for big transferts)
 # h: human readable numbers
 # a: archive (implies recursive + other flags)
@@ -12,17 +14,18 @@ ARGS="-Phav --delete --exclude-from=./backup_home.exclude.txt"
 # z: compress
 # --delete delete on dest if deleted on src
 
-rm -rf rsync_logs
-mkdir -p rsync_logs
+rm -f ${LOG_FILE}
 
-echo $(date --rfc-3339=seconds) >> rsync_logs/stdout
+date --rfc-3339=seconds >> ${LOG_FILE}
+df -h /media/nodraak/Backup/ | tee -a ${LOG_FILE}
 
 # home - local
-rsync $ARGS /home/nodraak /media/nodraak/Backup/Home | tee -a rsync_logs/stdout
+rsync ${RSYNC_ARGS} /home/nodraak /media/nodraak/Backup/Home | tee -a ${LOG_FILE}
 
 # media - local
-rsync $ARGS /media/Media/Backup /media/nodraak/Backup/Media | tee -a rsync_logs/stdout
-rsync $ARGS /media/Media/PhotosEtImages /media/nodraak/Backup/Media | tee -a rsync_logs/stdout
+rsync ${RSYNC_ARGS} /media/Media/Backup /media/nodraak/Backup/Media | tee -a ${LOG_FILE}
+rsync ${RSYNC_ARGS} /media/Media/PhotosEtImages /media/nodraak/Backup/Media | tee -a ${LOG_FILE}
 
-echo $(date --rfc-3339=seconds) >> rsync_logs/stdout
+df -h /media/nodraak/Backup/ | tee -a ${LOG_FILE}
+date --rfc-3339=seconds >> ${LOG_FILE}
 
