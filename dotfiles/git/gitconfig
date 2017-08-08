@@ -3,7 +3,8 @@
     email = adrienchardon@mailoo.org
     signingkey = BB79836B
 [commit]
-    gpgsign = true
+    # gpgsigning is awfull during rebase... use alias cm and ca to gpg sign
+    gpgsign = false
 [alias]
     a = add
     b = branch

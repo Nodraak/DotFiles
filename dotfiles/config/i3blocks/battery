@@ -78,7 +78,7 @@ if ($status eq 'Discharging') {
 }
 else {
     if ($percent > 98) {
-        print "#00A000\n";  # green
+        print "#00C000\n";  # green
         #system("notify-send",  "Battery is full");
     }
 }
