@@ -9,14 +9,25 @@
     a = add
     b = branch
     d = diff
+    #fp = fetch -p
     s = status -s -b
     sh = -c commit.gpgsign=false stash
+    #c = commit -S
     cm = commit -S -m
     ca = commit -S --amend
+    #cl = clone
     ck = checkout
+    #ph = push
+    #pl = pull
+    #pulledcode = log -p --reverse --no-merges --stat @{1}..
+    #pulledcommit = log --reverse --no-merges --stat @{1}..
+    #l = log --pretty=oneline --abbrev-commit --decorate=short
     l = log --pretty=format:'%C(red)%h %C(yellow)%ad%C(green)%d %C(reset)%s %C(blue)%an' --date=format:'%Y%m%d-%H%M'
     ri = rebase -i
     rc = rebase --continue
+    #lg = log --graph --oneline --decorate --all
+    #lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    #lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 [color]
     ui = auto
 [push]

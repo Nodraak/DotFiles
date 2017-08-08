@@ -1,6 +1,12 @@
 
+# 2017-01-07
+set auto-load local-gdbinit
+#add-auto-load-safe-path /home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/.gdbinit
+add-auto-load-safe-path /home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QBouge/.gdbinit
+add-auto-load-safe-path /home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QReflechi/.gdbinit
+
 # 2015-12-25 Nodraak - ugly hack, too lazy to fix the script
-set disassembly-flavor intel
+#set disassembly-flavor intel
 
 # INSTALL INSTRUCTIONS: save as ~/.gdbinit
 #
@@ -74,7 +80,7 @@ set disassembly-flavor intel
 # __________________gdb options_________________
 
 # set to 1 to have ARM target debugging as default, use the "arm" command to switch inside gdb
-set $ARM = 0
+set $ARM = 1
 # set to 0 if you have problems with the colorized prompt - reported by Plouj with Ubuntu gdb 7.2
 set $COLOREDPROMPT = 1
 # color the first line of the disassembly - default is green, if you want to change it search for
@@ -3178,7 +3184,9 @@ define hook-stop
     # Display instructions formats
     if $ARM == 1
         if $ARMOPCODES == 1
-            set arm show-opcode-bytes 1
+            # 2017-01-07
+            #set arm show-opcode-bytes 1
+            #Undefined set arm command: "show-opcode-bytes 1".  Try "help set arm".
         end
     else
         if $X86FLAVOR == 0
@@ -3684,7 +3692,9 @@ end
 
 define arm
     if $ARMOPCODES == 1
-        set arm show-opcode-bytes 1
+        # 2017-01-07
+        #set arm show-opcode-bytes 1
+        #Undefined set arm command: "show-opcode-bytes 1".  Try "help set arm".
     end
     set $ARM = 1
 end

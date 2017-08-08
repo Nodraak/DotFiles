@@ -10,8 +10,8 @@ service keyboard-setup reload
 cp etc_timezone /etc/timezone
 
 # apt
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 
 # (very) basic packages
 apt-get install -y --no-install-recommends \

@@ -6,6 +6,7 @@ APTFLAGS="-y --no-install-recommends"
 # dot files
 #
 
+cd $HOME
 git clone https://github.com/Nodraak/dotfiles
 cd dotfiles && ./install.py
 
@@ -37,8 +38,6 @@ echo "Configure these packages!"
 
 
 # desktop
-
-# TODO: wifi (b43) + bluetooth
 sudo apt-get install ${APTFLAGS} \
     ethtool \
     units pyline \
@@ -60,12 +59,24 @@ sudo apt-get install ${APTFLAGS} \
 
 sudo pip install matplotlib jrnl mbed-cli youtube-dl
 
-# sublime-text https://www.sublimetext.com/3 download, extract, move to /opt, ln -s sublime_text /usr/bin/sublime, config files + license
+# TODO: wifi (b43) + bluetooth
+# sublime-text https://www.sublimetext.com/3 download, extract, move to /opt, ln -s sublime_text /usr/bin/sublime, config files + license + plugins
+# firefox dev + extensions (ublock origin, cookie manager, disable ctrlq, ghostery, greasmonkey, gnotifier, live hhtp headers, modify http headers, sqlite manager, speed tweaks (speady fox), ssleuth, user agent switcher, web dev)
 # dropbox + gdrive
 # migrate Documents/ Images/ Musique/ Telechargements/
 
 exit
-# ----
+
+
+virtualbox
+ffmpef ffprobe ?
+makerbot ?
+tor
+arc theme ?
+crosstools ?
+keybase ?
+opera / chromium ?
+steam
 
 i3
 suckless-tools # dmenu
@@ -79,18 +90,19 @@ scrot # screenshots
 
 wicd / wpasupplicant
 
-gnu gcc arm
+arm-none-eabi-xx (+ mbed-os + mbed-cli) + cross compiler (os_dev)
 android-tools-adb
 dia
 gnome-*
-gnuplot
-gpredict
-gperf
 graphviz
 quassel
 xctu (xbee) ?
-chromium / opera ?
 mono
+monitoring: munin?
+
+gnuplot
+gpredict
+gperf
 
 Download ISO
     debian

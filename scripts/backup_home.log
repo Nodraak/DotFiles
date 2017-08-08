@@ -1,0 +1,1089 @@
+2017-07-13 19:29:53+02:00
+Filesystem                                             Size  Used Avail Use% Mounted on
+/dev/mapper/luks-63156ce3-8afc-4907-a712-3f1ad78b9bdc  459G   63G  373G  15% /media/nodraak/Backup
+sending incremental file list
+nodraak/
+nodraak/.gdb_history
+          3.59K 100%    0.00kB/s    0:00:00            3.59K 100%    0.00kB/s    0:00:00 (xfr#1, ir-chk=1202/1227)
+nodraak/.viminfo
+         27.22K 100%   25.96MB/s    0:00:00           27.22K 100%   25.96MB/s    0:00:00 (xfr#2, ir-chk=1156/1227)
+nodraak/.wakatime.data
+             58 100%   56.64kB/s    0:00:00               58 100%   56.64kB/s    0:00:00 (xfr#3, ir-chk=1153/1227)
+nodraak/.wakatime.db
+         32.77K   2%  154.59kB/s    0:00:07            1.18M 100%    3.54MB/s    0:00:00 (xfr#4, ir-chk=1152/1227)
+nodraak/.xsession-errors
+         32.77K   4%   79.80kB/s    0:00:07          664.83K 100%    1.42MB/s    0:00:00 (xfr#5, ir-chk=1146/1227)
+nodraak/.config/dconf/
+nodraak/.config/dconf/user
+         32.77K  41%   52.29kB/s    0:00:00           78.10K 100%  124.63kB/s    0:00:00 (xfr#6, ir-chk=1000/6076)
+nodraak/.config/gtk-2.0/
+nodraak/.config/gtk-2.0/gtkfilechooser.ini
+            225 100%    0.35kB/s    0:00:00              225 100%    0.35kB/s    0:00:00 (xfr#7, ir-chk=1011/7145)
+nodraak/.config/sublime-text-3/Local/
+nodraak/.config/sublime-text-3/Local/Auto Save Session.sublime_session
+         32.77K  25%   45.20kB/s    0:00:02          127.90K 100%  176.17kB/s    0:00:00 (xfr#8, ir-chk=1015/14649)
+deleting nodraak/.dropbox/instance1/TO_HASH_E7J8_Q
+nodraak/.dropbox/
+nodraak/.dropbox/dropbox.pid
+              5 100%    0.01kB/s    0:00:00                5 100%    0.01kB/s    0:00:00 (xfr#9, ir-chk=1008/17465)
+nodraak/.dropbox/host.db
+             69 100%    0.08kB/s    0:00:00               69 100%    0.08kB/s    0:00:00 (xfr#10, ir-chk=1007/17465)
+nodraak/.dropbox/info.json
+            115 100%    0.13kB/s    0:00:00              115 100%    0.13kB/s    0:00:00 (xfr#11, ir-chk=1005/17465)
+nodraak/.dropbox/instance1/
+nodraak/.dropbox/instance1/TO_HASH_y5AGLk
+          6.14K 100%    7.20kB/s    0:00:00            6.14K 100%    7.20kB/s    0:00:00 (xfr#12, ir-chk=1019/17485)
+nodraak/.dropbox/instance1/config.dbx
+         18.43K 100%   21.61kB/s    0:00:00           18.43K 100%   21.61kB/s    0:00:00 (xfr#13, ir-chk=1015/17485)
+nodraak/.dropbox/instance1/filecache.dbx
+         32.77K   0%   33.51kB/s    0:03:03          294.91K   4%  284.87kB/s    0:00:20            6.17M 100%    4.16MB/s    0:00:01 (xfr#14, ir-chk=1013/17485)
+nodraak/.dropbox/instance1/filecache.dbx-shm
+         32.77K 100%   79.21kB/s    0:00:00           32.77K 100%   79.21kB/s    0:00:00 (xfr#15, ir-chk=1012/17485)
+nodraak/.dropbox/instance1/filecache.dbx-wal
+         32.77K  16%   79.21kB/s    0:00:02          202.30K 100%  481.84kB/s    0:00:00 (xfr#16, ir-chk=1011/17485)
+nodraak/.dropbox/instance_db/
+nodraak/.dropbox/instance_db/instance.dbx
+          5.12K 100%   12.17kB/s    0:00:00            5.12K 100%   12.17kB/s    0:00:00 (xfr#17, ir-chk=1003/17485)
+nodraak/.dropbox/logs/1/
+nodraak/.gnupg/random_seed
+            600 100%    1.25kB/s    0:00:00              600 100%    1.25kB/s    0:00:00 (xfr#18, ir-chk=1005/18929)
+nodraak/.local/share/
+nodraak/.local/share/recently-used.xbel
+         32.77K  21%   36.49kB/s    0:00:03          155.04K 100%  172.44kB/s    0:00:00 (xfr#19, ir-chk=1075/32664)
+nodraak/.mozilla/firefox/prwxnkdr.default/
+nodraak/.mozilla/firefox/prwxnkdr.default/SiteSecurityServiceState.txt
+         32.77K  59%   29.60kB/s    0:00:00           54.91K 100%   49.56kB/s    0:00:00           54.91K 100%   49.56kB/s    0:00:01 (xfr#20, ir-chk=1084/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/cookies.sqlite
+         32.77K   1%    1.30MB/s    0:00:01            2.10M 100%   25.32MB/s    0:00:00 (xfr#21, ir-chk=1064/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/cookies.sqlite-shm
+         32.77K 100%  405.06kB/s    0:00:00           32.77K 100%  405.06kB/s    0:00:00 (xfr#22, ir-chk=1063/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/cookies.sqlite-wal
+         32.77K   4%  405.06kB/s    0:00:01          655.87K 100%    6.13MB/s    0:00:00 (xfr#23, ir-chk=1062/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/formhistory.sqlite
+         32.77K   8%  230.22kB/s    0:00:01          393.22K 100%    2.16MB/s    0:00:00 (xfr#24, ir-chk=1057/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/places.sqlite
+         32.77K   0%  183.91kB/s    0:02:50           31.46M 100%   90.36MB/s    0:00:00 (xfr#25, ir-chk=1045/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/places.sqlite-shm
+         32.77K 100%   96.39kB/s    0:00:00           32.77K 100%   96.39kB/s    0:00:00 (xfr#26, ir-chk=1044/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/places.sqlite-wal
+         32.77K  14%   96.39kB/s    0:00:02          229.58K 100%  631.54kB/s    0:00:00 (xfr#27, ir-chk=1043/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/prefs.js
+         32.77K  45%   90.14kB/s    0:00:00           72.55K 100%  199.59kB/s    0:00:00 (xfr#28, ir-chk=1041/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/webappsstore.sqlite-shm
+         32.77K 100%   90.14kB/s    0:00:00           32.77K 100%   90.14kB/s    0:00:00 (xfr#29, ir-chk=1029/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/webappsstore.sqlite-wal
+         32.77K   3%   89.89kB/s    0:00:11            1.08M 100%    2.67MB/s    0:00:00 (xfr#30, ir-chk=1028/38130)
+nodraak/.mozilla/firefox/prwxnkdr.default/browser-extension-data/firefox@ghostery.com/storage.js
+         32.77K   1%   82.47kB/s    0:00:23            2.01M 100%    4.86MB/s    0:00:00 (xfr#31, ir-chk=1007/38156)
+nodraak/.mozilla/firefox/prwxnkdr.default/browser-extension-data/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}/storage.js
+         32.77K   0%   81.22kB/s    0:08:05           39.43M 100%   72.87MB/s    0:00:00 (xfr#32, ir-chk=1006/38156)
+nodraak/.mozilla/firefox/prwxnkdr.default/datareporting/
+nodraak/.mozilla/firefox/prwxnkdr.default/datareporting/aborted-session-ping
+         25.05K 100%   47.41kB/s    0:00:00           25.05K 100%   47.41kB/s    0:00:00 (xfr#33, ir-chk=1003/38164)
+nodraak/.mozilla/firefox/prwxnkdr.default/sessionstore-backups/
+nodraak/.mozilla/firefox/prwxnkdr.default/sessionstore-backups/recovery.bak
+         32.77K  17%   57.97kB/s    0:00:02          185.49K 100%  327.56kB/s    0:00:00 (xfr#34, ir-chk=1012/39828)
+nodraak/.mozilla/firefox/prwxnkdr.default/sessionstore-backups/recovery.js
+         32.77K  18%   57.87kB/s    0:00:02          179.90K 100%  317.11kB/s    0:00:00 (xfr#35, ir-chk=1011/39828)
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499092059394.txt
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499088459401.txt
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499084859379.txt
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499081259109.txt
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499072827990.txt
+deleting nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499069227974.txt
+nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/
+nodraak/.mozilla/firefox/prwxnkdr.default/weave/logs/error-sync-1499966816156.txt
+          6.28K 100%   10.04kB/s    0:00:00            6.28K 100%   10.04kB/s    0:00:00 (xfr#36, ir-chk=1054/41023)
+nodraak/.pulse/d0043564d4b34030a17897c12a45d43b-device-volumes.tdb
+         12.29K 100%   14.44kB/s    0:00:00           12.29K 100%   14.44kB/s    0:00:00 (xfr#37, ir-chk=1001/50354)
+nodraak/Documents/Etudes/ECE_ING4/Deoxys/eceborg-deoxys.sublime-workspace
+         32.77K  72%    0.00kB/s    0:00:00           45.38K 100%   12.03MB/s    0:00:00 (xfr#38, ir-chk=1018/94741)
+nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/mbed.sublime-workspace
+         32.77K  56%  179.78kB/s    0:00:00           57.52K 100%  315.57kB/s    0:00:00 (xfr#39, ir-chk=1009/100833)
+nodraak/Documents/Prog/DotFiles/.git/
+nodraak/Documents/Prog/DotFiles/.git/COMMIT_EDITMSG
+             15 100%    0.00kB/s    0:00:00               15 100%    0.00kB/s    0:00:00 (xfr#40, ir-chk=1018/348568)
+nodraak/Documents/Prog/DotFiles/.git/index
+          7.01K 100%    6.68MB/s    0:00:00            7.01K 100%    6.68MB/s    0:00:00 (xfr#41, ir-chk=1012/348568)
+nodraak/Documents/Prog/DotFiles/.git/logs/HEAD
+         32.77K  77%  244.27kB/s    0:00:00           42.41K 100%  316.14kB/s    0:00:00 (xfr#42, ir-chk=1005/348578)
+nodraak/Documents/Prog/DotFiles/.git/logs/refs/heads/master
+         20.37K 100%   90.01kB/s    0:00:00           20.37K 100%   89.60kB/s    0:00:00 (xfr#43, ir-chk=1001/348578)
+nodraak/Documents/Prog/DotFiles/.git/objects/67/
+nodraak/Documents/Prog/DotFiles/.git/objects/67/8e63d092ccceb20c7513d277266c571b5ed2d5
+            174 100%    0.53kB/s    0:00:00              174 100%    0.53kB/s    0:00:00 (xfr#44, ir-chk=1010/349325)
+nodraak/Documents/Prog/DotFiles/.git/objects/89/
+nodraak/Documents/Prog/DotFiles/.git/objects/89/b5e2862b544bcc1cd05ca7dd51d893537a7c56
+            256 100%    0.78kB/s    0:00:00              256 100%    0.78kB/s    0:00:00 (xfr#45, ir-chk=1120/349613)
+nodraak/Documents/Prog/DotFiles/.git/objects/9e/
+nodraak/Documents/Prog/DotFiles/.git/objects/9e/c59f8dfea16ccab3389c11987793da50e1ec6d
+            821 100%    2.46kB/s    0:00:00              821 100%    2.46kB/s    0:00:00 (xfr#46, ir-chk=1021/349613)
+nodraak/Documents/Prog/DotFiles/.git/objects/d6/
+nodraak/Documents/Prog/DotFiles/.git/objects/d6/82969cc18b4385f2f52494e08e73f30422da2d
+            451 100%    1.10kB/s    0:00:00              451 100%    1.10kB/s    0:00:00 (xfr#47, ir-chk=1060/349914)
+nodraak/Documents/Prog/DotFiles/.git/refs/heads/
+nodraak/Documents/Prog/DotFiles/.git/refs/heads/master
+             41 100%    0.10kB/s    0:00:00               41 100%    0.10kB/s    0:00:00 (xfr#48, ir-chk=1015/350082)
+nodraak/Documents/Prog/DotFiles/scripts/
+nodraak/Documents/Prog/DotFiles/scripts/backup_home.log
+         10.02K 100%   19.37kB/s    0:00:00           10.02K 100%   19.37kB/s    0:00:00 (xfr#49, ir-chk=1003/352274)
+nodraak/Work/
+deleting nodraak/Work/qemu/build/debian64/qemu/qemu-version.h.tmp
+nodraak/Work/qemu/build/debian64/qemu/
+nodraak/Work/qemu/build/debian64/qemu/block.d
+         21.15K 100%    0.00kB/s    0:00:00           21.15K 100%    0.00kB/s    0:00:00 (xfr#50, ir-chk=1144/508130)
+nodraak/Work/qemu/build/debian64/qemu/block.o
+         32.77K   9%   31.25MB/s    0:00:00          347.08K 100%  165.50MB/s    0:00:00 (xfr#51, ir-chk=1143/508130)
+nodraak/Work/qemu/build/debian64/qemu/config-all-disas.mak
+             90 100%   43.95kB/s    0:00:00               90 100%   43.95kB/s    0:00:00 (xfr#52, ir-chk=1135/508130)
+nodraak/Work/qemu/build/debian64/qemu/config-host.h-timestamp
+          2.87K 100%    1.37MB/s    0:00:00            2.87K 100%    1.37MB/s    0:00:00 (xfr#53, ir-chk=1133/508130)
+nodraak/Work/qemu/build/debian64/qemu/config-host.mak
+          4.51K 100%    2.15MB/s    0:00:00            4.51K 100%    2.15MB/s    0:00:00 (xfr#54, ir-chk=1132/508130)
+nodraak/Work/qemu/build/debian64/qemu/config.log
+         32.77K   5%   15.62MB/s    0:00:00          646.82K 100%   88.12MB/s    0:00:00 (xfr#55, ir-chk=1131/508130)
+nodraak/Work/qemu/build/debian64/qemu/config.status
+            772 100%  107.70kB/s    0:00:00              772 100%  107.70kB/s    0:00:00 (xfr#56, ir-chk=1130/508130)
+nodraak/Work/qemu/build/debian64/qemu/module_block.h
+            379 100%   52.87kB/s    0:00:00              379 100%   52.87kB/s    0:00:00 (xfr#57, ir-chk=1110/508130)
+nodraak/Work/qemu/build/debian64/qemu/qemu-version.h
+             55 100%    7.67kB/s    0:00:00               55 100%    7.67kB/s    0:00:00 (xfr#58, ir-chk=1056/508130)
+nodraak/Work/qemu/build/debian64/qemu/qmp.d
+         25.29K 100%    3.45MB/s    0:00:00           25.29K 100%    3.45MB/s    0:00:00 (xfr#59, ir-chk=1045/508130)
+nodraak/Work/qemu/build/debian64/qemu/qmp.o
+         32.77K  26%    4.46MB/s    0:00:00          122.98K 100%   13.03MB/s    0:00:00 (xfr#60, ir-chk=1044/508130)
+nodraak/Work/qemu/build/debian64/qemu/vl.d
+         32.77K  89%    3.12MB/s    0:00:00           36.47K 100%    3.48MB/s    0:00:00 (xfr#61, ir-chk=1036/508130)
+nodraak/Work/qemu/build/debian64/qemu/vl.o
+         32.77K   7%    3.12MB/s    0:00:00          460.92K 100%   31.40MB/s    0:00:00 (xfr#62, ir-chk=1035/508130)
+nodraak/Work/qemu/build/debian64/qemu/dtc/
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/config-target.h-timestamp
+            217 100%    5.89kB/s    0:00:00              217 100%    5.89kB/s    0:00:00 (xfr#63, ir-chk=1055/508454)
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/config-target.mak
+            530 100%   14.38kB/s    0:00:00              530 100%   14.38kB/s    0:00:00 (xfr#64, ir-chk=1054/508454)
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/qemu-system-gnuarmeclipse
+         32.77K   0%  888.89kB/s    0:00:24           21.72M 100%  152.30MB/s    0:00:00 (xfr#65, ir-chk=1020/508454)
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/hw/cortexm/
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/hw/cortexm/svd.d
+         21.67K 100%  153.38kB/s    0:00:00           21.67K 100%  153.38kB/s    0:00:00 (xfr#66, ir-chk=1005/508507)
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/hw/cortexm/svd.o
+         32.77K  58%  231.88kB/s    0:00:00           55.85K 100%  392.37kB/s    0:00:00 (xfr#67, ir-chk=1004/508507)
+nodraak/Work/qemu/build/debian64/qemu/gnuarmeclipse-softmmu/trace/generated-helpers.c-timestamp
+            178 100%    1.23kB/s    0:00:00              178 100%    1.23kB/s    0:00:00 (xfr#68, ir-chk=1006/508605)
+nodraak/Work/qemu/build/debian64/qemu/linux-headers/
+nodraak/Work/qemu/build/debian64/qemu/pc-bios/
+nodraak/Work/qemu/build/debian64/qemu/pc-bios/optionrom/
+nodraak/Work/qemu/build/debian64/qemu/pc-bios/s390-ccw/
+nodraak/Work/qemu/build/debian64/qemu/pc-bios/spapr-rtas/
+nodraak/Work/qemu/build/debian64/qemu/po/
+nodraak/Work/qemu/build/debian64/qemu/roms/seabios/config.mak
+            186 100%    1.11kB/s    0:00:00              186 100%    1.11kB/s    0:00:00 (xfr#69, ir-chk=1059/508998)
+nodraak/Work/qemu/build/debian64/qemu/roms/vgabios/config.mak
+            186 100%    1.11kB/s    0:00:00              186 100%    1.11kB/s    0:00:00 (xfr#70, ir-chk=1058/508998)
+nodraak/Work/qemu/build/debian64/qemu/tests/acpi-test-data/
+nodraak/Work/qemu/build/debian64/qemu/tests/acpi-test-data/pc/
+nodraak/Work/qemu/build/debian64/qemu/tests/acpi-test-data/q35/
+nodraak/Work/qemu/build/debian64/qemu/tests/qemu-iotests/common.env
+             82 100%    0.49kB/s    0:00:00               82 100%    0.49kB/s    0:00:00 (xfr#71, ir-chk=1004/509083)
+nodraak/Work/qemu/build/debian64/qemu/tests/tcg/
+nodraak/Work/qemu/build/debian64/qemu/tests/tcg/cris/
+nodraak/Work/qemu/build/debian64/qemu/tests/tcg/lm32/
+nodraak/Work/qemu/build/debian64/qemu/tests/tcg/xtensa/
+nodraak/Work/qemu/build/debian64/qemu/trace/generated-helpers-wrappers.h-timestamp
+            123 100%    0.72kB/s    0:00:00              123 100%    0.72kB/s    0:00:00 (xfr#72, ir-chk=1022/509116)
+nodraak/Work/qemu/build/debian64/qemu/trace/generated-helpers.h-timestamp
+             61 100%    0.36kB/s    0:00:00               61 100%    0.36kB/s    0:00:00 (xfr#73, ir-chk=1020/509116)
+nodraak/Work/qemu/build/debian64/qemu/trace/generated-tcg-tracers.h-timestamp
+            435 100%    2.56kB/s    0:00:00              435 100%    2.56kB/s    0:00:00 (xfr#74, ir-chk=1018/509116)
+nodraak/Work/qemu/build/debian64/qemu/trace/generated-tracers.c-timestamp
+         32.77K   4%  190.48kB/s    0:00:03          676.31K 100%    3.73MB/s    0:00:00 (xfr#75, ir-chk=1016/509116)
+nodraak/Work/qemu/build/debian64/qemu/trace/generated-tracers.h-timestamp
+         32.77K   2%  184.97kB/s    0:00:07            1.34M 100%    7.08MB/s    0:00:00 (xfr#76, ir-chk=1013/509116)
+deleting nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/do_all_STM32L4x2.sh
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/COMMIT_EDITMSG
+             13 100%    0.01kB/s    0:00:00               13 100%    0.01kB/s    0:00:00 (xfr#77, ir-chk=1032/517733)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/index
+         32.77K   5%   33.68kB/s    0:00:15          563.28K 100%  577.81kB/s    0:00:00 (xfr#78, ir-chk=1029/517733)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/logs/HEAD
+            885 100%    0.91kB/s    0:00:00              885 100%    0.91kB/s    0:00:00 (xfr#79, ir-chk=1019/517733)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/logs/refs/heads/gnuarmeclipse-dev
+            683 100%    0.70kB/s    0:00:00              683 100%    0.70kB/s    0:00:00 (xfr#80, ir-chk=1015/517733)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/modules/dtc/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/00/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/00/f227d0c58b37ab575d093896864fa2e05dce6b
+          1.65K 100%    1.69kB/s    0:00:00            1.65K 100%    1.69kB/s    0:00:00 (xfr#81, ir-chk=1025/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/05/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/05/241a0cf9e54810ccac2540fc1a5fbc6dbe7b8d
+          2.77K 100%    2.84kB/s    0:00:00            2.77K 100%    2.84kB/s    0:00:00 (xfr#82, ir-chk=1024/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/09/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/09/52f19aab4c901eec05e7e216d615a51a473724
+          3.35K 100%    3.43kB/s    0:00:00            3.35K 100%    3.43kB/s    0:00:00 (xfr#83, ir-chk=1023/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/12/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/12/a32a25d8b8cbf623086fd7621853a645714ef4
+            329 100%    0.34kB/s    0:00:00              329 100%    0.34kB/s    0:00:00 (xfr#84, ir-chk=1022/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/12/d7dc4114b7a9ab33f274d3d572d12113b4dedd
+          2.58K 100%    2.64kB/s    0:00:00            2.58K 100%    2.64kB/s    0:00:00 (xfr#85, ir-chk=1021/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/14/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/14/ce3f8046ef923111b3e0dbbd9608df002f77cc
+          2.93K 100%    3.00kB/s    0:00:00            2.93K 100%    3.00kB/s    0:00:00 (xfr#86, ir-chk=1020/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/18/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/18/1e62a78865a68a7fd8f30fca77b34a538946b9
+          2.85K 100%    2.92kB/s    0:00:00            2.85K 100%    2.92kB/s    0:00:00 (xfr#87, ir-chk=1019/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/18/ffbc5097c58019899c8421fc19bd03eaeae9d0
+          3.39K 100%    3.48kB/s    0:00:00            3.39K 100%    3.48kB/s    0:00:00 (xfr#88, ir-chk=1018/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/20/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/20/2e09c487403ce22c97985121776497ffa693ec
+          3.15K 100%    3.23kB/s    0:00:00            3.15K 100%    3.23kB/s    0:00:00 (xfr#89, ir-chk=1017/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/20/f1d1dc8a838c1443029a0539be67bb62d47d66
+          1.49K 100%    1.53kB/s    0:00:00            1.49K 100%    1.53kB/s    0:00:00 (xfr#90, ir-chk=1016/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/21/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/21/190159e8a72e3605a1440ed1e8696a1cf3b8d9
+          2.80K 100%    2.87kB/s    0:00:00            2.80K 100%    2.87kB/s    0:00:00 (xfr#91, ir-chk=1015/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/22/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/22/7f1e75d928ba8daed4df7f305b605de75e30f5
+            163 100%    0.17kB/s    0:00:00              163 100%    0.17kB/s    0:00:00 (xfr#92, ir-chk=1014/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/24/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/24/a0bc61d96a5b3c0568f44c75d4d7eb369fa8d6
+         32.77K  39%   33.58kB/s    0:00:01           83.68K 100%   85.75kB/s    0:00:00 (xfr#93, ir-chk=1013/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2a/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2a/13241621f5512482c1caabd4d66f5592410dac
+          4.26K 100%    4.37kB/s    0:00:00            4.26K 100%    4.37kB/s    0:00:00 (xfr#94, ir-chk=1012/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2a/6f68901e5491676151632c64bf5196d32f7819
+          3.56K 100%    3.65kB/s    0:00:00            3.56K 100%    3.65kB/s    0:00:00 (xfr#95, ir-chk=1011/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2d/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2d/fabe88b43c665cc89d88a4705f14c753cd683d
+            512 100%    0.52kB/s    0:00:00              512 100%    0.52kB/s    0:00:00 (xfr#96, ir-chk=1010/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2f/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/2f/ef8d33d694f794a2d59713551235ab2aff26f7
+          2.08K 100%    2.13kB/s    0:00:00            2.08K 100%    2.13kB/s    0:00:00 (xfr#97, ir-chk=1009/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/37/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/37/df987182e0874df82888db61e2e1328e0f4ead
+            160 100%    0.16kB/s    0:00:00              160 100%    0.16kB/s    0:00:00 (xfr#98, ir-chk=1008/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/39/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/39/b73b6f822052ddf5165c090edf42e97c86899a
+          3.22K 100%    3.30kB/s    0:00:00            3.22K 100%    3.30kB/s    0:00:00 (xfr#99, ir-chk=1007/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/3b/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/3b/4c0c423771c97d40da68b01a09d5a8af1f5bc7
+          4.11K 100%    4.21kB/s    0:00:00            4.11K 100%    4.21kB/s    0:00:00 (xfr#100, ir-chk=1006/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/3c/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/3c/85565ed089cf0c8dd92d33e74d6897a6d777c0
+          5.96K 100%    6.11kB/s    0:00:00            5.96K 100%    6.11kB/s    0:00:00 (xfr#101, ir-chk=1005/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/3c/9e8ccdbff5ac9826e8b2282c26d94dfb403908
+          2.42K 100%    2.48kB/s    0:00:00            2.42K 100%    2.48kB/s    0:00:00 (xfr#102, ir-chk=1004/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/42/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/42/d6961106eb4e770a5dd318b6e6f186f44c2748
+          2.85K 100%    2.92kB/s    0:00:00            2.85K 100%    2.92kB/s    0:00:00 (xfr#103, ir-chk=1003/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/43/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/43/d38ca4d5a12f959f5d7799fa65194d03a5fb20
+         32.77K  38%   33.58kB/s    0:00:01           85.82K 100%   87.76kB/s    0:00:00 (xfr#104, ir-chk=1002/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/45/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/45/e177e1fea352b5f3897c140e0797e6886e280a
+          3.13K 100%    3.20kB/s    0:00:00            3.13K 100%    3.20kB/s    0:00:00 (xfr#105, ir-chk=1001/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/47/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/47/699bb059442b6767b0f53c31224fa78002fd9c
+            902 100%    0.92kB/s    0:00:00              902 100%    0.92kB/s    0:00:00 (xfr#106, ir-chk=1000/517859)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/49/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/49/7efb9ae4161a02d17baf820f33e5bbb4e90231
+          3.72K 100%    3.80kB/s    0:00:00            3.72K 100%    3.80kB/s    0:00:00 (xfr#107, ir-chk=1091/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/4a/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/4a/14f447d415ca643599adc0a39d1b881b75d1d6
+          3.12K 100%    3.19kB/s    0:00:00            3.12K 100%    3.19kB/s    0:00:00 (xfr#108, ir-chk=1090/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/55/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/55/b552d3b6acbe59b6c7c0043f81386e2c8e8cb3
+          3.86K 100%    3.95kB/s    0:00:00            3.86K 100%    3.95kB/s    0:00:00 (xfr#109, ir-chk=1089/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/56/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/56/b1333e1ec2cb1d9e422c99d2f36c446f757dab
+          1.93K 100%    1.97kB/s    0:00:00            1.93K 100%    1.97kB/s    0:00:00 (xfr#110, ir-chk=1088/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/57/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/57/a685fd26b9c1f95a54c254dcb2df16ca661e50
+          1.34K 100%    1.37kB/s    0:00:00            1.34K 100%    1.37kB/s    0:00:00 (xfr#111, ir-chk=1087/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/5a/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/5a/350e73250428843488678ccf07de6d32c89487
+         32.77K  38%   33.47kB/s    0:00:01           84.55K 100%   86.28kB/s    0:00:00 (xfr#112, ir-chk=1086/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/5a/9d14a7fa982002d3be0c832b3859a499bf7eef
+            158 100%    0.16kB/s    0:00:00              158 100%    0.16kB/s    0:00:00 (xfr#113, ir-chk=1085/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/61/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/61/6de2579723c81c9cdd1995395616771e5fb7b5
+          4.96K 100%    5.06kB/s    0:00:00            4.96K 100%    5.06kB/s    0:00:00 (xfr#114, ir-chk=1084/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/67/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/67/ffecaa606dc3c64c097ce172ed43a2d104331e
+          1.98K 100%    2.02kB/s    0:00:00            1.98K 100%    2.02kB/s    0:00:00 (xfr#115, ir-chk=1083/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/68/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/68/c5c7e642544386f29a51f60b0672d4815b0ce4
+          2.82K 100%    2.87kB/s    0:00:00            2.82K 100%    2.87kB/s    0:00:00 (xfr#116, ir-chk=1082/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/69/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/69/289420957eb766784b61f3f43da00f778bbb7e
+          1.78K 100%    1.81kB/s    0:00:00            1.78K 100%    1.81kB/s    0:00:00 (xfr#117, ir-chk=1081/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/69/b9f32acd86dedc7616202688ef58b88dc692ad
+         32.77K  34%   33.40kB/s    0:00:01           94.27K 100%   96.09kB/s    0:00:00 (xfr#118, ir-chk=1080/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/6c/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/6c/28e3cb22a915f5c8ab7428c0c153d5f44aee48
+          5.48K 100%    5.58kB/s    0:00:00            5.48K 100%    5.58kB/s    0:00:00 (xfr#119, ir-chk=1079/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/6c/36df721ae8a929e5960ed0014ab2bc6249ecdc
+          3.52K 100%    3.58kB/s    0:00:00            3.52K 100%    3.58kB/s    0:00:00 (xfr#120, ir-chk=1078/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/6f/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/6f/9b581fd2bfa05808ecd53f1d6a7c7b84cd76c3
+          3.53K 100%    3.60kB/s    0:00:00            3.53K 100%    3.60kB/s    0:00:00 (xfr#121, ir-chk=1077/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/71/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/71/66695b5a9a2bf99872a0a24cd6010906255315
+          5.00K 100%    5.09kB/s    0:00:00            5.00K 100%    5.09kB/s    0:00:00 (xfr#122, ir-chk=1076/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/72/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/72/68df3cd40578146103601543b890d770f5188d
+         32.77K  39%   33.40kB/s    0:00:01           83.69K 100%   85.22kB/s    0:00:00 (xfr#123, ir-chk=1075/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/72/7ed3a523ca9355d592bc80c24d812846e66d7c
+          4.84K 100%    4.92kB/s    0:00:00            4.84K 100%    4.92kB/s    0:00:00 (xfr#124, ir-chk=1074/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/72/84b96d38bd032fbe8ea3e1d2e1edf32dc7107d
+          2.97K 100%    3.02kB/s    0:00:00            2.97K 100%    3.02kB/s    0:00:00 (xfr#125, ir-chk=1073/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/73/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/73/553aaa48d4b1a7046aad169cc743680fded1d3
+          4.14K 100%    4.21kB/s    0:00:00            4.14K 100%    4.21kB/s    0:00:00 (xfr#126, ir-chk=1072/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/75/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/75/76959c2cf7e45abbb2702bdaa5183a116040fb
+            519 100%    0.53kB/s    0:00:00              519 100%    0.53kB/s    0:00:00 (xfr#127, ir-chk=1071/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7b/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7b/645b06fdbf8c7673bdfed5799d7dbe5f40dd80
+          2.65K 100%    2.69kB/s    0:00:00            2.65K 100%    2.69kB/s    0:00:00 (xfr#128, ir-chk=1070/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7c/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7c/946d9f678fee998049fedd8334f211da63e0a1
+          3.81K 100%    3.88kB/s    0:00:00            3.81K 100%    3.88kB/s    0:00:00 (xfr#129, ir-chk=1069/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7c/df96941e62bac8b1e58a62b5279526b9433ba2
+          5.85K 100%    5.95kB/s    0:00:00            5.85K 100%    5.95kB/s    0:00:00 (xfr#130, ir-chk=1068/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7d/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7d/2d5e25ef7f7d0612ed75b34c3e3fab44077713
+          3.03K 100%    3.08kB/s    0:00:00            3.03K 100%    3.08kB/s    0:00:00 (xfr#131, ir-chk=1067/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7e/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/7e/b120dd60c005fc2eae97f634f2cd2d59644bcd
+          4.33K 100%    4.40kB/s    0:00:00            4.33K 100%    4.40kB/s    0:00:00 (xfr#132, ir-chk=1066/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/80/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/80/2adc0588282bb792f58b112f0283e84b921973
+          2.74K 100%    2.79kB/s    0:00:00            2.74K 100%    2.79kB/s    0:00:00 (xfr#133, ir-chk=1065/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/94/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/94/22800306dcf9ab69b4e3cad441acd413241eeb
+          1.62K 100%    1.64kB/s    0:00:00            1.62K 100%    1.64kB/s    0:00:00 (xfr#134, ir-chk=1064/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/96/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/96/2b0d06d8192025f90e498b0553d93a1fd975b2
+          2.67K 100%    2.72kB/s    0:00:00            2.67K 100%    2.72kB/s    0:00:00 (xfr#135, ir-chk=1063/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/98/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/98/f0fc81092348259a4c722662d69c5cf1b98eb4
+          5.07K 100%    5.16kB/s    0:00:00            5.07K 100%    5.16kB/s    0:00:00 (xfr#136, ir-chk=1062/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a2/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a2/7cf1e96ce5404e7f423907989af82a780e34ae
+          4.18K 100%    4.25kB/s    0:00:00            4.18K 100%    4.25kB/s    0:00:00 (xfr#137, ir-chk=1061/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a3/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a3/24d759dac861f88105c0ba4d8787a5d8af8580
+          3.21K 100%    3.27kB/s    0:00:00            3.21K 100%    3.27kB/s    0:00:00 (xfr#138, ir-chk=1060/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a4/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a4/f54bb5879de01924c867946d4f19878cf80522
+            327 100%    0.33kB/s    0:00:00              327 100%    0.33kB/s    0:00:00 (xfr#139, ir-chk=1059/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a5/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a5/00be0fd84096c9dd13b09ca0e6d7c56a7132af
+          5.00K 100%    5.09kB/s    0:00:00            5.00K 100%    5.09kB/s    0:00:00 (xfr#140, ir-chk=1058/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a6/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a6/e34a742e8925575ab166b71f227febdde8b0de
+            329 100%    0.33kB/s    0:00:00              329 100%    0.33kB/s    0:00:00 (xfr#141, ir-chk=1057/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a7/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a7/b8ec111662c7b1c6d648aa8d563c94fd5da911
+          2.99K 100%    3.04kB/s    0:00:00            2.99K 100%    3.04kB/s    0:00:00 (xfr#142, ir-chk=1056/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/a7/ebbaa74f97dc7a3058f5304c37bf1d909c471a
+          2.04K 100%    2.07kB/s    0:00:00            2.04K 100%    2.07kB/s    0:00:00 (xfr#143, ir-chk=1055/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/aa/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/aa/08900edb997769643bac329bfb6ea38033da64
+          3.04K 100%    3.09kB/s    0:00:00            3.04K 100%    3.09kB/s    0:00:00 (xfr#144, ir-chk=1054/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ab/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ab/61d97edcbde60204cf4b246092509bb82409fb
+          1.37K 100%    1.39kB/s    0:00:00            1.37K 100%    1.39kB/s    0:00:00 (xfr#145, ir-chk=1053/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ad/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ad/054f6a146828f91a07f478a7353de1bd935d57
+          2.53K 100%    2.57kB/s    0:00:00            2.53K 100%    2.57kB/s    0:00:00 (xfr#146, ir-chk=1052/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ad/a6ff3c3bf5b9c3c1b56c123e6b72a5f2d1fc74
+          2.88K 100%    2.93kB/s    0:00:00            2.88K 100%    2.93kB/s    0:00:00 (xfr#147, ir-chk=1051/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b0/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b0/bc219b57eedb499246ad901decd67bea809056
+          2.03K 100%    2.07kB/s    0:00:00            2.03K 100%    2.07kB/s    0:00:00 (xfr#148, ir-chk=1050/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b3/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b3/e67ca7501e77d292a69c6e31c48dae6e0f3730
+          4.65K 100%    4.73kB/s    0:00:00            4.65K 100%    4.72kB/s    0:00:00 (xfr#149, ir-chk=1049/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b6/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b6/4a9c14c21e476426f9b953515de22a56437092
+          3.13K 100%    3.18kB/s    0:00:00            3.13K 100%    3.18kB/s    0:00:00 (xfr#150, ir-chk=1048/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b8/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/b8/66f0bf75ea2864d6b7e2f46264dd2c4a65e870
+          3.88K 100%    3.94kB/s    0:00:00            3.88K 100%    3.94kB/s    0:00:00 (xfr#151, ir-chk=1047/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/bc/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/bc/455abf329be2c06fe817114351f013eeef1731
+            329 100%    0.33kB/s    0:00:00              329 100%    0.33kB/s    0:00:00 (xfr#152, ir-chk=1046/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/be/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/be/d26eb63f2bd45fa26ef3d1faf06f5671d508c3
+          3.67K 100%    3.72kB/s    0:00:00            3.67K 100%    3.72kB/s    0:00:00 (xfr#153, ir-chk=1045/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/bf/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/bf/0097b3022150bd8e6d4d609aa4f1c3b6392dcd
+          3.98K 100%    4.04kB/s    0:00:00            3.98K 100%    4.04kB/s    0:00:00 (xfr#154, ir-chk=1044/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/bf/1d9ced0cfd7a1d90a8720716bcea50ed17e6ee
+          1.47K 100%    1.49kB/s    0:00:00            1.47K 100%    1.49kB/s    0:00:00 (xfr#155, ir-chk=1043/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c2/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c2/c0af7315993a2a7adef8ff3372fbcf9294afac
+          3.67K 100%    3.72kB/s    0:00:00            3.67K 100%    3.72kB/s    0:00:00 (xfr#156, ir-chk=1042/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c3/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c3/24d10671b70b487e1e4e004f78b1e6ab28451e
+            559 100%    0.57kB/s    0:00:00              559 100%    0.57kB/s    0:00:00 (xfr#157, ir-chk=1041/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c5/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c5/f5dc1629ab30a1714cd8a0be982c5738619353
+          4.06K 100%    4.12kB/s    0:00:00            4.06K 100%    4.12kB/s    0:00:00 (xfr#158, ir-chk=1040/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c6/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c6/34c2477492e65cc789a654a5e8afd7700fbe21
+         17.80K 100%   18.06kB/s    0:00:00           17.80K 100%   18.06kB/s    0:00:00 (xfr#159, ir-chk=1039/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c8/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/c8/c588f212386589f4f9afb10526019e3730993c
+          4.33K 100%    4.39kB/s    0:00:00            4.33K 100%    4.39kB/s    0:00:00 (xfr#160, ir-chk=1038/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ce/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ce/171e7a7ef655bafa4e5bd68e205c30f64901a6
+          1.44K 100%    1.46kB/s    0:00:00            1.44K 100%    1.46kB/s    0:00:00 (xfr#161, ir-chk=1037/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ce/43579ad5f9a63ad1f4725960026abb94870c87
+          2.08K 100%    2.11kB/s    0:00:00            2.08K 100%    2.11kB/s    0:00:00 (xfr#162, ir-chk=1036/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d1/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d1/d76d8a4314cbdef03f6b36f57b1356b7ed70ec
+          2.40K 100%    2.43kB/s    0:00:00            2.40K 100%    2.43kB/s    0:00:00 (xfr#163, ir-chk=1035/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d4/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d4/4a7e78548b02633d92e10b6da89d24e5808cfa
+          3.46K 100%    3.51kB/s    0:00:00            3.46K 100%    3.51kB/s    0:00:00 (xfr#164, ir-chk=1034/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d8/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/d8/5d2a8ff2eefcf7eca92f007d3426d47f53166a
+          2.56K 100%    2.60kB/s    0:00:00            2.56K 100%    2.60kB/s    0:00:00 (xfr#165, ir-chk=1033/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/db/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/db/cd710df2145511c40b98653a171b40fec9aa31
+          3.84K 100%    3.89kB/s    0:00:00            3.84K 100%    3.89kB/s    0:00:00 (xfr#166, ir-chk=1032/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/de/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/de/0b4689069adec3f707db0f17ca8f7e9fb63e41
+            901 100%    0.91kB/s    0:00:00              901 100%    0.91kB/s    0:00:00 (xfr#167, ir-chk=1031/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/e0/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/e0/db385498ef908d51cbadb3f6619e196cee5478
+          3.27K 100%    3.31kB/s    0:00:00            3.27K 100%    3.31kB/s    0:00:00 (xfr#168, ir-chk=1030/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/e9/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/e9/70349462a1c0550e473a508ab51fff160b1fa8
+          2.13K 100%    2.16kB/s    0:00:00            2.13K 100%    2.16kB/s    0:00:00 (xfr#169, ir-chk=1029/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/eb/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/eb/9e85aeac8ca8ebac49787b98cbf5735f550a84
+          2.35K 100%    2.38kB/s    0:00:00            2.35K 100%    2.38kB/s    0:00:00 (xfr#170, ir-chk=1028/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/eb/aaa6322e2140ca0c41733642631dd11bd3ef44
+          3.48K 100%    3.53kB/s    0:00:00            3.48K 100%    3.53kB/s    0:00:00 (xfr#171, ir-chk=1027/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ec/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ec/cf3540ade1153997f3623dd12206b687af6ece
+          4.60K 100%    4.66kB/s    0:00:00            4.60K 100%    4.66kB/s    0:00:00 (xfr#172, ir-chk=1026/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ed/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ed/c7debceabaed58750a153c8f06a4f7722b69cd
+          2.21K 100%    2.24kB/s    0:00:00            2.21K 100%    2.24kB/s    0:00:00 (xfr#173, ir-chk=1025/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ef/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/ef/e892ea132cdcb0176510194e67ac6807fceea4
+          1.38K 100%    1.40kB/s    0:00:00            1.38K 100%    1.40kB/s    0:00:00 (xfr#174, ir-chk=1024/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f0/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f0/2f2e0793ff1fed9a3887c615790e68946fb27d
+            326 100%    0.33kB/s    0:00:00              326 100%    0.33kB/s    0:00:00 (xfr#175, ir-chk=1023/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f0/630d921f452523dd9e84348cc376aa36690e09
+          2.75K 100%    2.79kB/s    0:00:00            2.75K 100%    2.79kB/s    0:00:00 (xfr#176, ir-chk=1022/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f5/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f5/3c0bf55e3145a0d70f7e87fde653abecf30570
+          4.42K 100%    4.48kB/s    0:00:00            4.42K 100%    4.48kB/s    0:00:00 (xfr#177, ir-chk=1021/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f5/447a880d88cad69746eeb803ddbd89a0be35d2
+          4.07K 100%    4.12kB/s    0:00:00            4.07K 100%    4.12kB/s    0:00:00 (xfr#178, ir-chk=1020/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f5/f870d5ec5a7ed0d5a4eb828ef0830b8e69b5ff
+          5.00K 100%    5.07kB/s    0:00:00            5.00K 100%    5.07kB/s    0:00:00 (xfr#179, ir-chk=1019/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f6/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/f6/fdcd23952550409be9234aefe658ae843dc68a
+          5.33K 100%    5.40kB/s    0:00:00            5.33K 100%    5.40kB/s    0:00:00 (xfr#180, ir-chk=1018/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/fd/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/objects/fd/0c6fdbc44f1da43911922af758ec85a44e6f20
+          3.98K 100%    4.03kB/s    0:00:00            3.98K 100%    4.03kB/s    0:00:00 (xfr#181, ir-chk=1017/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/refs/heads/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/.git/refs/heads/gnuarmeclipse-dev
+             41 100%    0.04kB/s    0:00:00               41 100%    0.04kB/s    0:00:00 (xfr#182, ir-chk=1011/517951)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/STM32L4x2-qemu.json
+         32.77K   3%   29.14kB/s    0:00:33           65.54K   6%   58.23kB/s    0:00:16            1.01M 100%  894.18kB/s    0:00:01 (xfr#183, ir-chk=1004/518585)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2-patch.json
+          3.82K 100%  932.13kB/s    0:00:00            3.82K 100%  932.13kB/s    0:00:00 (xfr#184, ir-chk=1041/518639)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2-xsvd.json
+         32.77K   3%    7.81MB/s    0:00:00            1.01M 100%   96.10MB/s    0:00:00 (xfr#185, ir-chk=1040/518639)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/adc.c
+         22.22K 100%  310.02kB/s    0:00:00           22.22K 100%  310.02kB/s    0:00:00 (xfr#186, ir-chk=1081/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/adc.h
+         12.99K 100%  181.17kB/s    0:00:00           12.99K 100%  181.17kB/s    0:00:00 (xfr#187, ir-chk=1080/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/aes.c
+         10.94K 100%  152.55kB/s    0:00:00           10.94K 100%  152.55kB/s    0:00:00 (xfr#188, ir-chk=1079/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/aes.h
+          6.34K 100%   88.52kB/s    0:00:00            6.34K 100%   88.52kB/s    0:00:00 (xfr#189, ir-chk=1078/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/can1.c
+         32.77K  16%  457.14kB/s    0:00:00          194.03K 100%    2.61MB/s    0:00:00 (xfr#190, ir-chk=1077/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/can1.h
+         32.77K  29%  450.70kB/s    0:00:00          109.56K 100%    1.47MB/s    0:00:00 (xfr#191, ir-chk=1076/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/comp.c
+         10.55K 100%  145.10kB/s    0:00:00           10.55K 100%  145.10kB/s    0:00:00 (xfr#192, ir-chk=1075/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/comp.h
+          5.08K 100%   69.84kB/s    0:00:00            5.08K 100%   69.84kB/s    0:00:00 (xfr#193, ir-chk=1074/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/crc.c
+          8.85K 100%  121.71kB/s    0:00:00            8.85K 100%  121.71kB/s    0:00:00 (xfr#194, ir-chk=1073/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/crc.h
+          4.09K 100%   56.24kB/s    0:00:00            4.09K 100%   56.24kB/s    0:00:00 (xfr#195, ir-chk=1072/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/crs.c
+         10.42K 100%  141.32kB/s    0:00:00           10.42K 100%  141.32kB/s    0:00:00 (xfr#196, ir-chk=1071/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/crs.h
+          5.11K 100%   69.31kB/s    0:00:00            5.11K 100%   69.31kB/s    0:00:00 (xfr#197, ir-chk=1070/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/dac1.c
+         14.21K 100%  192.74kB/s    0:00:00           14.21K 100%  192.74kB/s    0:00:00 (xfr#198, ir-chk=1069/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/dac1.h
+         10.13K 100%  137.34kB/s    0:00:00           10.13K 100%  137.34kB/s    0:00:00 (xfr#199, ir-chk=1068/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/dma1.c
+         26.16K 100%  354.86kB/s    0:00:00           26.16K 100%  354.86kB/s    0:00:00 (xfr#200, ir-chk=1067/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/dma1.h
+         19.74K 100%  267.69kB/s    0:00:00           19.74K 100%  267.69kB/s    0:00:00 (xfr#201, ir-chk=1066/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/exti.c
+         25.75K 100%  349.22kB/s    0:00:00           25.75K 100%  349.22kB/s    0:00:00 (xfr#202, ir-chk=1065/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/exti.h
+         17.36K 100%  235.39kB/s    0:00:00           17.36K 100%  235.39kB/s    0:00:00 (xfr#203, ir-chk=1064/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/firewall.c
+          9.31K 100%  126.32kB/s    0:00:00            9.31K 100%  126.32kB/s    0:00:00 (xfr#204, ir-chk=1063/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/firewall.h
+          4.70K 100%   63.77kB/s    0:00:00            4.70K 100%   63.77kB/s    0:00:00 (xfr#205, ir-chk=1062/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/flash.c
+         15.96K 100%  216.46kB/s    0:00:00           15.96K 100%  216.46kB/s    0:00:00 (xfr#206, ir-chk=1061/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/flash.h
+         10.72K 100%  145.35kB/s    0:00:00           10.72K 100%  145.35kB/s    0:00:00 (xfr#207, ir-chk=1060/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpioa.c
+         23.95K 100%  320.35kB/s    0:00:00           23.95K 100%  320.35kB/s    0:00:00 (xfr#208, ir-chk=1059/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpioa.h
+         16.75K 100%  224.06kB/s    0:00:00           16.75K 100%  224.06kB/s    0:00:00 (xfr#209, ir-chk=1058/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpiob.c
+         23.95K 100%  320.35kB/s    0:00:00           23.95K 100%  320.35kB/s    0:00:00 (xfr#210, ir-chk=1057/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpiob.h
+         16.75K 100%  224.06kB/s    0:00:00           16.75K 100%  224.06kB/s    0:00:00 (xfr#211, ir-chk=1056/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpioc.c
+         23.95K 100%  320.35kB/s    0:00:00           23.95K 100%  320.35kB/s    0:00:00 (xfr#212, ir-chk=1055/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/gpioc.h
+         16.75K 100%  224.06kB/s    0:00:00           16.75K 100%  224.06kB/s    0:00:00 (xfr#213, ir-chk=1054/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/i2c1.c
+         15.92K 100%  213.01kB/s    0:00:00           15.92K 100%  213.01kB/s    0:00:00 (xfr#214, ir-chk=1053/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/i2c1.h
+          9.67K 100%  129.32kB/s    0:00:00            9.67K 100%  129.32kB/s    0:00:00 (xfr#215, ir-chk=1052/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/iwdg.c
+          8.71K 100%  116.53kB/s    0:00:00            8.71K 100%  116.53kB/s    0:00:00 (xfr#216, ir-chk=1051/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/iwdg.h
+          4.03K 100%   53.84kB/s    0:00:00            4.03K 100%   53.84kB/s    0:00:00 (xfr#217, ir-chk=1050/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lcd.c
+         32.77K  91%  432.43kB/s    0:00:00           35.67K 100%  470.73kB/s    0:00:00 (xfr#218, ir-chk=1049/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lcd.h
+         16.05K 100%  211.76kB/s    0:00:00           16.05K 100%  211.76kB/s    0:00:00 (xfr#219, ir-chk=1048/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lptim1.c
+         12.19K 100%  160.91kB/s    0:00:00           12.19K 100%  160.91kB/s    0:00:00 (xfr#220, ir-chk=1047/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lptim1.h
+          6.72K 100%   88.67kB/s    0:00:00            6.72K 100%   88.67kB/s    0:00:00 (xfr#221, ir-chk=1046/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lpuart1.c
+         15.89K 100%  209.64kB/s    0:00:00           15.89K 100%  209.64kB/s    0:00:00 (xfr#222, ir-chk=1045/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/lpuart1.h
+          8.71K 100%  114.93kB/s    0:00:00            8.71K 100%  114.93kB/s    0:00:00 (xfr#223, ir-chk=1044/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/nvic.c
+         21.03K 100%  277.54kB/s    0:00:00           21.03K 100%  277.54kB/s    0:00:00 (xfr#224, ir-chk=1043/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/nvic.h
+         13.97K 100%  184.32kB/s    0:00:00           13.97K 100%  184.32kB/s    0:00:00 (xfr#225, ir-chk=1042/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/opamp.c
+         11.63K 100%  153.52kB/s    0:00:00           11.63K 100%  153.52kB/s    0:00:00 (xfr#226, ir-chk=1041/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/opamp.h
+          7.79K 100%  102.83kB/s    0:00:00            7.79K 100%  102.83kB/s    0:00:00 (xfr#227, ir-chk=1040/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/pwr.c
+         32.77K  93%  421.05kB/s    0:00:00           34.98K 100%  449.49kB/s    0:00:00 (xfr#228, ir-chk=1039/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/pwr.h
+         25.36K 100%  325.81kB/s    0:00:00           25.36K 100%  325.81kB/s    0:00:00 (xfr#229, ir-chk=1038/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/quadspi.c
+         13.48K 100%  173.19kB/s    0:00:00           13.48K 100%  173.19kB/s    0:00:00 (xfr#230, ir-chk=1037/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/quadspi.h
+          7.64K 100%   98.16kB/s    0:00:00            7.64K 100%   98.16kB/s    0:00:00 (xfr#231, ir-chk=1036/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rcc.c
+         32.77K  92%  421.05kB/s    0:00:00           35.37K 100%  454.49kB/s    0:00:00 (xfr#232, ir-chk=1035/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rcc.h
+         24.77K 100%  318.23kB/s    0:00:00           24.77K 100%  318.23kB/s    0:00:00 (xfr#233, ir-chk=1034/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rng.c
+          8.58K 100%  110.27kB/s    0:00:00            8.58K 100%  110.27kB/s    0:00:00 (xfr#234, ir-chk=1033/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rng.h
+          3.74K 100%   48.01kB/s    0:00:00            3.74K 100%   48.01kB/s    0:00:00 (xfr#235, ir-chk=1032/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rtc.c
+         27.59K 100%  354.54kB/s    0:00:00           27.59K 100%  354.54kB/s    0:00:00 (xfr#236, ir-chk=1031/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/rtc.h
+         19.55K 100%  248.01kB/s    0:00:00           19.55K 100%  248.01kB/s    0:00:00 (xfr#237, ir-chk=1030/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/sai1.c
+         18.79K 100%  238.31kB/s    0:00:00           18.79K 100%  238.31kB/s    0:00:00 (xfr#238, ir-chk=1029/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/sai1.h
+         11.52K 100%  146.12kB/s    0:00:00           11.52K 100%  146.12kB/s    0:00:00 (xfr#239, ir-chk=1028/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/sdmmc.c
+         19.10K 100%  242.19kB/s    0:00:00           19.10K 100%  242.19kB/s    0:00:00 (xfr#240, ir-chk=1027/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/sdmmc.h
+         12.49K 100%  158.41kB/s    0:00:00           12.49K 100%  158.41kB/s    0:00:00 (xfr#241, ir-chk=1026/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/spi1.c
+         12.02K 100%  152.50kB/s    0:00:00           12.02K 100%  152.50kB/s    0:00:00 (xfr#242, ir-chk=1025/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/spi1.h
+          6.48K 100%   82.17kB/s    0:00:00            6.48K 100%   82.17kB/s    0:00:00 (xfr#243, ir-chk=1024/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/swpmi1.c
+         11.94K 100%  151.38kB/s    0:00:00           11.94K 100%  151.38kB/s    0:00:00 (xfr#244, ir-chk=1023/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/swpmi1.h
+          6.75K 100%   85.60kB/s    0:00:00            6.75K 100%   85.60kB/s    0:00:00 (xfr#245, ir-chk=1022/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/syscfg.c
+         15.37K 100%  194.92kB/s    0:00:00           15.37K 100%  194.92kB/s    0:00:00 (xfr#246, ir-chk=1021/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/syscfg.h
+         27.67K 100%  346.40kB/s    0:00:00           27.67K 100%  346.40kB/s    0:00:00 (xfr#247, ir-chk=1020/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim1.c
+         25.58K 100%  320.29kB/s    0:00:00           25.58K 100%  320.29kB/s    0:00:00 (xfr#248, ir-chk=1019/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim1.h
+         17.60K 100%  220.37kB/s    0:00:00           17.60K 100%  220.37kB/s    0:00:00 (xfr#249, ir-chk=1018/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim15.c
+         14.90K 100%  186.56kB/s    0:00:00           14.90K 100%  186.56kB/s    0:00:00 (xfr#250, ir-chk=1017/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim15.h
+          9.16K 100%  114.71kB/s    0:00:00            9.16K 100%  114.71kB/s    0:00:00 (xfr#251, ir-chk=1016/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim16.c
+         15.84K 100%  198.25kB/s    0:00:00           15.84K 100%  198.25kB/s    0:00:00 (xfr#252, ir-chk=1015/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim16.h
+          9.94K 100%  124.50kB/s    0:00:00            9.94K 100%  124.50kB/s    0:00:00 (xfr#253, ir-chk=1014/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim2.c
+         20.08K 100%  248.20kB/s    0:00:00           20.08K 100%  248.20kB/s    0:00:00 (xfr#254, ir-chk=1013/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim2.h
+         13.26K 100%  163.93kB/s    0:00:00           13.26K 100%  163.93kB/s    0:00:00 (xfr#255, ir-chk=1012/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim6.c
+          9.52K 100%  117.64kB/s    0:00:00            9.52K 100%  117.64kB/s    0:00:00 (xfr#256, ir-chk=1011/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tim6.h
+          4.71K 100%   58.25kB/s    0:00:00            4.71K 100%   58.25kB/s    0:00:00 (xfr#257, ir-chk=1010/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tsc.c
+         25.56K 100%  312.02kB/s    0:00:00           25.56K 100%  312.02kB/s    0:00:00 (xfr#258, ir-chk=1009/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/tsc.h
+         14.00K 100%  170.92kB/s    0:00:00           14.00K 100%  170.92kB/s    0:00:00 (xfr#259, ir-chk=1008/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/usart1.c
+         19.29K 100%  235.46kB/s    0:00:00           19.29K 100%  235.46kB/s    0:00:00 (xfr#260, ir-chk=1007/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/usart1.h
+         11.30K 100%  137.94kB/s    0:00:00           11.30K 100%  137.94kB/s    0:00:00 (xfr#261, ir-chk=1006/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/usb.c
+         19.60K 100%  239.29kB/s    0:00:00           19.60K 100%  239.29kB/s    0:00:00 (xfr#262, ir-chk=1005/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/usb.h
+         12.15K 100%  146.54kB/s    0:00:00           12.15K 100%  146.54kB/s    0:00:00 (xfr#263, ir-chk=1004/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/vrefbuf.c
+          8.44K 100%  101.79kB/s    0:00:00            8.44K 100%  101.79kB/s    0:00:00 (xfr#264, ir-chk=1003/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/vrefbuf.h
+          3.60K 100%   43.46kB/s    0:00:00            3.60K 100%   43.46kB/s    0:00:00 (xfr#265, ir-chk=1002/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/wwdg.c
+          8.45K 100%   99.44kB/s    0:00:00            8.45K 100%   99.44kB/s    0:00:00 (xfr#266, ir-chk=1001/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/gnuarmeclipse/devices/support/STM32L4x2/wwdg.h
+          3.64K 100%   42.87kB/s    0:00:00            3.64K 100%   42.87kB/s    0:00:00 (xfr#267, ir-chk=1000/519195)
+nodraak/Work/qemu/gnuarmeclipse-qemu.git/hw/cortexm/svd.c
+         18.95K 100%  129.45kB/s    0:00:00           18.95K 100%  129.45kB/s    0:00:00 (xfr#268, ir-chk=1006/519548)
+nodraak/Work/qemu/install/debian64/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/README.md
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/LICENSE
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/COPYING.LIB
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/COPYING
+deleting nodraak/Work/qemu/install/debian64/qemu/license/qemu-2.8.0/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/pixman-0.34.0/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/pixman-0.34.0/NEWS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/pixman-0.34.0/COPYING
+deleting nodraak/Work/qemu/install/debian64/qemu/license/pixman-0.34.0/AUTHORS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/pixman-0.34.0/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libpng-1.6.23/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libpng-1.6.23/LICENSE
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libpng-1.6.23/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libffi-3.2.1/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libffi-3.2.1/LICENSE
+deleting nodraak/Work/qemu/install/debian64/qemu/license/libffi-3.2.1/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/jpeg-9b/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/jpeg-9b/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/README.win32
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/README.rationale
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/README.in
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/README.commits
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/NEWS.pre-1-3
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/NEWS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/COPYING
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/AUTHORS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/glib-2.51.0/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/THANKS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/README.woe32
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/README
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/NEWS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/DEPENDENCIES
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/COPYING
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/AUTHORS
+deleting nodraak/Work/qemu/install/debian64/qemu/license/gettext-0.19.8.1/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2_image-2.0.1/README.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2_image-2.0.1/COPYING.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2_image-2.0.1/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2-2.0.5/README.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2-2.0.5/README-SDL.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2-2.0.5/COPYING.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/license/SDL2-2.0.5/
+deleting nodraak/Work/qemu/install/debian64/qemu/license/
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/config.log
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/build-qemu.sh
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/build-helper.sh
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/CHANGES.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/BUILD.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/gnuarmeclipse/
+deleting nodraak/Work/qemu/install/debian64/qemu/INFO.txt
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/libutil.so.1
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/libutil.so
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/libutil-2.19.so
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/librt.so.1
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/librt.so
+deleting nodraak/Work/qemu/install/debian64/qemu/bin/librt-2.19.so
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32F429I-Discovery.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32F4-Discovery.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32F0-Discovery.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32-P107.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32-P103.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32-H103.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/STM32-E407.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/OLIMEXINO-STM32.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NetduinoPlus2.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NetduinoGo.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NUCLEO-L432KC.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NUCLEO-F411RE.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NUCLEO-F103RB.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/NUCLEO-F072RB.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/Maple.jpg
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/graphics/
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32L4x2-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F429x-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F411xx-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F40x-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F107xx-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F103xx-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F0x2-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/STM32F0x1-qemu.json
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/README.md
+deleting nodraak/Work/qemu/install/debian64/qemu/share/qemu/devices/
+nodraak/Work/qemu/install/debian64/qemu/
+nodraak/Work/qemu/install/debian64/qemu/bin/
+nodraak/Work/qemu/install/debian64/qemu/bin/libSDL2-2.0.so.0.4.1
+         32.77K   1%   70.48kB/s    0:00:23            1.70M 100%    3.52MB/s    0:00:00 (xfr#269, ir-chk=1034/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libSDL2_image-2.0.so.0.0.1
+         32.77K  39%   69.41kB/s    0:00:00           82.21K 100%  174.15kB/s    0:00:00 (xfr#270, ir-chk=1031/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libffi.so.6.0.4
+         32.77K  51%   69.41kB/s    0:00:00           63.51K 100%  134.54kB/s    0:00:00 (xfr#271, ir-chk=1028/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libglib-2.0.so.0.5100.0
+         32.77K   1%   69.11kB/s    0:00:35            2.46M 100%    4.98MB/s    0:00:00 (xfr#272, ir-chk=1025/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libgthread-2.0.so.0.5100.0
+          8.99K 100%   18.64kB/s    0:00:00            8.99K 100%   18.64kB/s    0:00:00 (xfr#273, ir-chk=1022/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libjpeg.so.9.2.0
+         32.77K   9%   67.94kB/s    0:00:04          360.59K 100%  741.35kB/s    0:00:00 (xfr#274, ir-chk=1019/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libpixman-1.so.0.34.0
+         32.77K   0%   67.23kB/s    0:00:55            3.77M 100%    7.37MB/s    0:00:00 (xfr#275, ir-chk=1016/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libpng16.so.16.23.0
+         32.77K   4%   65.57kB/s    0:00:11          817.28K 100%    1.55MB/s    0:00:00 (xfr#276, ir-chk=1013/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/libz.so.1.2.8
+         32.77K  26%   63.62kB/s    0:00:01          125.06K 100%  242.81kB/s    0:00:00 (xfr#277, ir-chk=1010/524838)
+nodraak/Work/qemu/install/debian64/qemu/bin/qemu-system-gnuarmeclipse
+         32.77K   0%   63.37kB/s    0:01:02            3.97M 100%    7.32MB/s    0:00:00 (xfr#278, ir-chk=1009/524838)
+nodraak/Work/qemu/install/debian64/qemu/doc/
+nodraak/Work/qemu/install/debian64/qemu/doc/qemu-doc.html
+         32.77K   7%   61.78kB/s    0:00:06          436.27K 100%  814.62kB/s    0:00:00 (xfr#279, ir-chk=1008/524838)
+nodraak/Work/qemu/install/debian64/qemu/doc/qemu-doc.pdf
+         32.77K   6%   61.19kB/s    0:00:07          517.32K 100%  962.27kB/s    0:00:00 (xfr#280, ir-chk=1007/524838)
+nodraak/Work/qemu/install/debian64/qemu/doc/qmp-commands.txt
+         32.77K  27%   60.95kB/s    0:00:01          118.95K 100%  220.85kB/s    0:00:00 (xfr#281, ir-chk=1006/524838)
+nodraak/Work/qemu/install/debian64/qemu/libexec/
+nodraak/Work/qemu/install/debian64/qemu/libexec/qemu-bridge-helper
+         32.77K  89%   60.72kB/s    0:00:00           36.75K 100%   68.10kB/s    0:00:00 (xfr#282, ir-chk=1005/524838)
+nodraak/Work/qemu/install/debian64/qemu/man/
+nodraak/Work/qemu/install/debian64/qemu/man/man1/
+nodraak/Work/qemu/install/debian64/qemu/man/man1/qemu.1
+         32.77K  20%   60.72kB/s    0:00:02          159.02K 100%  294.11kB/s    0:00:00 (xfr#283, ir-chk=1003/524838)
+nodraak/Work/qemu/install/debian64/qemu/share/
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/trace-events-all
+         32.77K  18%   60.61kB/s    0:00:02          175.99K 100%  324.89kB/s    0:00:00 (xfr#284, ir-chk=1001/524838)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/ar
+          2.24K 100%    4.13kB/s    0:00:00            2.24K 100%    4.13kB/s    0:00:00 (xfr#285, ir-chk=1037/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/bepo
+         11.42K 100%   21.04kB/s    0:00:00           11.42K 100%   21.04kB/s    0:00:00 (xfr#286, ir-chk=1036/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/common
+          2.08K 100%    3.83kB/s    0:00:00            2.08K 100%    3.83kB/s    0:00:00 (xfr#287, ir-chk=1035/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/cz
+          1.22K 100%    2.24kB/s    0:00:00            1.22K 100%    2.24kB/s    0:00:00 (xfr#288, ir-chk=1034/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/da
+          2.58K 100%    4.75kB/s    0:00:00            2.58K 100%    4.75kB/s    0:00:00 (xfr#289, ir-chk=1033/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/de
+          2.47K 100%    4.55kB/s    0:00:00            2.47K 100%    4.55kB/s    0:00:00 (xfr#290, ir-chk=1032/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/de-ch
+          2.53K 100%    4.67kB/s    0:00:00            2.53K 100%    4.67kB/s    0:00:00 (xfr#291, ir-chk=1031/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/en-gb
+          2.58K 100%    4.76kB/s    0:00:00            2.58K 100%    4.76kB/s    0:00:00 (xfr#292, ir-chk=1030/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/en-us
+            609 100%    1.12kB/s    0:00:00              609 100%    1.12kB/s    0:00:00 (xfr#293, ir-chk=1029/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/es
+          2.24K 100%    4.12kB/s    0:00:00            2.24K 100%    4.12kB/s    0:00:00 (xfr#294, ir-chk=1028/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/et
+          1.11K 100%    2.05kB/s    0:00:00            1.11K 100%    2.05kB/s    0:00:00 (xfr#295, ir-chk=1027/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fi
+          2.64K 100%    4.86kB/s    0:00:00            2.64K 100%    4.86kB/s    0:00:00 (xfr#296, ir-chk=1026/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fo
+            906 100%    1.67kB/s    0:00:00              906 100%    1.67kB/s    0:00:00 (xfr#297, ir-chk=1025/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fr
+          2.59K 100%    4.77kB/s    0:00:00            2.59K 100%    4.77kB/s    0:00:00 (xfr#298, ir-chk=1024/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fr-be
+          2.73K 100%    5.04kB/s    0:00:00            2.73K 100%    5.04kB/s    0:00:00 (xfr#299, ir-chk=1023/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fr-ca
+            934 100%    1.72kB/s    0:00:00              934 100%    1.72kB/s    0:00:00 (xfr#300, ir-chk=1022/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/fr-ch
+          2.47K 100%    4.55kB/s    0:00:00            2.47K 100%    4.55kB/s    0:00:00 (xfr#301, ir-chk=1021/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/hr
+          2.70K 100%    4.97kB/s    0:00:00            2.70K 100%    4.97kB/s    0:00:00 (xfr#302, ir-chk=1020/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/hu
+          1.87K 100%    3.44kB/s    0:00:00            1.87K 100%    3.44kB/s    0:00:00 (xfr#303, ir-chk=1019/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/is
+          3.07K 100%    5.65kB/s    0:00:00            3.07K 100%    5.65kB/s    0:00:00 (xfr#304, ir-chk=1018/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/it
+          2.46K 100%    4.54kB/s    0:00:00            2.46K 100%    4.54kB/s    0:00:00 (xfr#305, ir-chk=1017/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/ja
+          2.14K 100%    3.94kB/s    0:00:00            2.14K 100%    3.94kB/s    0:00:00 (xfr#306, ir-chk=1016/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/lt
+          1.10K 100%    2.02kB/s    0:00:00            1.10K 100%    2.02kB/s    0:00:00 (xfr#307, ir-chk=1015/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/lv
+          2.84K 100%    5.23kB/s    0:00:00            2.84K 100%    5.23kB/s    0:00:00 (xfr#308, ir-chk=1014/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/mk
+          2.37K 100%    4.36kB/s    0:00:00            2.37K 100%    4.35kB/s    0:00:00 (xfr#309, ir-chk=1013/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/modifiers
+            293 100%    0.54kB/s    0:00:00              293 100%    0.54kB/s    0:00:00 (xfr#310, ir-chk=1012/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/nl
+          1.10K 100%    2.03kB/s    0:00:00            1.10K 100%    2.03kB/s    0:00:00 (xfr#311, ir-chk=1011/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/nl-be
+             43 100%    0.08kB/s    0:00:00               43 100%    0.08kB/s    0:00:00 (xfr#312, ir-chk=1010/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/no
+          2.58K 100%    4.74kB/s    0:00:00            2.58K 100%    4.74kB/s    0:00:00 (xfr#313, ir-chk=1009/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/pl
+          2.67K 100%    4.91kB/s    0:00:00            2.67K 100%    4.91kB/s    0:00:00 (xfr#314, ir-chk=1008/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/pt
+          2.45K 100%    4.51kB/s    0:00:00            2.45K 100%    4.51kB/s    0:00:00 (xfr#315, ir-chk=1007/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/pt-br
+          1.35K 100%    2.49kB/s    0:00:00            1.35K 100%    2.49kB/s    0:00:00 (xfr#316, ir-chk=1006/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/ru
+          2.55K 100%    4.70kB/s    0:00:00            2.55K 100%    4.70kB/s    0:00:00 (xfr#317, ir-chk=1005/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/sl
+          2.29K 100%    4.22kB/s    0:00:00            2.29K 100%    4.22kB/s    0:00:00 (xfr#318, ir-chk=1004/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/sv
+          1.01K 100%    1.85kB/s    0:00:00            1.01K 100%    1.85kB/s    0:00:00 (xfr#319, ir-chk=1003/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/th
+          3.12K 100%    5.74kB/s    0:00:00            3.12K 100%    5.74kB/s    0:00:00 (xfr#320, ir-chk=1002/524876)
+nodraak/Work/qemu/install/debian64/qemu/share/qemu/keymaps/tr
+          2.65K 100%    4.87kB/s    0:00:00            2.65K 100%    4.87kB/s    0:00:00 (xfr#321, ir-chk=1001/524876)
+deleting nodraak/Work/tmp/out.bin
+deleting nodraak/Work/tmp/do_all.sh
+deleting nodraak/Work/tmp/Makefile
+nodraak/Work/qemu/output/
+nodraak/Work/qemu/output/debian64/
+nodraak/Work/qemu/output/debian64/config.log
+         32.77K   5%   34.97kB/s    0:00:17          646.82K 100%  686.59kB/s    0:00:00 (xfr#322, ir-chk=1015/527242)
+nodraak/Work/qemu/output/debian64/config.status
+            772 100%    0.82kB/s    0:00:00              772 100%    0.82kB/s    0:00:00 (xfr#323, ir-chk=1014/527242)
+nodraak/Work/qemu/output/debian64/configure-output.txt
+          4.10K 100%    4.35kB/s    0:00:00            4.10K 100%    4.35kB/s    0:00:00 (xfr#324, ir-chk=1013/527242)
+nodraak/Work/qemu/scripts/
+nodraak/Work/qemu/scripts/build-helper.sh
+         30.52K 100%   32.29kB/s    0:00:00           30.52K 100%   32.29kB/s    0:00:00 (xfr#325, ir-chk=1003/527393)
+nodraak/Work/qemu/scripts/build-qemu.sh
+         32.77K  47%   34.67kB/s    0:00:01           68.90K 100%   72.74kB/s    0:00:00 (xfr#326, ir-chk=1002/527393)
+nodraak/Work/qemu/scripts/build.sh
+         32.77K  75%   34.56kB/s    0:00:00           43.51K 100%   45.88kB/s    0:00:00 (xfr#327, ir-chk=1001/527393)
+nodraak/Work/tmp/
+nodraak/Work/workdir/
+nodraak/Work/workdir/Makefile
+            458 100%    0.48kB/s    0:00:00              458 100%    0.48kB/s    0:00:00 (xfr#328, ir-chk=1018/527499)
+nodraak/Work/workdir/STM32L4x2-patch.json
+          3.82K 100%    4.02kB/s    0:00:00            3.82K 100%    4.02kB/s    0:00:00 (xfr#329, ir-chk=1017/527499)
+nodraak/Work/workdir/out.bin
+         32.77K  85%   34.48kB/s    0:00:00           38.44K 100%   40.45kB/s    0:00:00 (xfr#330, ir-chk=1016/527499)
+nodraak/Work/workdir/qemu_prepare_files_L432KC.sh
+            834 100%    0.88kB/s    0:00:00              834 100%    0.88kB/s    0:00:00 (xfr#331, ir-chk=1015/527499)
+nodraak/Work/workdir/STM32L4x2/
+nodraak/Work/workdir/STM32L4x2/adc.c
+         22.22K 100%   23.36kB/s    0:00:00           22.22K 100%   23.36kB/s    0:00:00 (xfr#332, ir-chk=1126/527613)
+nodraak/Work/workdir/STM32L4x2/adc.h
+         12.99K 100%   13.64kB/s    0:00:00           12.99K 100%   13.64kB/s    0:00:00 (xfr#333, ir-chk=1125/527613)
+nodraak/Work/workdir/STM32L4x2/aes.c
+         10.94K 100%   11.48kB/s    0:00:00           10.94K 100%   11.48kB/s    0:00:00 (xfr#334, ir-chk=1124/527613)
+nodraak/Work/workdir/STM32L4x2/aes.h
+          6.34K 100%    6.66kB/s    0:00:00            6.34K 100%    6.66kB/s    0:00:00 (xfr#335, ir-chk=1123/527613)
+nodraak/Work/workdir/STM32L4x2/can1.c
+         32.77K  16%   34.41kB/s    0:00:04          194.03K 100%  203.53kB/s    0:00:00 (xfr#336, ir-chk=1122/527613)
+nodraak/Work/workdir/STM32L4x2/can1.h
+         32.77K  29%   34.33kB/s    0:00:02          109.56K 100%  114.79kB/s    0:00:00 (xfr#337, ir-chk=1121/527613)
+nodraak/Work/workdir/STM32L4x2/comp.c
+         10.55K 100%   11.05kB/s    0:00:00           10.55K 100%   11.05kB/s    0:00:00 (xfr#338, ir-chk=1120/527613)
+nodraak/Work/workdir/STM32L4x2/comp.h
+          5.08K 100%    5.32kB/s    0:00:00            5.08K 100%    5.32kB/s    0:00:00 (xfr#339, ir-chk=1119/527613)
+nodraak/Work/workdir/STM32L4x2/crc.c
+          8.85K 100%    9.27kB/s    0:00:00            8.85K 100%    9.26kB/s    0:00:00 (xfr#340, ir-chk=1118/527613)
+nodraak/Work/workdir/STM32L4x2/crc.h
+          4.09K 100%    4.28kB/s    0:00:00            4.09K 100%    4.28kB/s    0:00:00 (xfr#341, ir-chk=1117/527613)
+nodraak/Work/workdir/STM32L4x2/crs.c
+         10.42K 100%   10.91kB/s    0:00:00           10.42K 100%   10.91kB/s    0:00:00 (xfr#342, ir-chk=1116/527613)
+nodraak/Work/workdir/STM32L4x2/crs.h
+          5.11K 100%    5.35kB/s    0:00:00            5.11K 100%    5.35kB/s    0:00:00 (xfr#343, ir-chk=1115/527613)
+nodraak/Work/workdir/STM32L4x2/dac1.c
+         14.21K 100%   14.87kB/s    0:00:00           14.21K 100%   14.87kB/s    0:00:00 (xfr#344, ir-chk=1114/527613)
+nodraak/Work/workdir/STM32L4x2/dac1.h
+         10.13K 100%   10.60kB/s    0:00:00           10.13K 100%   10.60kB/s    0:00:00 (xfr#345, ir-chk=1113/527613)
+nodraak/Work/workdir/STM32L4x2/dma1.c
+         26.16K 100%   27.38kB/s    0:00:00           26.16K 100%   27.38kB/s    0:00:00 (xfr#346, ir-chk=1112/527613)
+nodraak/Work/workdir/STM32L4x2/dma1.h
+         19.74K 100%   20.66kB/s    0:00:00           19.74K 100%   20.66kB/s    0:00:00 (xfr#347, ir-chk=1111/527613)
+nodraak/Work/workdir/STM32L4x2/exti.c
+         25.75K 100%   26.92kB/s    0:00:00           25.75K 100%   26.92kB/s    0:00:00 (xfr#348, ir-chk=1110/527613)
+nodraak/Work/workdir/STM32L4x2/exti.h
+         17.36K 100%   18.15kB/s    0:00:00           17.36K 100%   18.15kB/s    0:00:00 (xfr#349, ir-chk=1109/527613)
+nodraak/Work/workdir/STM32L4x2/firewall.c
+          9.31K 100%    9.74kB/s    0:00:00            9.31K 100%    9.74kB/s    0:00:00 (xfr#350, ir-chk=1108/527613)
+nodraak/Work/workdir/STM32L4x2/firewall.h
+          4.70K 100%    4.92kB/s    0:00:00            4.70K 100%    4.92kB/s    0:00:00 (xfr#351, ir-chk=1107/527613)
+nodraak/Work/workdir/STM32L4x2/flash.c
+         15.96K 100%   16.69kB/s    0:00:00           15.96K 100%   16.69kB/s    0:00:00 (xfr#352, ir-chk=1106/527613)
+nodraak/Work/workdir/STM32L4x2/flash.h
+         10.72K 100%   11.20kB/s    0:00:00           10.72K 100%   11.20kB/s    0:00:00 (xfr#353, ir-chk=1105/527613)
+nodraak/Work/workdir/STM32L4x2/gpioa.c
+         23.95K 100%   24.98kB/s    0:00:00           23.95K 100%   24.98kB/s    0:00:00 (xfr#354, ir-chk=1104/527613)
+nodraak/Work/workdir/STM32L4x2/gpioa.h
+         16.75K 100%   17.47kB/s    0:00:00           16.75K 100%   17.47kB/s    0:00:00 (xfr#355, ir-chk=1103/527613)
+nodraak/Work/workdir/STM32L4x2/gpiob.c
+         23.95K 100%   24.98kB/s    0:00:00           23.95K 100%   24.96kB/s    0:00:00 (xfr#356, ir-chk=1102/527613)
+nodraak/Work/workdir/STM32L4x2/gpiob.h
+         16.75K 100%   17.46kB/s    0:00:00           16.75K 100%   17.46kB/s    0:00:00 (xfr#357, ir-chk=1101/527613)
+nodraak/Work/workdir/STM32L4x2/gpioc.c
+         23.95K 100%   24.96kB/s    0:00:00           23.95K 100%   24.96kB/s    0:00:00 (xfr#358, ir-chk=1100/527613)
+nodraak/Work/workdir/STM32L4x2/gpioc.h
+         16.75K 100%   17.46kB/s    0:00:00           16.75K 100%   17.46kB/s    0:00:00 (xfr#359, ir-chk=1099/527613)
+nodraak/Work/workdir/STM32L4x2/i2c1.c
+         15.92K 100%   16.60kB/s    0:00:00           15.92K 100%   16.60kB/s    0:00:00 (xfr#360, ir-chk=1098/527613)
+nodraak/Work/workdir/STM32L4x2/i2c1.h
+          9.67K 100%   10.08kB/s    0:00:00            9.67K 100%   10.08kB/s    0:00:00 (xfr#361, ir-chk=1097/527613)
+nodraak/Work/workdir/STM32L4x2/iwdg.c
+          8.71K 100%    9.08kB/s    0:00:00            8.71K 100%    9.08kB/s    0:00:00 (xfr#362, ir-chk=1096/527613)
+nodraak/Work/workdir/STM32L4x2/iwdg.h
+          4.03K 100%    4.19kB/s    0:00:00            4.03K 100%    4.19kB/s    0:00:00 (xfr#363, ir-chk=1095/527613)
+nodraak/Work/workdir/STM32L4x2/lcd.c
+         32.77K  91%   34.12kB/s    0:00:00           35.67K 100%   37.14kB/s    0:00:00 (xfr#364, ir-chk=1094/527613)
+nodraak/Work/workdir/STM32L4x2/lcd.h
+         16.05K 100%   16.71kB/s    0:00:00           16.05K 100%   16.71kB/s    0:00:00 (xfr#365, ir-chk=1093/527613)
+nodraak/Work/workdir/STM32L4x2/lptim1.c
+         12.19K 100%   12.69kB/s    0:00:00           12.19K 100%   12.69kB/s    0:00:00 (xfr#366, ir-chk=1092/527613)
+nodraak/Work/workdir/STM32L4x2/lptim1.h
+          6.72K 100%    7.00kB/s    0:00:00            6.72K 100%    7.00kB/s    0:00:00 (xfr#367, ir-chk=1091/527613)
+nodraak/Work/workdir/STM32L4x2/lpuart1.c
+         15.89K 100%   16.54kB/s    0:00:00           15.89K 100%   16.54kB/s    0:00:00 (xfr#368, ir-chk=1090/527613)
+nodraak/Work/workdir/STM32L4x2/lpuart1.h
+          8.71K 100%    9.07kB/s    0:00:00            8.71K 100%    9.07kB/s    0:00:00 (xfr#369, ir-chk=1089/527613)
+nodraak/Work/workdir/STM32L4x2/nvic.c
+         21.03K 100%   21.87kB/s    0:00:00           21.03K 100%   21.87kB/s    0:00:00 (xfr#370, ir-chk=1088/527613)
+nodraak/Work/workdir/STM32L4x2/nvic.h
+         13.97K 100%   14.53kB/s    0:00:00           13.97K 100%   14.53kB/s    0:00:00 (xfr#371, ir-chk=1087/527613)
+nodraak/Work/workdir/STM32L4x2/opamp.c
+         11.63K 100%   12.10kB/s    0:00:00           11.63K 100%   12.10kB/s    0:00:00 (xfr#372, ir-chk=1086/527613)
+nodraak/Work/workdir/STM32L4x2/opamp.h
+          7.79K 100%    8.10kB/s    0:00:00            7.79K 100%    8.10kB/s    0:00:00 (xfr#373, ir-chk=1085/527613)
+nodraak/Work/workdir/STM32L4x2/pwr.c
+         32.77K  93%   34.08kB/s    0:00:00           34.98K 100%   36.38kB/s    0:00:00 (xfr#374, ir-chk=1084/527613)
+nodraak/Work/workdir/STM32L4x2/pwr.h
+         25.36K 100%   26.37kB/s    0:00:00           25.36K 100%   26.37kB/s    0:00:00 (xfr#375, ir-chk=1083/527613)
+nodraak/Work/workdir/STM32L4x2/quadspi.c
+         13.48K 100%   14.00kB/s    0:00:00           13.48K 100%   14.00kB/s    0:00:00 (xfr#376, ir-chk=1082/527613)
+nodraak/Work/workdir/STM32L4x2/quadspi.h
+          7.64K 100%    7.94kB/s    0:00:00            7.64K 100%    7.94kB/s    0:00:00 (xfr#377, ir-chk=1081/527613)
+nodraak/Work/workdir/STM32L4x2/rcc.c
+         32.77K  92%   34.04kB/s    0:00:00           35.37K 100%   36.75kB/s    0:00:00 (xfr#378, ir-chk=1080/527613)
+nodraak/Work/workdir/STM32L4x2/rcc.h
+         24.77K 100%   25.73kB/s    0:00:00           24.77K 100%   25.73kB/s    0:00:00 (xfr#379, ir-chk=1079/527613)
+nodraak/Work/workdir/STM32L4x2/rng.c
+          8.58K 100%    8.92kB/s    0:00:00            8.58K 100%    8.92kB/s    0:00:00 (xfr#380, ir-chk=1078/527613)
+nodraak/Work/workdir/STM32L4x2/rng.h
+          3.74K 100%    3.88kB/s    0:00:00            3.74K 100%    3.88kB/s    0:00:00 (xfr#381, ir-chk=1077/527613)
+nodraak/Work/workdir/STM32L4x2/rtc.c
+         27.59K 100%   28.67kB/s    0:00:00           27.59K 100%   28.67kB/s    0:00:00 (xfr#382, ir-chk=1076/527613)
+nodraak/Work/workdir/STM32L4x2/rtc.h
+         19.55K 100%   20.29kB/s    0:00:00           19.55K 100%   20.29kB/s    0:00:00 (xfr#383, ir-chk=1075/527613)
+nodraak/Work/workdir/STM32L4x2/sai1.c
+         18.79K 100%   19.50kB/s    0:00:00           18.79K 100%   19.50kB/s    0:00:00 (xfr#384, ir-chk=1074/527613)
+nodraak/Work/workdir/STM32L4x2/sai1.h
+         11.52K 100%   11.96kB/s    0:00:00           11.52K 100%   11.96kB/s    0:00:00 (xfr#385, ir-chk=1073/527613)
+nodraak/Work/workdir/STM32L4x2/sdmmc.c
+         19.10K 100%   19.82kB/s    0:00:00           19.10K 100%   19.82kB/s    0:00:00 (xfr#386, ir-chk=1072/527613)
+nodraak/Work/workdir/STM32L4x2/sdmmc.h
+         12.49K 100%   12.96kB/s    0:00:00           12.49K 100%   12.96kB/s    0:00:00 (xfr#387, ir-chk=1071/527613)
+nodraak/Work/workdir/STM32L4x2/spi1.c
+         12.02K 100%   12.48kB/s    0:00:00           12.02K 100%   12.48kB/s    0:00:00 (xfr#388, ir-chk=1070/527613)
+nodraak/Work/workdir/STM32L4x2/spi1.h
+          6.48K 100%    6.72kB/s    0:00:00            6.48K 100%    6.72kB/s    0:00:00 (xfr#389, ir-chk=1069/527613)
+nodraak/Work/workdir/STM32L4x2/swpmi1.c
+         11.94K 100%   12.39kB/s    0:00:00           11.94K 100%   12.39kB/s    0:00:00 (xfr#390, ir-chk=1068/527613)
+nodraak/Work/workdir/STM32L4x2/swpmi1.h
+          6.75K 100%    7.00kB/s    0:00:00            6.75K 100%    7.00kB/s    0:00:00 (xfr#391, ir-chk=1067/527613)
+nodraak/Work/workdir/STM32L4x2/syscfg.c
+         15.37K 100%   15.93kB/s    0:00:00           15.37K 100%   15.93kB/s    0:00:00 (xfr#392, ir-chk=1066/527613)
+nodraak/Work/workdir/STM32L4x2/syscfg.h
+         27.67K 100%   28.68kB/s    0:00:00           27.67K 100%   28.68kB/s    0:00:00 (xfr#393, ir-chk=1065/527613)
+nodraak/Work/workdir/STM32L4x2/tim1.c
+         25.58K 100%   26.49kB/s    0:00:00           25.58K 100%   26.49kB/s    0:00:00 (xfr#394, ir-chk=1064/527613)
+nodraak/Work/workdir/STM32L4x2/tim1.h
+         17.60K 100%   18.23kB/s    0:00:00           17.60K 100%   18.23kB/s    0:00:00 (xfr#395, ir-chk=1063/527613)
+nodraak/Work/workdir/STM32L4x2/tim15.c
+         14.90K 100%   15.43kB/s    0:00:00           14.90K 100%   15.43kB/s    0:00:00 (xfr#396, ir-chk=1062/527613)
+nodraak/Work/workdir/STM32L4x2/tim15.h
+          9.16K 100%    9.49kB/s    0:00:00            9.16K 100%    9.49kB/s    0:00:00 (xfr#397, ir-chk=1061/527613)
+nodraak/Work/workdir/STM32L4x2/tim16.c
+         15.84K 100%   16.40kB/s    0:00:00           15.84K 100%   16.40kB/s    0:00:00 (xfr#398, ir-chk=1060/527613)
+nodraak/Work/workdir/STM32L4x2/tim16.h
+          9.94K 100%   10.30kB/s    0:00:00            9.94K 100%   10.30kB/s    0:00:00 (xfr#399, ir-chk=1059/527613)
+nodraak/Work/workdir/STM32L4x2/tim2.c
+         20.08K 100%   20.79kB/s    0:00:00           20.08K 100%   20.79kB/s    0:00:00 (xfr#400, ir-chk=1058/527613)
+nodraak/Work/workdir/STM32L4x2/tim2.h
+         13.26K 100%   13.72kB/s    0:00:00           13.26K 100%   13.72kB/s    0:00:00 (xfr#401, ir-chk=1057/527613)
+nodraak/Work/workdir/STM32L4x2/tim6.c
+          9.52K 100%    9.85kB/s    0:00:00            9.52K 100%    9.85kB/s    0:00:00 (xfr#402, ir-chk=1056/527613)
+nodraak/Work/workdir/STM32L4x2/tim6.h
+          4.71K 100%    4.87kB/s    0:00:00            4.71K 100%    4.87kB/s    0:00:00 (xfr#403, ir-chk=1055/527613)
+nodraak/Work/workdir/STM32L4x2/tsc.c
+         25.56K 100%   26.44kB/s    0:00:00           25.56K 100%   26.44kB/s    0:00:00 (xfr#404, ir-chk=1054/527613)
+nodraak/Work/workdir/STM32L4x2/tsc.h
+         14.00K 100%   14.48kB/s    0:00:00           14.00K 100%   14.48kB/s    0:00:00 (xfr#405, ir-chk=1053/527613)
+nodraak/Work/workdir/STM32L4x2/usart1.c
+         19.29K 100%   19.95kB/s    0:00:00           19.29K 100%   19.95kB/s    0:00:00 (xfr#406, ir-chk=1052/527613)
+nodraak/Work/workdir/STM32L4x2/usart1.h
+         11.30K 100%   11.69kB/s    0:00:00           11.30K 100%   11.69kB/s    0:00:00 (xfr#407, ir-chk=1051/527613)
+nodraak/Work/workdir/STM32L4x2/usb.c
+         19.60K 100%   20.28kB/s    0:00:00           19.60K 100%   20.28kB/s    0:00:00 (xfr#408, ir-chk=1050/527613)
+nodraak/Work/workdir/STM32L4x2/usb.h
+         12.15K 100%   12.56kB/s    0:00:00           12.15K 100%   12.56kB/s    0:00:00 (xfr#409, ir-chk=1049/527613)
+nodraak/Work/workdir/STM32L4x2/vrefbuf.c
+          8.44K 100%    8.72kB/s    0:00:00            8.44K 100%    8.72kB/s    0:00:00 (xfr#410, ir-chk=1048/527613)
+nodraak/Work/workdir/STM32L4x2/vrefbuf.h
+          3.60K 100%    3.73kB/s    0:00:00            3.60K 100%    3.73kB/s    0:00:00 (xfr#411, ir-chk=1047/527613)
+nodraak/Work/workdir/STM32L4x2/wwdg.c
+          8.45K 100%    8.73kB/s    0:00:00            8.45K 100%    8.73kB/s    0:00:00 (xfr#412, ir-chk=1046/527613)
+nodraak/Work/workdir/STM32L4x2/wwdg.h
+          3.64K 100%    3.77kB/s    0:00:00            3.64K 100%    3.77kB/s    0:00:00 (xfr#413, ir-chk=1045/527613)
+nodraak/Work/workdir/tmp/
+nodraak/Work/workdir/tmp/STM32L4x2-qemu.json
+         32.77K   3%   33.86kB/s    0:00:28            1.01M 100%    1.01MB/s    0:00:00 (xfr#414, ir-chk=1044/527613)
+nodraak/Work/workdir/tmp/STM32L4x2-xsvd.json
+         32.77K   3%   33.68kB/s    0:00:28            1.01M 100%    1.01MB/s    0:00:00 (xfr#415, ir-chk=1043/527613)
+nodraak/Work/workdir/tmp/STM32L4x2.svd
+         32.77K   2%   33.47kB/s    0:00:46            1.60M 100%    1.58MB/s    0:00:00 (xfr#416, ir-chk=1042/527613)
+
+sent 153.60M bytes  received 95.36K bytes  3.80M bytes/sec
+total size is 44.45G  speedup is 289.17
+sending incremental file list
+
+sent 52.54K bytes  received 51 bytes  105.19K bytes/sec
+total size is 4.80G  speedup is 91,178.89
+sending incremental file list
+
+sent 43.40K bytes  received 93 bytes  29.00K bytes/sec
+total size is 14.62G  speedup is 336,004.01
+Filesystem                                             Size  Used Avail Use% Mounted on
+/dev/mapper/luks-63156ce3-8afc-4907-a712-3f1ad78b9bdc  459G   63G  373G  15% /media/nodraak/Backup
+2017-07-13 19:30:34+02:00

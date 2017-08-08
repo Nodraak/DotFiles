@@ -31,6 +31,8 @@ FILELIST = (
 
 
 def main():
+    # todo: mkdir /home/user/.config
+
     for src, dest in FILELIST:
         source = '%s/%s' % (SRC_DIR, src)
         destination = '%s/%s' % (DEST_DIR, dest)
