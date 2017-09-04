@@ -12,14 +12,14 @@ color=#ffffff
 interval=1
 
 [wireless]
-label=wlan0
-instance=wlan0
+label=wlp2s0b1
+instance=wlp2s0b1
 command=~/.config/i3blocks/network_if_
 interval=10
 
 [ethernet]
-label=eth0
-instance=eth0
+label=enp1s0f0
+instance=enp1s0f0
 command=~/.config/i3blocks/network_if_
 interval=10
 

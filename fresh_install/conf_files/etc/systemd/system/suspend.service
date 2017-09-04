@@ -1,0 +1,13 @@
+[Unit]
+Description=Starts i3lock at suspend time
+Before=sleep.target
+
+[Service]
+User=nodraak
+Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=
+ExecStart=/home/nodraak/.config/i3lock/lock
+
+[Install]
+WantedBy=sleep.target

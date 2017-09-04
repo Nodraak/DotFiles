@@ -18,16 +18,16 @@ cd dotfiles && ./install.py
 
 sudo apt-get install ${APTFLAGS} \
     bash-completion command-not-found shellcheck sl \
-    build-essential make cmake autoconf automake python-pip python-dev ipython \
+    build-essential make cmake autoconf automake python-pip python-dev \
     unzip gzip bzip2 \
     curl wget w3m screen tmux \
     htop iotop iftop powertop stress lm-sensors \
     nmap strace \
     imagemagick jpegoptim \
     ca-certificates rsync telnet \
-    pygmentize itstool libxml2-utils intltool pkg-config
+    itstool libxml2-utils intltool pkg-config
 
-sudo pip install numpy requests httpie beautifulsoup flask django pygments
+sudo pip3 install numpy requests httpie beautifulsoup flask django pygments
 
 sudo apt-get install ${APTFLAGS} \
     unattended-upgrades \
@@ -38,79 +38,101 @@ echo "Configure these packages!"
 
 
 # desktop
+
 sudo apt-get install ${APTFLAGS} \
-    ethtool \
-    units pyline \
-    arduino gitg cloc moserial \
+    ethtool socat dnsutils netutils-tools net-tools \
+    units \
+    arduino gitg cloc mercurial \
     gdb valgrind \
     wireshark aircrack-ng \
     wine \
-    texlive pandoc aspell \
+    texlive-full texlive-lang-french texlive-latex-extra xzdec pgf texlive-formats-extra pandoc aspell \
     xorg lightdm i3 suckless-tools \
     i3blocks i3lock dunst uswsusp xbacklight xautolock \
     xsel feh conky redshift \
     evince zathura eog pcmanfm caja \
-    thunderbird amarok xchat firefox-esr \
-    transmission-gtk vlc qemu virtualbox virtualbox-guest-additions-iso \
-    tor torbrowser-launcher virtualbox-guest-additions-iso geogebra kmymoney \
-    steam \
-    libreoffice gimp audacity filezilla eagle \
-    libglib2.0-dev libgtk-3-dev
+    thunderbird amarok hexchat \
+    transmission-gtk vlc qemu \
+    tor geogebra kmymoney \
+    libreoffice gimp audacity filezilla \
+    libglib2.0-dev libgtk-3-dev python3-tk libopencv-dev \
+    kicad itree libnotify-bin \
+    colordiff ascii
 
-sudo pip install matplotlib jrnl mbed-cli youtube-dl
+sudo pip3 install matplotlib jrnl mbed-cli youtube-dl pyline ipython scipy opencv-python
 
-# TODO: wifi (b43) + bluetooth
-# sublime-text https://www.sublimetext.com/3 download, extract, move to /opt, ln -s sublime_text /usr/bin/sublime, config files + license + plugins
-# firefox dev + extensions (ublock origin, cookie manager, disable ctrlq, ghostery, greasmonkey, gnotifier, live hhtp headers, modify http headers, sqlite manager, speed tweaks (speady fox), ssleuth, user agent switcher, web dev)
+# finish texlive install
+# refs
+#   https://tex.stackexchange.com/questions/137428/tlmgr-cannot-setup-tlpdb
+#   https://help.ubuntu.com/community/LaTeX
+#   (https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages)
+sudo tlmgr init-usertree
+sudo tlmgr install framed
+sudo texhash
+
+# unlock bluetooth :
+sudo rfkill list
+sudo rfkill unblock 42
+
+# moserial
+# tarball from http://ftp.gnome.org/pub/GNOME/sources/moserial/
+
+# virtualbox
+# apt source https://www.virtualbox.org/wiki/Linux_Downloads
+# virtualbox-guest-additions-iso ?
+
+# xctu (xbee)
+# https://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu
+
+# sublime
+# download (add repo + apt-get)
+# license
+# plugins + config files
+
+# Firefox
+# uninstall apt's firefox
+# download from website + install manually in /opt + symlink to /usr/bin
+# plugings:
+#   uBlock Origin https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+#   Privacy Badger https://www.eff.org/privacybadger
+#   more extensions (cookie manager, disable ctrlq, ghostery, greasmonkey, gnotifier, live hhtp headers, modify http headers, sqlite manager, speed tweaks (speady fox), ssleuth, user agent switcher, web dev)
+# settings (cf firefoxconfig)
+
+# Local dns
+# apt-get install dnsmasq
+# conf file dnsmask.conf
+# /etc/dhcp/dhclient.conf
+#   supersede domain-name-servers 127.0.0.1;
+#   supersede domain-name ".";
+# check it worked: ndlookup nodraak.fr / nmcli
+
+# font Hack
+# http://sourcefoundry.org/hack/
+
+# check conky + i3bar
+
+# torbrowser
+
+# lock_on_suspend
+# conf file /etc/systemd/system/suspend.service - OR somewhere else
+sudo systemctl enable suspend.service
+sudo systemctl disable suspend.service
+
+# wifi
+# sudo apt-get install firmware-b43-installer
+# fucking use gnome's nm-applet / gnome-settings and drop wicd
+# need?: crda conf file (wifi ?)
+# test it works
+
 # dropbox + gdrive
-# migrate Documents/ Images/ Musique/ Telechargements/
 
-exit
+# xbacklight
+#$ cat /etc/X11/xorg.conf
+#Section "Device"
+#        Identifier      "Card0"
+#        Driver          "intel"
+#        Option          "Backlight"     "/sys/class/backlight/intel_backlight"
+#EndSection
 
-dns ??
-backup ??
-monitoring??
-
-virtualbox
-ffmpef ffprobe ?
-makerbot ?
-tor
-arc theme ?
-crosstools ?
-keybase ?
-opera / chromium ?
-steam
-
-i3
-suckless-tools # dmenu
-i3blocks
-i3locks
-dunst / feh # bg ?
-uswsusp # suspend, ...
-xbacklight
-xautolock
-scrot # screenshots
-
-wicd / wpasupplicant
-
-arm-none-eabi-xx (+ mbed-os + mbed-cli) + cross compiler (os_dev)
-android-tools-adb
-dia
-gnome-*
-graphviz
-quassel
-xctu (xbee) ?
-mono
-monitoring: munin?
-
-gnuplot
-gpredict
-gperf
-
-Download ISO
-    debian
-    tails
-    systemrescuecd
-    kali / bodhi cbpp dracOs Parrot Solus
-    rpi
+# steam
 

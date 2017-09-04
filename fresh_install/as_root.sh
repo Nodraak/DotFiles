@@ -3,13 +3,14 @@
 $user=xx
 
 # keyboard
-cp etc_default_keyboard /etc/default/keyboard
-service keyboard-setup reload
+cp xx/etc_default_keyboard /etc/default/keyboard
+service keyboard-setup restart
 
 # time zone
-cp etc_timezone /etc/timezone
+cp xx/etc_timezone /etc/timezone
 
 # apt
+# update src: disable cdrom and add source
 apt-get update -y
 apt-get upgrade -y
 
@@ -20,3 +21,6 @@ apt-get install -y --no-install-recommends \
 # activate root for user
 usermod -G sudo $user
 
+sudo apt-get purge uswsusp && sudo apt-get install uswsusp # (swap issue)
+
+reboot
