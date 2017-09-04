@@ -23,9 +23,11 @@ nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QReflechi/.bui
 nodraak/Documents/Prog-sysAdmin/Outils/ANDROID_STUFF
 nodraak/Dropbox
 nodraak/STM32Cube
+nodraak/Work
 nodraak/Téléchargements
-nodraak/Telechargements/iTeam_forma
-nodraak/Telechargements/FutureElectronics/
+nodraak/Telechargements/cross
+nodraak/Telechargements/we*
+nodraak/Telechargements/FutureElectronics
 nodraak/Telechargements/tmp*
 nodraak/Telechargements/uTorrent
 nodraak/Telechargements/JDownloader2

@@ -13,3 +13,5 @@ dotfiles/vim/vim/bundle/vim-gitgutter/.gitignore
 dotfiles/vim/vim/bundle/vim-gitgutter/README.mkd
 dotfiles/vim/vim/bundle/vim-gitgutter/doc/
 dotfiles/vim/vim/bundle/vim-gitgutter/screenshot.png
+scripts/backup_home.log
+

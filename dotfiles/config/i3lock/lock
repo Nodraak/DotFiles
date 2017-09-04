@@ -2,14 +2,15 @@
 
 cd $(dirname $(realpath $0))
 
-scrot -e 'mv $f lockbg.png'
-convert lockbg.png \
+scrot -e 'mv $f _screenshot.png'
+cp _screenshot.png _lockbg.png
+convert _lockbg.png \
     -blur 15x15 \
     -family Hack -fill '#FFFFFF' -stroke black -strokewidth 1 -pointsize 32 \
     -gravity south -annotate +0+200 'Type password to unlock' \
-    debian.png -geometry +0+0 -composite lockbg.png
+    debian.png -geometry +0+0 -composite _lockbg.png
 
-i3lock -e -t -i lockbg.png
+i3lock -e -t -i _lockbg.png
 
 # prevent possible race conditions with suspend
 #sleep 1

@@ -445,7 +445,6 @@ how_to_screengif () {
 }
 
 restart_wifi () {
-    set -e
     echo "service wpa_supp restart..."
     sudo service wpa_supplicant restart
     echo "ok"
@@ -492,3 +491,7 @@ swapusage() {
 # if [ -x /usr/games/fortune ]; then
 #     /usr/games/fortune -s | cowsay
 # fi
+
+# docker X11 forwarding
+xhost +local:nodraak > /dev/null
+

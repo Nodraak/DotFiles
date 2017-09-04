@@ -67,6 +67,9 @@ sudo pip install matplotlib jrnl mbed-cli youtube-dl
 
 exit
 
+dns ??
+backup ??
+monitoring??
 
 virtualbox
 ffmpef ffprobe ?
