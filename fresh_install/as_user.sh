@@ -27,7 +27,7 @@ sudo apt-get install ${APTFLAGS} \
     ca-certificates rsync telnet \
     itstool libxml2-utils intltool pkg-config
 
-sudo pip3 install numpy requests httpie beautifulsoup flask django pygments
+sudo pip3 install numpy requests httpie beautifulsoup flask django pygments pylint
 
 sudo apt-get install ${APTFLAGS} \
     unattended-upgrades \
@@ -49,7 +49,7 @@ sudo apt-get install ${APTFLAGS} \
     texlive-full texlive-lang-french texlive-latex-extra xzdec pgf texlive-formats-extra pandoc aspell \
     xorg lightdm i3 suckless-tools \
     i3blocks i3lock dunst uswsusp xbacklight xautolock \
-    xsel feh conky redshift \
+    xsel feh conky redshift scrot \
     evince zathura eog pcmanfm caja \
     thunderbird amarok hexchat \
     transmission-gtk vlc qemu \
@@ -57,7 +57,7 @@ sudo apt-get install ${APTFLAGS} \
     libreoffice gimp audacity filezilla \
     libglib2.0-dev libgtk-3-dev python3-tk libopencv-dev \
     kicad itree libnotify-bin \
-    colordiff ascii
+    colordiff ascii cryptsetup
 
 sudo pip3 install matplotlib jrnl mbed-cli youtube-dl pyline ipython scipy opencv-python
 
@@ -104,7 +104,7 @@ sudo rfkill unblock 42
 # /etc/dhcp/dhclient.conf
 #   supersede domain-name-servers 127.0.0.1;
 #   supersede domain-name ".";
-# check it worked: ndlookup nodraak.fr / nmcli
+# check it worked: nslookup nodraak.fr / nmcli
 
 # font Hack
 # http://sourcefoundry.org/hack/

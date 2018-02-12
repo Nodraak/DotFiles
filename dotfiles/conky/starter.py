@@ -12,7 +12,7 @@ configs = (
     '4_network',
 )
 
-print('chdir("%s")' % home_dir)
+print('[conky/starter.py] Moving to "%s"' % home_dir)
 chdir(home_dir)
 
 # clean previous state

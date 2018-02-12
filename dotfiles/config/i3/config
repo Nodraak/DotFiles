@@ -18,7 +18,10 @@ bindsym $mod+Shift+r restart
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
+# on laptop, top: workspace buttons + i3blocks
 bar {
+    output LVDS1
     status_command i3blocks
     position top
 #binding_mode_indicator no
@@ -29,7 +32,9 @@ bar {
     }
 }
 
+# on laptop, bottom: additional info
 bar {
+    output LVDS1
     status_command i3blocks -c ~/.config/i3blocks/config_windowname
     position bottom
     workspace_buttons no
@@ -37,6 +42,13 @@ bar {
     colors {
         statusline #A0A0A0
     }
+}
+
+# on dual screen (HDMI), bottom: only workspace button
+bar {
+    output HDMI1
+    position bottom
+    workspace_buttons yes
 }
 
 ########################################
@@ -147,7 +159,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86KbdBrightnessUp exec "~/.config/i3/kbdbacklight inc 10 && pkill -RTMIN+3 i3blocks"
 bindsym XF86KbdBrightnessDown exec "~/.config/i3/kbdbacklight dec 10 && pkill -RTMIN+3 i3blocks"
 
-# system: lock, logout, suspend, poweroff
+# system commands: lock, logout, suspend, poweroff
 set $mode_system lock (l) - logout (o) - suspend (s) - hibernate (h) - poweroff (p) - reboot (r)
 set $Locker ~/.config/i3lock/lock
 mode "$mode_system" {
@@ -158,10 +170,23 @@ mode "$mode_system" {
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym p exec --no-startup-id systemctl poweroff -i, mode "default"
 
-    bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+l mode "$mode_system"
+bindsym $mod+l mode "$mode_system"
+
+# Start a software: Firefox, Sublime, Gitg, amaRok
+set $mode_start Internet - Sublime - Gitg - mUsic - mAils - Fichiers
+mode "$mode_start" {
+    bindsym i exec --no-startup-id firefox, mode "default"
+    bindsym s exec --no-startup-id subl, mode "default"
+    bindsym g exec --no-startup-id gitg, mode "default"
+    bindsym u exec --no-startup-id amarok, mode "default"
+    bindsym a exec --no-startup-id thunderbird, mode "default"
+    bindsym f exec --no-startup-id pcmanfm, mode "default"
+
+    bindsym Escape mode "default"
+}
+bindsym $mod+a mode "$mode_start"
 
 ########################################
 # some daemons

@@ -19,7 +19,7 @@ apt-get install -y --no-install-recommends \
     sudo vim git
 
 # activate root for user
-usermod -G sudo $user
+usermod -a -G sudo $user
 
 sudo apt-get purge uswsusp && sudo apt-get install uswsusp # (swap issue)
 

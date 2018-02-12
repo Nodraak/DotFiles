@@ -3,7 +3,6 @@ nodraak/.bash_history
 nodraak/.bash_history_logs
 nodraak/.cache
 nodraak/.config/chromium
-nodraak/.config/sublime-text-2/Backup
 nodraak/.config/libreoffice
 nodraak/.dropbox-dist
 nodraak/.gnupg/gnupg_keys
@@ -17,17 +16,11 @@ nodraak/.wine
 nodraak/.wine64
 nodraak/Documents/Etudes/AAU/P6/Data/sortedClean
 nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/.git
-nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QBouge/.build
-nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QEntreQSort/.build
-nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/Deoxys/QReflechi/.build
-nodraak/Documents/Prog-sysAdmin/Outils/ANDROID_STUFF
-nodraak/Dropbox
 nodraak/STM32Cube
+nodraak/STM32CubeMX
 nodraak/Work
 nodraak/Téléchargements
-nodraak/Telechargements/cross
-nodraak/Telechargements/we*
-nodraak/Telechargements/FutureElectronics
+nodraak/Telechargements/wetransfer-b850a2.zip
 nodraak/Telechargements/tmp*
 nodraak/Telechargements/uTorrent
 nodraak/Telechargements/JDownloader2
@@ -35,4 +28,8 @@ nodraak/Telechargements/JDownloader2
 Media/lost+found
 Media/SteamLibrary
 Media/VirtualBox_VMs
+
+nodraak/Documents/Pro
+nodraak/Documents/Etudes/ECE_ING5/PFE_Cubesat/Site_ece3sat_hugo/themes/ece3sat/static/js/MathJax
+nodraak/Documents/Etudes/ECE_ING5/Android/AndroidStudioProjects
 

@@ -1,13 +1,22 @@
-Disclaimer: shamelessly stolen from https://github.com/mid-kid/config
 
-Privacy plugins:
-- Ublock Origin
-- NoScript
+adapted from https://github.com/mid-kid/config and @aeris22 hints
+
+privacy.firstparty.isolate; true
+
+ublock origin
+umatrix
+privacy badger
+canvas blocker
+disconnect
+https everywhere
+decentraleyes
+au revoir utm
+google search link fix
+smart referer
+
 - Self-Destructing Cookies
-- HTTPS everywhere
+- NoScript
 
-Optional:
-- Privacy Badger (Kinda useless if you use the above)
 
 Options:
 -- Safebrowsing stuff
@@ -27,7 +36,6 @@ Options:
 - media.gmp-eme-adobe.enabled = false
 
 -- Stupid integrated browser plugins
-- loop.enabled = false
 - browser.pocket.enabled = false
 
 -- Search suggestions
@@ -64,7 +72,7 @@ Options:
 - network.cookie.cookieBehavior = 1
 
 -- Cookies last for one session only
-- network.cookie.lifetimePolicy = 2
+- network.cookie.lifetimePolicy = 2 (or 1?)
 
 -- So much for that cheap anti-right-click trick some sites pull off
 - dom.event.clipboardevents.enabled = false
@@ -78,5 +86,3 @@ Options:
 -- Don't be shy.
 - browser.urlbar.trimURLs = false
 
--- Don't cache "webapps"
-- browser.cache.offline.enable = false

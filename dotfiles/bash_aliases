@@ -190,13 +190,14 @@ alias disasArm='arm-none-eabi-objdump -D -F -M intel --demangle'
 complete -o nospace -F _filedir_xspec pylint
 #alias pylintd='pylint3 --load-plugins pylint_django'
 
-# dual monitor
-alias dmen='xrandr --output HDMI1 --above LVDS1 --auto'
-alias dmdis='xrandr --output HDMI1 --off'
+# dual monitor - dont forget to reset conky
+alias dmen='xrandr --output HDMI1 --mode 1440x900 --above LVDS1 && ~/.conky/starter.py'
+alias dmdis='xrandr --output HDMI1 --off && ~/.conky/starter.py'
 
 # misc
 alias pdflatex='pdflatex -file-line-error -halt-on-error'
 HISTIGNORE='jrnl *'  # no export needed
+HISTCONTROL='ignorespace'
 bind Space:magic-space  # expand !!, ^old^new, etc
 
 alias sl='sl -e'
@@ -206,6 +207,7 @@ alias dmesg='dmesg -dTw'
 alias ports='netstat -tulanp'
 alias getlyrics='kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"'
 
+alias iftop_wlan='sudo iftop -i wlp2s0b1'
 
 #
 # Env variables
@@ -352,7 +354,7 @@ o () {
         cmd="pcmanfm"
     fi
 
-    exec $cmd "$@" &
+    exec $cmd "$@" 2> /dev/null &
 }
 complete -o nospace -F _filedir_xspec o
 
