@@ -1,12 +1,17 @@
-gap_x 0
-gap_y 0
-minimum_size 1280 160
-update_interval 3600
-own_window_transparent yes
+-- dont open the config, this general config file and a custom config file are cat-ed together 
+--conky.config = {
 
-own_window_colour 222
-own_window_transparent no
-own_window_argb_value 250
+    gap_x = 0,
+    gap_y = 0,
+    minimum_width = 1230, minimum_height = 180,
+    update_interval = 3600,
 
-TEXT
+    own_window_transparent = false,
+    own_window_transparent = false,
+    own_window_argb_value = 200,
+    own_window_colour = '#222',
+};
 
+conky.text = [[
+
+]];

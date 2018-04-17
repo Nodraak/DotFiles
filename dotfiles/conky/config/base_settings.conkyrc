@@ -1,47 +1,54 @@
-# Default colors and also border colors
-default_color white
-#default_shade_color black
-#default_outline_color white
+conky.config = {
+-- Default colors and also border colors
+    default_color = 'white',
+--default_shade_color black
+--default_outline_color white
 
-#background yes
-update_interval 2
-total_run_times 0 # number of update before quitting. Set to zero to run forever
-double_buffer yes # Use double buffering
-no_buffers yes # Subtract file system buffers from used memory
-top_cpu_separate yes
+--background yes
+    update_interval = 2,
+    total_run_times = 0,-- number of update before quitting. Set to zero to run forever
+    double_buffer = true,-- Use double buffering
+    no_buffers = true,-- Subtract file system buffers from used memory
+    top_cpu_separate = true,
 
-# gnome 3 compatibility + window settings
-own_window yes
-own_window_class Conky
-own_window_type override
-own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+-- gnome 3 compatibility + window settings
+    own_window = true,
+    own_window_class = 'Conky',
+    -- own_window_type = 'override',  -- fail on fedora
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
-# border
-draw_shades no
-draw_outline no
-draw_borders no # borders around text
-draw_graph_borders yes # Draw borders around graphs
-stippled_borders 0 # Border stippling (dashing) - stippled = pointillé in french
-#border_margin 0 not found cmd
-border_width 0
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
 
-# Use Xft (anti-aliased font and stuff)
-use_xft yes
-xftfont Hack:size=8
-#text_buffer_size 2048
-override_utf8_locale yes
-use_spacer left # Adds spaces around certain objects to stop them from moving other things around
-pad_percents 3
+-- border
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,-- borders around text
+    draw_graph_borders = true,-- Draw borders around graphs
+    stippled_borders = 0,-- Border stippling (dashing) - stippled = pointillé in french
+--border_margin 0 not found cmd
+    border_width = 0,
 
-cpu_avg_samples 3
-net_avg_samples 3
+-- Use Xft (anti-aliased font and stuff)
+    use_xft = true,
+    font = 'Hack:size=10',
+--text_buffer_size 2048
+    override_utf8_locale = true,
+    use_spacer = 'left',-- Adds spaces around certain objects to stop them from moving other things around
+    pad_percents = 3,
 
-# size of text area
-#maximum_width 260
-alignment top_left
+    cpu_avg_samples = 3,
+    net_avg_samples = 3,
 
-color0 588 # light blue - title
-color1 0A0 # dark green
-color2 A00 # dark red
-color3 orange
+-- size of text area
+--maximum_width 260
+    alignment = 'top_left',
+
+    color0 = '#588',-- light blue - title
+    color1 = '#0A0',-- dark green
+    color2 = '#A00',-- dark red
+    color3 = 'orange',
+
+-- dont close the config, this general config file and a custom config file are cat-ed together
+--};

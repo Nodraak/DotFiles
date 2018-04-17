@@ -1,10 +1,14 @@
-gap_x 940
-gap_y 20
-minimum_size 250 100
-update_interval 5
-own_window_transparent yes
+-- dont open the config, this general config file and a custom config file are cat-ed together 
+--conky.config = {
 
-TEXT
+    gap_x = 950,
+    gap_y = 40,
+    minimum_width = 250, minimum_height = 100,
+    update_interval = 5,
+    -- own_window_transparent = true,
+};
+
+conky.text = [[
 ${color0}NETWORK ${hr 2}${color}
 Public ${execi 30 echo "$(curl https://httpbin.org/ip --silent | sed -n "2p" | cut -d "\"" -f 4; echo)" "($(date --rfc-3339=second | cut -b 12-19))"}
 enp1s0f0 ${addr enp1s0f0}
@@ -12,3 +16,4 @@ wlp2s0b1 ${if_up wlp2s0b1}${addr wlp2s0b1}
        ${wireless_essid wlp2s0b1} - ${wireless_link_qual_perc wlp2s0b1}${else}disabled${endif}
 ${downspeedgraph wlp2s0b1 30,120} ${goto 130} ${upspeedgraph wlp2s0b1 30, 120}
 Inbound ${downspeedf} ${goto 130}  Outbound ${upspeed}
+]];

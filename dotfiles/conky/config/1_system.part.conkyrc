@@ -1,12 +1,16 @@
-gap_x 10
-gap_y 20
-minimum_size 250 100
-update_interval 1
-own_window_transparent yes
+-- dont open the config, this general config file and a custom config file are cat-ed together 
+--conky.config = {
 
-#${battery} ${alignr}${color 666}${battery_bar 10, 100}${color}
+    gap_x = 10,
+    gap_y = 40,
+    minimum_width = 250, minimum_height = 100,
+    update_interval = 1,
+    -- own_window_transparent = true,
+};
 
-TEXT
+--${battery} ${alignr}${color 666}${battery_bar 10, 100}${color}
+
+conky.text = [[
 ${color0}SYSTEM ${hr 2}${color}
 CPUs
 1 ${freq_g 1} ${cpu cpu1}% ${cpubar cpu1 10,50} | Up ${uptime}
@@ -18,3 +22,4 @@ ${if_match $memperc < 45}${color1}${else}${if_match $memperc < 75}${color3}${els
 RAM    ${mem} ${memperc}% ${alignr}${membar 10,100}${color}
 ${if_match $swapperc == 0}${color1}${else}${if_match $swapperc < 5}${color3}${else}${color2}${endif}${endif}\
 SWAP   ${swap} ${swapperc}% ${alignr}${swapbar 10,100}${color}
+]];

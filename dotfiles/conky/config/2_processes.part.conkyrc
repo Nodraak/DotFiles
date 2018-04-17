@@ -1,10 +1,14 @@
-gap_x 310
-gap_y 20
-minimum_size 250 100
-update_interval 2
-own_window_transparent yes
+-- dont open the config, this general config file and a custom config file are cat-ed together 
+--conky.config = {
 
-TEXT
+    gap_x = 310,
+    gap_y = 40,
+    minimum_width = 270, minimum_height = 100,
+    update_interval = 2,
+    -- own_window_transparent = true,
+};
+
+conky.text = [[
 ${color0}PROCESSES ${hr 2}${color}
 CPU${goto 40}${top name 1}${goto 160}${top pid 1}${goto 220}${top cpu 1}%
    ${goto 40}${top name 2}${goto 160}${top pid 2}${goto 220}${top cpu 2}%
@@ -15,4 +19,4 @@ MEM${goto 40}${top_mem name 1}${goto 160}${top_mem pid 1}${goto 220}${top_mem me
 IO ${goto 40}${top_io name 1}${goto 160}${top_io pid 1}${goto 220}${top_io io_perc 1}%
    ${goto 40}${top_io name 2}${goto 160}${top_io pid 2}${goto 220}${top_io io_perc 2}%
    ${goto 40}${top_io name 3}${goto 160}${top_io pid 3}${goto 220}${top_io io_perc 3}%
-${color #333}${freq_g 1}${color}
+]];

@@ -31,8 +31,9 @@ FILELIST = (
 
 
 def main():
-    # todo: mkdir /home/user/.config
+    print('%s -> %s\n' % (SRC_DIR, DEST_DIR))
 
+    # todo: mkdir /home/user/.config
     for src, dest in FILELIST:
         source = '%s/%s' % (SRC_DIR, src)
         destination = '%s/%s' % (DEST_DIR, dest)
@@ -45,11 +46,13 @@ def main():
             else:
                 status = 'KO'
 
-        print('[%s] %s\n\t%s\n\t-> %s' % (status, dest, destination, source))
+        print('[%s] %-15s -> %s' % (status, src, dest))
 
         if status == 'ln':
             with open(os.devnull, 'w') as shutup:
                 subprocess.check_call(LINK + [source, destination], stderr=shutup)
+
+    print('\nPlease run:\n\techo "source ~/.bash_aliases" >> ~/.bashrc')
 
 
 if __name__ == '__main__':

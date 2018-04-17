@@ -8,6 +8,11 @@
 VIRTUAL_ENV_DISABLE_PROMPT=""
 VIRTUAL_ENV=""
 
+source /usr/share/bash-completion/completions/git
+# /usr/lib/git-core/git-sh-prompt/git-sh-prompt.sh
+# source /usr/share/git-core/contrib/completion/git-prompt.sh
+# debian vs centos
+
 #
 # Set title of terminal, used by PS1 and some alias
 #
@@ -88,11 +93,12 @@ _ps1_update () {
 
     local tmp
     local user_hostname
-    PS1=""
-    user_hostname="${USER}@${HOSTNAME}"
+    local user_hostname="${USER}@${HOSTNAME}"
 
     # window title
     set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
+
+    PS1=""
 
     # virtual env
     if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ];
@@ -180,7 +186,6 @@ alias vd='vimdiff'
 # dev
 alias g='git'  # now this is what I call 'lazy'
 complete -o default -o nospace -F _git g
-source /usr/share/bash-completion/completions/git
 alias gg='gitg'
 alias gg.='gg .'
 alias gcc='gcc -fdiagnostics-color=auto'

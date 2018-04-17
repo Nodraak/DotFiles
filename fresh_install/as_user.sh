@@ -136,3 +136,8 @@ sudo systemctl disable suspend.service
 
 # steam
 
+font Hack
+https://sourcefoundry.org/hack/
+https://github.com/source-foundry/Hack
+
+
