@@ -66,7 +66,7 @@ def main():
     print('Pylint : %d files to check' % nb_files_to_check)
     print('------------ Pylint report ------------')
     for f in py_files_changed:
-        pylint = Popen(("pylint3 -f text %s" % f).split(), stdout=PIPE, stderr=PIPE)
+        pylint = Popen(("pylint -f text %s" % f).split(), stdout=PIPE, stderr=PIPE)
         pylint.wait()
         output = pylint.stdout.read().decode('utf-8')
 

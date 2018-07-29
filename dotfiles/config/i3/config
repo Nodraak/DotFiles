@@ -156,8 +156,8 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 && pkill -RTMIN+2 i3blocks"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 && pkill -RTMIN+2 i3blocks"
 
 # kb backlight
-bindsym XF86KbdBrightnessUp exec "~/.config/i3/kbdbacklight inc 10 && pkill -RTMIN+3 i3blocks"
-bindsym XF86KbdBrightnessDown exec "~/.config/i3/kbdbacklight dec 10 && pkill -RTMIN+3 i3blocks"
+bindsym XF86KbdBrightnessUp exec "sudo ~/.config/i3/kbdbacklight inc 10 && pkill -RTMIN+3 i3blocks"
+bindsym XF86KbdBrightnessDown exec "sudo ~/.config/i3/kbdbacklight dec 10 && pkill -RTMIN+3 i3blocks"
 
 # system commands: lock, logout, suspend, poweroff
 set $mode_system lock (l) - logout (o) - suspend (s) - hibernate (h) - poweroff (p) - reboot (r)
@@ -200,4 +200,7 @@ exec --no-startup-id /home/nodraak/.config/i3blocks/music_must_update &
 
 # TODO xautolock??
 #exec xautolock -detectsleep -time 5 -locker $Locker
+
+
+for_window [ title="^pdfpc - present" ] border none floating enable
 

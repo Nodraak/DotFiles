@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# sudoers: nodraak ALL=NOPASSWD:/home/nodraak/.config/i3/kbdbacklight
+
 import sys
 
 FILEPATH='/sys/class/leds/smc::kbd_backlight/brightness'

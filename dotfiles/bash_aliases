@@ -95,7 +95,9 @@ export LESS_TERMCAP_ue=$'\E[0m'
 #
 
 _ps1_update () {
-    local last_cmd_ret="$?"  # must be first
+    # must be first
+    local pipe_status="${PIPESTATUS[@]}"
+    local pipe_status_sum="$(echo $pipe_status | sed 's/ /+/g' | bc)"
 
     local tmp
     local user_hostname
@@ -132,8 +134,8 @@ _ps1_update () {
     fi
 
     # last cmd ret
-    if [[ "$last_cmd_ret" != "0" ]]; then
-        PS1+="${Red}$last_cmd_ret${NC} "
+    if [[ "$pipe_status_sum" != "0" ]]; then
+        PS1+="${Red}$pipe_status${NC} "
     fi
 
     # cwd
@@ -402,7 +404,7 @@ grepdf () {
 pdf_extract_page() {
     if [ $# -ne 4 ]
     then
-        echo "usage: ./script infile outfile start stop"
+        echo "usage: ./script infile outfile start(including ; 0-indexed) stop(including ; 0-indexed)"
         return 1
     fi
 
