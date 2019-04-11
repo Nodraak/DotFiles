@@ -217,14 +217,20 @@ alias iftop_wlan='sudo iftop -i wlp2s0b1'
 
 export EDITOR="vim"  # for git, crontab, ...
 
+# go
 export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
+# c/cpp
 #export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin
 #export PATH=$GCCARMPATH:${PATH}
 
+# nodejs
 #export PATH=/opt/node-v8.1.2-linux-x64/bin/:${PATH}
+
+# rust
+export PATH=${HOME}/.cargo/bin/:${PATH}
 
 #
 # Functions
@@ -327,7 +333,7 @@ o () {
             cmd="zathura"
             ;;
         *.txt|*.md|*.tex|*.c|*.h|*.py|*.css|*.scss|*.js|*.json|*.sh )
-            cmd="sublime"
+            cmd="subl"
             ;;
         *.html )
             cmd="firefox"
@@ -457,8 +463,9 @@ swapusage() {
     echo "Name             Pid    Swap"
 }
 
-# docker X11 forwarding
-#xhost +local:nodraak > /dev/null
+pdf_diff() {
+    echo 'compare -verbose -debug coder $PDF_1 $PDF_2 -compose src $OUT_FILE.pdf'
+}
 
 #
 # GMV

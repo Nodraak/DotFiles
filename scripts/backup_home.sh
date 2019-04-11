@@ -24,6 +24,7 @@ fi
 
 rm -f ${LOG_FILE}
 
+echo "Started $(date --rfc-3339=seconds)" >> backup_home.complete.log
 date --rfc-3339=seconds >> ${LOG_FILE}
 df -h /media/nodraak/Backup/ | tee -a ${LOG_FILE}
 
@@ -34,8 +35,6 @@ rsync ${RSYNC_ARGS} /home/nodraak ${DEST}/Home | tee -a ${LOG_FILE}
 rsync ${RSYNC_ARGS} /media/Media/Backup ${DEST}/Media | tee -a ${LOG_FILE}
 rsync ${RSYNC_ARGS} /media/Media/PhotosEtImages ${DEST}/Media | tee -a ${LOG_FILE}
 
+echo "Completed $(date --rfc-3339=seconds)" >> backup_home.complete.log
 df -h /media/nodraak/Backup/ | tee -a ${LOG_FILE}
 date --rfc-3339=seconds >> ${LOG_FILE}
-
-date --rfc-3339=seconds >> backup_home.complete.log
-

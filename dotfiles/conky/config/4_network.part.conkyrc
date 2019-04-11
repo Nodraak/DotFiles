@@ -11,8 +11,8 @@
 conky.text = [[
 ${color0}NETWORK ${hr 2}${color}
 Public ${execi 30 echo "$(curl https://httpbin.org/ip --silent | sed -n "2p" | cut -d "\"" -f 4; echo)" "($(date --rfc-3339=second | cut -b 12-19))"}
-enp1s0f0 ${addr enp1s0f0}
-wlp2s0b1 ${if_up wlp2s0b1}${addr wlp2s0b1}
+* enp1s0f0 ${addr enp1s0f0}
+* wlp2s0b1 ${if_up wlp2s0b1}${addr wlp2s0b1}
        ${wireless_essid wlp2s0b1} - ${wireless_link_qual_perc wlp2s0b1}${else}disabled${endif}
 ${downspeedgraph enp1s0f0 30,120} ${goto 130} ${upspeedgraph enp1s0f0 30, 120}
 ${downspeedgraph wlp2s0b1 30,120} ${goto 130} ${upspeedgraph wlp2s0b1 30, 120}

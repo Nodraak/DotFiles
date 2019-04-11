@@ -6,7 +6,7 @@ STATUS_CODE="$(echo "${DATA}" | tail -n 1)"
 
 if [ "${STATUS_CODE}" = "200" ]
 then
-    IP=$(echo "${DATA}" | sed -n "2p" | cut -d "\"" -f 4)
+    IP="$(echo "${DATA}" | sed -n "2p" | cut -d "\"" -f 4)"
 
     echo "$IP"
     echo "$IP"
@@ -14,11 +14,10 @@ else
     # curl's exit code 6: Couldn't resolve host. The given remote host was not resolved.
     if [ $CURL_EXIT_CODE -eq 6 ]
     then
-        echo "unknown (no conn)"
-        echo "unknown (no conn)"
+        echo "unknown (6: resolv)"
+        echo "unknown (6: resolv)"
     else
         echo "unknown (${STATUS_CODE})"
         echo "unknown (${STATUS_CODE})"
     fi
 fi
-

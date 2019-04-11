@@ -42,7 +42,7 @@ Options:
 - browser.search.suggest.enabled = false
 
 -- WebRTC
-- media.peerconnection.enabled = false
+- media.peerconnection.enabled = false -> NOP, breaks appears.in ? (need restart)
 
 -- Geolocation
 - beacon.enabled = false
@@ -75,7 +75,7 @@ Options:
 - network.cookie.lifetimePolicy = 2 (or 1?)
 
 -- So much for that cheap anti-right-click trick some sites pull off
-- dom.event.clipboardevents.enabled = false
+- dom.event.clipboardevents.enabled = false -> NOP, it breaks ctrl-c ctrl-v in gdocs
 
 -- Why do websites need my battery stats?
 - dom.battery.enabled = false
@@ -85,4 +85,3 @@ Options:
 
 -- Don't be shy.
 - browser.urlbar.trimURLs = false
-
