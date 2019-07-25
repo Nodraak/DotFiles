@@ -8,10 +8,16 @@
 VIRTUAL_ENV_DISABLE_PROMPT=""
 VIRTUAL_ENV=""
 
-source /usr/share/bash-completion/completions/git
+# depending on OS and version
+F=/usr/share/bash-completion/completions/git
+if [[ -e "$F" ]]; then source "$F"; fi
+F=/etc/bash_completion.d/git-prompt
+if [[ -e "$F" ]]; then source "$F"; fi
+F=/etc/bash_completion.d/git
+if [[ -e "$F" ]]; then source "$F"; fi
 # /usr/lib/git-core/git-sh-prompt/git-sh-prompt.sh
 # source /usr/share/git-core/contrib/completion/git-prompt.sh
-# debian vs centos
+
 
 #
 # Set title of terminal, used by PS1 and some alias
@@ -96,28 +102,20 @@ _ps1_update () {
     local user_hostname="${USER}@${HOSTNAME}"
 
     # window title
-    set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
+    #set_xtitle "${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}"
 
     PS1=""
-
-    # virtual env
-    if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ];
-    then
-        virtual_env=$(basename "$VIRTUAL_ENV")
-        if [ "$virtual_env" != "" ];
-        then
-            PS1+="($virtual_env) "
-        fi
-    fi
 
     # date
     PS1+="${Cyan}\t${NC} "
 
     # login + hostname
     # TODO: add rpi + update for Debian 9
-    if [[ "$user_hostname" = "nodraak@lapbian" ]]; then
+    if [[ "$user_hostname" = "achardon@ltadch" ]]; then
         PS1+="${Green}$user_hostname${NC} "
-    elif [[ "$user_hostname" = "nodraak@diamant" ]]; then
+    elif [[ "$user_hostname" = "Debian@ltadch" ]]; then
+        PS1+="${Green}$user_hostname${NC} "
+    elif [[ "$user_hostname" = "adch@s5icsaswdev" ]]; then
         PS1+="${Cyan}$user_hostname${NC} "
     else
         PS1+="${Red}$user_hostname${NC} "
@@ -145,11 +143,6 @@ _ps1_update () {
     PS1+="\n\\$ "
 
     # no "export PS1" needed
-
-    # to finish: log the last command - for stats purposes
-    #if [[ "$user_hostname" = "nodraak@macbian8" ]]; then
-    #    echo "$(date --rfc-3339=seconds) $(pwd) $(history 1)" >> "${HOME}/.bash_history_logs/$(date "+%Y-%m-%d").log"
-    #fi
 }
 
 PROMPT_COMMAND="_ps1_update"
@@ -193,13 +186,9 @@ alias disas='objdump -D -F -M intel --demangle'
 alias disasArm='arm-none-eabi-objdump -D -F -M intel --demangle'
 
 # dev - techno specific utils
-alias sba='source ../bin/activate'
-alias cc='compass compile'
-complete -o nospace -F _filedir_xspec cc
-alias pmr='python manage.py runserver'
-alias pylint='pylint3 --comment=y'
+#alias pylint='pylint3 --comment=y'
 complete -o nospace -F _filedir_xspec pylint
-alias pylintd='pylint3 --load-plugins pylint_django'
+#alias pylintd='pylint3 --load-plugins pylint_django'
 
 # dual monitor
 alias dmen='xrandr --output HDMI1 --above LVDS1 --auto'
@@ -212,7 +201,7 @@ bind Space:magic-space  # expand !!, ^old^new, etc
 
 alias sl='sl -e'
 alias tmux='TERM=screen-256color tmux'  # keep vim's user defined theme
-alias dmesg=' dmesg -dTw'
+alias dmesg='dmesg -dTw'
 
 alias ports='netstat -tulanp'
 alias getlyrics='kid3-cli -c "get comment" "$(mocp --info | grep File | cut -b 7-)"'
@@ -228,22 +217,14 @@ export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
-export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin
-export PATH=$GCCARMPATH:${PATH}
+#export GCCARMPATH=/home/nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/gcc-arm-none-eabi-5_4-2016q2/bin
+#export PATH=$GCCARMPATH:${PATH}
 
-export PATH=/opt/node-v8.1.2-linux-x64/bin/:${PATH}
+#export PATH=/opt/node-v8.1.2-linux-x64/bin/:${PATH}
 
 #
 # Functions
 #
-
-cvg () {
-    coverage erase
-    echo "Starting tests ..."
-    coverage run ./manage.py test
-    echo "Generating html report ..."
-    coverage html
-}
 
 _texspell_file() {
     if [ $# -ne 4 ]
@@ -449,15 +430,6 @@ how_to_screengif () {
     echo "gifsicle -O in.gif -o out.gif"
 }
 
-restart_wifi () {
-    echo "service wpa_supp restart..."
-    sudo service wpa_supplicant restart
-    echo "ok"
-    echo "dhcclient wlan0..."
-    sudo dhclient wlan0
-    echo "ok"
-}
-
 alias youtube-dl-audio="youtube-dl --extract-audio --format 140"
 
 
@@ -481,22 +453,77 @@ swapusage() {
     echo "Name             Pid    Swap"
 }
 
-
-#
-# Finally, stuff that prints something
-#
-
-# Start tmux on every shell login
-#[[ $- != *i* ]] && return  # If not running interactively, do not do anything
-#[[ -z "$TMUX" ]] && TERM=screen-256color exec tmux
-
-# linuxlogo
-
-# Makes our day a bit more fun !
-# if [ -x /usr/games/fortune ]; then
-#     /usr/games/fortune -s | cowsay
-# fi
-
 # docker X11 forwarding
-xhost +local:nodraak > /dev/null
+#xhost +local:nodraak > /dev/null
+
+#
+# GMV
+#
+
+# ltadch
+
+function setup_aliases_ltadch() {
+    # from http://wpad/wpad.dat - 2019-05-07
+    export http_proxy="http://ptmproxy.gmv.es:80"
+    export https_proxy="http://ptmproxy.gmv.es:80"
+
+    alias mount_projects="sudo umount /mnt/p ; sudo mount -t drvfs '\\\\gmvprojects\\s5_ics_asw' /mnt/p"
+    alias mount_gmvstorage="sudo umount /mnt/s ; sudo mount -t drvfs '\\\\gmvstorage\\storage\\S5-ICS-ASW' /mnt/s"
+    alias mount_gmvteca="sudo umount /mnt/t ; sudo mount -t drvfs '\\\\gmvteca\\gmvteca' /mnt/t"
+
+    export DISPLAY=localhost:0.0
+    alias xforwardS5Vcast="ssh -fX s5dev vcastqt"
+    alias checkPis="ssh s5pis 'ps aux | grep h1505-mib'"
+
+    alias sudo='sudo -EH'
+}
+
+# s5icsaswdev
+
+function setup_path_ut_vcast() {
+    export PATH=$PATHUNITEST
+}
+
+function setup_path_vt() {
+    export PATH=$PATHVALTEST
+}
+
+function setup_aliases_s5dev() {
+
+    #
+    # PATH
+    #
+
+    export PATHBAK=$PATH
+
+    # common
+    export PATH=$PATH:/home/adch/scripts
+    export PATH=$PATH:/opt/vcast
+    export PATH=$PATH:/opt/tsim-leon/tsim/linux-x64
+
+    # custom
+    export PATHUNITEST=$PATH:/opt/rtems-4.6/bin/
+    export PATHVALTEST=$PATH:/opt/rtems/4.6_20171003/bin
+
+    #setup_path_ut_vcast
+    setup_path_vt
+
+    #
+    # Others
+    #
+
+    export LM_LICENSE_FILE=41931@licserver
+    export S5ICSASW_VCAST_CONFIG_DIR=~/S5-ICS-ASW-VectorCast_CONFIG/
+
+    alias svnstatus='svn status | grep -v ?'
+    alias py='python3.6'
+    alias pylint='python3.6 -m pylint'
+
+    export LC_ALL=en_US.utf8
+    export LC_CTYPE=en_US.utf8
+}
+
+
+setup_aliases_ltadch
+#setup_aliases_s5dev
 

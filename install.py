@@ -11,22 +11,27 @@ LINK = ['ln', '-s']
 
 # (source, dest)
 FILELIST = (
+# base
     ('bash_aliases', '.bash_aliases'),
-    ('config/dunst', '.config/dunst'),
-    ('config/i3', '.config/i3'),
-    ('config/i3lock', '.config/i3lock'),
-    ('config/i3blocks', '.config/i3blocks'),
-    ('config/redshift.conf', '.config/redshift.conf'),
-    ('conky', '.conky'),
-    ('coveragerc', '.coveragerc'),
-    ('gdbinit', '.gdbinit'),
-    ('git/gitconfig', '.gitconfig'),
-    ('git/git_template', '.git_template'),
+    #('git/gitconfig', '.gitconfig'),
     ('ipython', '.ipython'),
-    ('pylintrc', '.pylintrc'),
-    ('tmux.conf', '.tmux.conf'),
     ('vim/vim', '.vim'),
     ('vim/vimrc', '.vimrc'),
+
+# laptop
+    #('config/dunst', '.config/dunst'),
+    #('config/i3', '.config/i3'),
+    #('config/i3lock', '.config/i3lock'),
+    #('config/i3blocks', '.config/i3blocks'),
+    #('config/redshift.conf', '.config/redshift.conf'),
+    #('conky', '.conky'),
+
+# others
+    #('coveragerc', '.coveragerc'),
+    #('gdbinit', '.gdbinit'),
+    #('git/git_template', '.git_template'),
+    #('pylintrc', '.pylintrc'),
+    #('tmux.conf', '.tmux.conf'),
 )
 
 

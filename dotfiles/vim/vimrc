@@ -10,6 +10,7 @@ set encoding=utf-8              " The encoding displayed.
 set fileencoding=utf-8          " The encoding written to file.
 set autoread                    " Set to auto read when a file is changed from the outside
 set title                       " Set the title of the window in the terminal to the file
+set titleold=                   " reset title on exit
 set mouse=a                     " enable mouse support
 set ruler                       " Show row and column ruler information
 set number                      " Line numbers on
