@@ -1,4 +1,3 @@
-nodraak/.buildozer
 nodraak/.bash_history
 nodraak/.bash_history_logs
 nodraak/.cache
@@ -14,22 +13,19 @@ nodraak/.steam
 nodraak/.thumbnails
 nodraak/.wine
 nodraak/.wine64
-nodraak/Documents/Etudes/AAU/P6/Data/sortedClean
-nodraak/Documents/Etudes/ECE_ING4/Deoxys/stm32-mbed/Deoxys/.git
-nodraak/STM32Cube
-nodraak/STM32CubeMX
-nodraak/Work
+
+nodraak/Documents/Jobs
+nodraak/Documents/Studies/AAU/P6/Data/sortedClean
+nodraak/Documents/Studies/ECE_ING4/Deoxys/stm32-mbed/Deoxys/.git
+nodraak/Documents/Studies/ECE_ING5/PFE_Cubesat/Site_ece3sat_hugo/themes/ece3sat/static/js/MathJax
+nodraak/Documents/Studies/ECE_ING5/Android/AndroidStudioProjects
+
 nodraak/Téléchargements
-nodraak/Telechargements/wetransfer-b850a2.zip
 nodraak/Telechargements/tmp*
 nodraak/Telechargements/uTorrent
-nodraak/Telechargements/JDownloader2
 
 Media/lost+found
 Media/SteamLibrary
 Media/VirtualBox_VMs
 
-nodraak/Documents/Pro
-nodraak/Documents/Etudes/ECE_ING5/PFE_Cubesat/Site_ece3sat_hugo/themes/ece3sat/static/js/MathJax
-nodraak/Documents/Etudes/ECE_ING5/Android/AndroidStudioProjects
 
