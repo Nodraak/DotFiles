@@ -33,10 +33,10 @@ c.InteractiveShellApp.exec_lines = [
     'from math import cos, sin, cosh, sinh, tanh, acosh, asinh, pi, sqrt, log, log10',
     'import numpy as np',
     'from numpy import linspace',
-    'from scipy import signal, fftpack',
-    'from scipy.stats import norm',
+#    'from scipy import signal, fftpack',
+#    'from scipy.stats import norm',
     'from matplotlib import pyplot as plt',
-    'import cv2',
+#    'import cv2',
 ]
 
 # Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',

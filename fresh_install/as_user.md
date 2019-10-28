@@ -29,7 +29,7 @@ $APTINSTALL rsync stress
 # X11
 $APTINSTALL xorg lightdm i3 i3blocks i3lock scrot suckless-tools  # {i3lock,scrot}->lock, suckless-tools->dmenu
 $APTINSTALL xbacklight libnotify-bin imagemagick gnome-control-center terminator # xbacklight, notify-send (battery), convert
-$APTINSTALL conky redshift
+$APTINSTALL conky lm-sensors redshift
 #$APTINSTALL xautolock xsel feh dunst uswsusp
 
 # bash
@@ -214,6 +214,7 @@ sudo rfkill unblock 42
 
 # font Hack
 # http://sourcefoundry.org/hack/
+#https://github.com/source-foundry/Hack
 
 
 # dropbox + gdrive

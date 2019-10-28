@@ -14,7 +14,7 @@ conky.text = [[
 ${color0}SYSTEM ${hr 2}${color}
 CPUs
 1 ${freq_g 1} ${cpu cpu1}% ${cpubar cpu1 10,50} | Up ${uptime}
-2 ${freq_g 2} ${cpu cpu2}% ${cpubar cpu2 10,50} | Temp ${execi 2 sensors | grep "Core 0" | cut -b 18-25}
+2 ${freq_g 2} ${cpu cpu2}% ${cpubar cpu2 10,50} | Temp ${execi 2 sensors | grep "Core 0" | cut -b 16-25}
 3 ${freq_g 3} ${cpu cpu3}% ${cpubar cpu3 10,50} | Fan ${execi 2 sensors | grep Exhaust | cut -b 14-21}
 4 ${freq_g 4} ${cpu cpu4}% ${cpubar cpu4 10,50} | Load ${execi 2 cat /proc/loadavg | cut -d " " -f 1}
 
