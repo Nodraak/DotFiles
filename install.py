@@ -12,7 +12,7 @@ LINK = ['ln', '-s']
 # (source, dest)
 FILELIST = (
 # base
-    ('bash_aliases', '.bash_aliases'),
+    ('bash/', '.bash'),
     #('git/gitconfig', '.gitconfig'),
     ('ipython', '.ipython'),
     ('vim/vim', '.vim'),
@@ -57,7 +57,7 @@ def main():
             with open(os.devnull, 'w') as shutup:
                 subprocess.check_call(LINK + [source, destination], stderr=shutup)
 
-    print('\nPlease run:\n\techo "source ~/.bash_aliases" >> ~/.bashrc')
+    print('\nPlease run:\n\techo "source ~/.bash/main.sh" >> ~/.bashrc')
 
 
 if __name__ == '__main__':
