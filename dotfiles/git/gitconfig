@@ -32,8 +32,7 @@
     ui = auto
 [push]
     default = matching
-[init]
-    templatedir = ~/.git_template
 [rebase]
     autostash = true
-[core]
+[diff]
+    noprefix = true

@@ -52,5 +52,5 @@ function setup_aliases_s5dev()
     export LC_CTYPE=en_US.utf8
 }
 
-setup_aliases_ltadch
+#setup_aliases_ltadch
 #setup_aliases_s5dev

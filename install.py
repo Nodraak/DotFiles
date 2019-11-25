@@ -13,7 +13,7 @@ LINK = ['ln', '-s']
 FILELIST = (
 # base
     ('bash/', '.bash'),
-    #('git/gitconfig', '.gitconfig'),
+    ('git/gitconfig', '.gitconfig'),
     ('ipython', '.ipython'),
     ('vim/vim', '.vim'),
     ('vim/vimrc', '.vimrc'),

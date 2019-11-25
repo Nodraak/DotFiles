@@ -19,7 +19,7 @@ source "$DIR/git-completion.sh"
 source "$DIR/func-open.sh"
 source "$DIR/func-latex.sh"
 source "$DIR/func-pdf.sh"
-source "$DIR/func-misc.sh"
+source "$DIR/func-miscs.sh"
 
 # env specific
-source "$DIR/gmv.sh"
+#source "$DIR/gmv.sh"
