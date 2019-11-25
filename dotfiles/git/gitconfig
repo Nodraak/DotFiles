@@ -1,20 +1,16 @@
 [user]
     name = Adrien Chardon
-    email = adrienchardon@mailoo.org
-    signingkey = BB79836B
-[commit]
-    # gpgsigning is awfull during rebase... use alias cm and ca to gpg sign
-    gpgsign = false
+    email = achardon@gmv.com
 [alias]
     a = add
     b = branch
     d = diff
     #fp = fetch -p
     s = status -s -b
-    sh = -c commit.gpgsign=false stash
-    #c = commit -S
-    cm = commit -S -m
-    ca = commit -S --amend
+    sh = stash
+    #c = commit
+    cm = commit -m
+    ca = commit --amend
     #cl = clone
     ck = checkout
     #ph = push

@@ -54,3 +54,10 @@ function setup_aliases_s5dev()
 
 #setup_aliases_ltadch
 #setup_aliases_s5dev
+
+export http_proxy="http://ptmproxy.gmv.es:80"
+export https_proxy="http://ptmproxy.gmv.es:80"
+
+# start wsl app from windows
+export DISPLAY=localhost:0.0
+

@@ -1,4 +1,9 @@
 {
+	"commented": {
+		"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+		"dictionary": "Packages/Language - French - Français/fr_FR.dic",
+		"font_face": "Hack",
+	},
 	"auto_complete": false,
 	"auto_complete_size_limit": 512000,
 	"auto_find_in_selection": true,
@@ -18,9 +23,7 @@
 		"*.jar",
 		"*.zip"
 	],
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"copy_with_empty_selection": false,
-	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -30,7 +33,6 @@
 		"CVS",
 		"node_modules/*"
 	],
-	"font_face": "Hack",
 	"font_size": 10,
 	"highlight_line": true,
 	"hot_exit": false,
