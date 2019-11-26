@@ -1,0 +1,13 @@
+{
+    "selector": "text.html.markdown",
+    "cmd": ["pandoc", "${file}", "-o", "${file_base_name}.html"],
+    "working_dir": "${file_path}",
+
+    "variants":
+    [
+        {
+            "name": "Run",
+            "cmd": ["bash", "-c", "pandoc --number-sections ${file} -o ${file_base_name}.html && firefox ${file_path}/${file_base_name}.html"]
+        }
+    ]
+}

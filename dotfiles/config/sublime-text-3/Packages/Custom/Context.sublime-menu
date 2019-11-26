@@ -1,0 +1,35 @@
+[
+    {
+        "caption": "Custom",
+        "children":
+        [
+            {
+                "caption": "Open With Terminal",
+                "command": "open_terminal_file",
+                "args": {
+                    "files": null
+                }
+            },
+            {
+                "caption": "Open With Zathura",
+                "command": "open_file_with_zathura",
+                "args": {
+                    "files": null
+                }
+            },
+            {
+                "caption": "Open With Gitg",
+                "command": "open_with_gitg",
+                "args": {
+                    "files": null
+                }
+            },
+            {
+                "command": "git_blame"
+            },
+            {
+                "command": "git_diff"
+            }
+        ]
+    }
+]

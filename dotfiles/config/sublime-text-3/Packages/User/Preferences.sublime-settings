@@ -1,0 +1,54 @@
+{
+	"auto_complete": false,
+	"auto_complete_size_limit": 512000,
+	"auto_find_in_selection": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"copy_with_empty_selection": false,
+	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".hg",
+		".svn",
+		"CVS",
+		"node_modules/*"
+	],
+	"font_face": "Hack",
+	"font_size": 10,
+	"highlight_line": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+	],
+	"index_files": false,
+	"index_workers": 1,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
