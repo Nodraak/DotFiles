@@ -6,6 +6,9 @@
 
 export EDITOR="vim"  # for git, crontab, ...
 
+# PATH
+export PATH="/home/adch/.local/bin:$PATH"
+
 # go
 export GOPATH=~/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}

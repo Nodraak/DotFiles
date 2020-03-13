@@ -12,9 +12,10 @@ LINK = ['ln', '-s']
 # (source, dest)
 FILELIST = (
 # base
-    ('bash/', '.bash'),
+    ('bash', '.bash'),
     ('git/gitconfig', '.gitconfig'),
     ('ipython', '.ipython'),
+    ('config/sublime-text-3/Packages', '.config/sublime-text-3/Packages'),
     ('vim/vim', '.vim'),
     ('vim/vimrc', '.vimrc'),
 
@@ -57,7 +58,9 @@ def main():
             with open(os.devnull, 'w') as shutup:
                 subprocess.check_call(LINK + [source, destination], stderr=shutup)
 
-    print('\nPlease run:\n\techo "source ~/.bash/main.sh" >> ~/.bashrc')
+    print('\nTwo last things:')
+    print('\t* Update dotfiles/bash/main.sh dotfiles path')
+    print('\t* Run: echo "source ~/.bash/main.sh" >> ~/.bashrc')
 
 
 if __name__ == '__main__':
