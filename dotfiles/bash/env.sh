@@ -6,11 +6,12 @@
 
 export EDITOR="vim"  # for git, crontab, ...
 
-# PATH
-export PATH="/home/adch/.local/bin:$PATH"
+# Home
+export PATH=${HOME}/bin:${PATH}
+export PATH=${HOME}/.local/bin:${PATH}
 
 # go
-export GOPATH=~/gopath
+export GOPATH=${HOME}/gopath
 export PATH=$GOPATH:$GOPATH/bin:${PATH}
 export DRIVE_GOMAXPROCS=8
 
@@ -22,4 +23,4 @@ export DRIVE_GOMAXPROCS=8
 #export PATH=/opt/node-v8.1.2-linux-x64/bin/:${PATH}
 
 # rust
-export PATH=${HOME}/.cargo/bin/:${PATH}
+export PATH=${HOME}/.cargo/bin:${PATH}
