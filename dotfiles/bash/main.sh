@@ -23,3 +23,4 @@ source "$DIR/func-miscs.sh"
 
 # env specific
 #source "$DIR/gmv.sh"
+source "$DIR/pts.sh"
