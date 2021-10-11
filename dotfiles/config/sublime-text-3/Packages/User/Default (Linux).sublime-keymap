@@ -5,4 +5,5 @@
     { "keys": ["ctrl+shift+o"],         "command": "prompt_open_folder" },
     { "keys": ["ctrl+k", "ctrl+t"],     "command": "title_case" },
 
+    { "keys": ["ctrl+q"], "command": "" },
 ]

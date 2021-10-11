@@ -21,7 +21,7 @@
     #pl = pull
     #pulledcode = log -p --reverse --no-merges --stat @{1}..
     #pulledcommit = log --reverse --no-merges --stat @{1}..
-    l = log --pretty=format:'%C(red)%h %C(yellow)%ad %C(reset)%s %C(blue)%an%C(green)%d' --date=format:'%Y%m%d-%H%M'
+    l = log --pretty=format:'%C(red)%h %C(yellow)%ad %C(reset)%s %C(blue)%an%C(green)%d' --date=iso
     ri = rebase -i
     rc = rebase --continue
     l1 = log --pretty=oneline --abbrev-commit --decorate=short

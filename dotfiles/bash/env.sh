@@ -4,7 +4,7 @@
 # Env variables
 #
 
-export EDITOR="vim"  # for git, crontab, ...
+export EDITOR="subl -w"  # for git, crontab, ...
 
 # Home
 export PATH=${HOME}/bin:${PATH}
