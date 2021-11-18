@@ -59,6 +59,26 @@ function _swapusage()
 function swapusage()
 {
     echo "Name             Pid    Swap"
-    _swapusage | column -t | sort -k 3 -n
-    echo "Name             Pid    Swap"
+    _swapusage | column -t | sort -k 3 -n -r | head -n 20
 }
+
+#
+# function CPU freq
+#
+# sudo su
+#
+# #FREQ=1200000
+# FREQ=3600000
+#
+# echo $FREQ > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+# echo $FREQ > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+# echo $FREQ > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+# echo $FREQ > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+#
+
+#
+# function filigrame
+#
+# CONVERT_OPTIONS='-fill none -stroke red -strokewidth 3 -pointsize 300 -gravity center -annotate 315x315+0+0'
+# convert $IN $CONVERT_OPTIONS "2020-12-09 - Formulario U1" $OUT
+#

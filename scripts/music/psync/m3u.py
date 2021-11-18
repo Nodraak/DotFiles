@@ -46,6 +46,8 @@ class M3u(Backend):
         return pdb
 
     def save(self, data):
+        # TODO delete all files from folder
+
         for playlist_name, playlist_data in data.get_data():
             if 'tags' not in playlist_data:
                 playlist_data['tags'] = ['' for _ in range(len(playlist_data['songs']))]

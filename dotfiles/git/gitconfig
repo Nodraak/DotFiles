@@ -32,6 +32,8 @@
     statsAuthors = shortlog -sne --oneline --since='Jan 1 2010'
 [color]
     ui = auto
+[core]
+    editor = subl --wait
 [diff]
     noprefix = true
     colormoved = zebra

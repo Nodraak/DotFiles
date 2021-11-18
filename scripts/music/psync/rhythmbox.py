@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+TODO: check https://github.com/adrienverge/rhythmbox_playlist_to_m3u/blob/master/rhythmbox_playlist_to_m3u.py
+"""
 
 from lxml import etree
 import urllib.parse

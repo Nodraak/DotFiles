@@ -154,6 +154,7 @@ assign [class="^Thunderbird$"] 10
 bindsym XF86AudioRaiseVolume exec "amixer -q set Master 5%+ unmute && pkill -RTMIN+1 i3blocks"
 bindsym XF86AudioLowerVolume exec "amixer -q set Master 5%- unmute && pkill -RTMIN+1 i3blocks"
 bindsym XF86AudioMute exec "amixer -q set Master toggle && pkill -RTMIN+1 i3blocks"
+#bindsym XF86AudioMute exec "gnome-screenshot"
 
 # screen light
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 && pkill -RTMIN+2 i3blocks"

@@ -23,3 +23,7 @@ source "$DIR/func-miscs.sh"
 
 # env specific
 #source "$DIR/gmv.sh"
+
+
+export PATH=/opt/rtems-4.10/bin/:${PATH}
+export PATH=/opt/mkprom2/:${PATH}

@@ -4,7 +4,9 @@ $user=xx
 
 # keyboard
 cp xx/etc_default_keyboard /etc/default/keyboard
+cp conf/etc/X11/xorg /etc....
 service keyboard-setup restart
+reboot?
 
 # time zone
 cp xx/etc_timezone /etc/timezone

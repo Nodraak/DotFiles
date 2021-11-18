@@ -89,6 +89,14 @@ sudo pip3 install \
 #        Option          "Backlight"     "/sys/class/backlight/intel_backlight"
 #   EndSection
 
+nodraak ALL=NOPASSWD:/home/nodraak/.config/i3/kbdbacklight
+
+#
+# Docker
+#
+
+# Image path: https://blog.adriel.co.nz/2018/01/25/change-docker-data-directory-in-debian-jessie/
+
 ```
 
 
@@ -137,6 +145,18 @@ sudo pip3 install \
     sudo texhash
     sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
 
+#
+# Steam - https://wiki.debian.org/Steam
+#
+
+Source non-free: deb http://deb.debian.org/debian/ buster main contrib non-free
+dpkg --add-architecture i386
+apt update
+apt install steam
+
+# KSP: https://github.com/KSP-CKAN/CKAN
+
+
 ```
 
 
@@ -150,6 +170,16 @@ sudo pip3 install \
 
 
 
+
+
+```
+# added nodraak 2017-09-12
+# be nice to the hdd
+tmpfs                                           /tmp            tmpfs           defaults,noatime,nosuid,nodev,mode=1777,size=1024M 0 0
+
+# /media/Media
+UUID=1286acbd-c6fc-4bd1-b57b-572e59ac32e2       /media/Media    ext4            defaults,noatime 0       2
+```
 
 
 
@@ -184,6 +214,7 @@ keyboard backlight
 
 
     # jrnl mbed-cli  pyline scipy opencv-python
+https://github.com/jrnl-org/jrnl
 
 
     unattended-upgrades \
@@ -203,7 +234,10 @@ sudo rfkill list
 sudo rfkill unblock 42
 
 # moserial
-# tarball from http://ftp.gnome.org/pub/GNOME/sources/moserial/
+# https://wiki.gnome.org/action/show/Apps/Moserial / https://gitlab.gnome.org/GNOME/moserial.git
+# deps: gnome-common yelp-tools gtk+-3.0 valac
+# port access: sudo addgroup "$USERNAME" dialout
+# old: tarball from http://ftp.gnome.org/pub/GNOME/sources/moserial/
 
 # virtualbox
 # apt source https://www.virtualbox.org/wiki/Linux_Downloads
@@ -261,3 +295,5 @@ Download ISO
     kali / bodhi cbpp dracOs Parrot Solus
     rpi
 
+
+pip3 install weboob ansible
