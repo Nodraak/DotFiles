@@ -3,7 +3,8 @@
     gpgsign = false
 [user]
     name = Adrien Chardon
-    email = adrienchardon@mailoo.org
+    #email = adrienchardon@mailoo.org
+    email = adrien.chardon@pts.space
     signingkey = BB79836B
 
 [alias]
