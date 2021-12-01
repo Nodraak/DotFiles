@@ -32,9 +32,11 @@
 [color]
     ui = auto
 [push]
-    default = matching
+    default = upstream
 [rebase]
     autostash = true
 [diff]
     noprefix = true
     colormoved = zebra
+[http]
+    sslVerify = true
