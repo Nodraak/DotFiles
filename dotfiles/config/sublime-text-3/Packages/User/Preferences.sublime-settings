@@ -16,7 +16,8 @@
 		"*.pdf",
 		"*.swf",
 		"*.jar",
-		"*.zip"
+		"*.zip",
+		"*/ut-stubs/*"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"copy_with_empty_selection": false,
@@ -31,7 +32,6 @@
 		"node_modules/*"
 	],
 	"font_face": "Hack",
-	"font_size": 10,
 	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
