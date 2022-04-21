@@ -11,6 +11,12 @@ DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export PATH=$PATH:/opt/kickstage/astris-precompiled-tools/opt/clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu-/bin/
 
+# reproducible compilation - not sure which is needed
+export LANG="en_US.utf8"
+export LANGUAGE="en_US.utf8"
+export LC_ALL="en_US.utf8"
+export LC_CTYPE="en_US.utf8"
+
 function pts_initworkenv_term() {
     AKS_ROOT="$HOME/Documents/2021-PTS/work/Kickstage/2021-08-work/"
 
