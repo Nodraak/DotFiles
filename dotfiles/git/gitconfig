@@ -39,6 +39,9 @@
     sslVerify = true
 [init]
     defaultBranch = main
+[merge]
+    # https://blog.nilbus.com/take-the-pain-out-of-git-conflict-resolution-use-diff3/
+    conflictstyle = diff3
 [push]
     default = upstream
 [rebase]
