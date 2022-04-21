@@ -22,8 +22,8 @@ function pts_initworkenv_term() {
 
     terminator --new-tab -e "echo -e '\033]2;py\007' && cd Downloads/ && python3"
     terminator --new-tab -e "echo -e '\033]2;AKS/fsw\007' && cd ${AKS_ROOT}/astris-fsw-framework/ && bash"
-    # asn1 parser
-    # tmtc db
+    terminator --new-tab -e "echo -e '\033]2;AKS/asn1_parser\007' && cd ${AKS_ROOT}/asn1_parser/ && bash"
+    terminator --new-tab -e "echo -e '\033]2;AKS/astris-tmtc-database\007' && cd ${AKS_ROOT}/astris-tmtc-database/ && bash"
     # COSMOS
 
     # cleanup the terminal used to boostrap the env
