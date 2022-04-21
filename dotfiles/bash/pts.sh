@@ -4,6 +4,8 @@
 
 alias i="invoke"
 alias il="invoke --list"
+source <(invoke --print-completion-script bash)
+complete -F _complete_invoke -o default i
 
 DOTNET_CLI_TELEMETRY_OPTOUT=1
 
