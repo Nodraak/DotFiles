@@ -1,10 +1,11 @@
+[commit]
+    # gpgsigning is awfull during rebase... use alias cm and ca to gpg sign
+    gpgsign = false
 [user]
     name = Adrien Chardon
     email = adrienchardon@mailoo.org
     signingkey = BB79836B
-[commit]
-    # gpgsigning is awfull during rebase... use alias cm and ca to gpg sign
-    gpgsign = false
+
 [alias]
     a = add
     b = branch
@@ -31,12 +32,14 @@
     statsAuthors = shortlog -sne --oneline --since='Jan 1 2010'
 [color]
     ui = auto
-[push]
-    default = upstream
-[rebase]
-    autostash = true
 [diff]
     noprefix = true
     colormoved = zebra
 [http]
     sslVerify = true
+[init]
+    defaultBranch = main
+[push]
+    default = upstream
+[rebase]
+    autostash = true
