@@ -15,6 +15,7 @@ alias la='ls -lGha'
 alias lla='la'
 alias grep='grep --color'
 alias pcregrep='pcregrep --color'
+alias ip='ip --color'
 alias du='du -kh'
 alias df='df -khT'
 

@@ -2,7 +2,7 @@
 
 # export or not export -> http://unix.stackexchange.com/questions/107851/using-export-in-bashrc
 
-DIR="$HOME/dotfiles/dotfiles/bash/"
+DIR="$HOME/Documents/dotfiles/dotfiles/bash/"
 
 # basics
 source "$DIR/colors.sh"

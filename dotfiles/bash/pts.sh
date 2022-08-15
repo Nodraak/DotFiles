@@ -17,21 +17,15 @@ export LANGUAGE="en_US.utf8"
 export LC_ALL="en_US.utf8"
 export LC_CTYPE="en_US.utf8"
 
-function pts_initworkenv_term() {
+function pts_initworkenv() {
     AKS_ROOT="$HOME/Documents/2021-PTS/work/Kickstage/2021-08-work/"
-
-    terminator --new-tab -e "echo -e '\033]2;py\007' && cd Downloads/ && python3"
-    terminator --new-tab -e "echo -e '\033]2;AKS/fsw\007' && cd ${AKS_ROOT}/astris-fsw-framework/ && bash"
-    terminator --new-tab -e "echo -e '\033]2;AKS/asn1_parser\007' && cd ${AKS_ROOT}/asn1_parser/ && bash"
-    terminator --new-tab -e "echo -e '\033]2;AKS/astris-tmtc-database\007' && cd ${AKS_ROOT}/astris-tmtc-database/ && bash"
-    # COSMOS
-
-    # cleanup the terminal used to boostrap the env
-    exit
-}
-
-function pts_initworkenv_gui() {
     DOC_ROOT="$HOME/Documents/"
+
+    terminator --new-tab -e "echo -e '\033]2;py\007' && cd Downloads/ && python3" &
+    terminator --new-tab -e "echo -e '\033]2;AKS/fsw\007' && cd ${AKS_ROOT}/astris-fsw-framework/ && bash" &
+    terminator --new-tab -e "echo -e '\033]2;AKS/asn1_parser\007' && cd ${AKS_ROOT}/asn1_parser/ && bash" &
+    terminator --new-tab -e "echo -e '\033]2;AKS/astris-tmtc-database\007' && cd ${AKS_ROOT}/astris-tmtc-database/ && bash" &
+    # COSMOS
 
     gitg --no-wd &
     # mattermost
@@ -44,4 +38,11 @@ function pts_initworkenv_gui() {
 
     # cleanup the terminal used to boostrap the env
     exit
+}
+
+function pts_screen_desk() {
+    xrandr \
+        --output eDP-1 --mode 1280x800 --rate 59.91 --pos 0x546 --rotate normal \
+        --output HDMI-1 --primary --mode 1920x1080 --rate 23.98 --pos 1280x0 --rotate normal \
+        --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off
 }
