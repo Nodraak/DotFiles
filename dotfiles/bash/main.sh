@@ -5,25 +5,22 @@
 DIR="$HOME/dotfiles/dotfiles/bash/"
 
 # basics
-source "$DIR/colors.sh"
-source "$DIR/xtitle.sh"
-source "$DIR/ps1.sh"  # depends on colors and xtitle
-source "$DIR/env.sh"
 source "$DIR/aliases.sh"
+source "$DIR/colors.sh"
+source "$DIR/env.sh"
 source "$DIR/git-completion.sh"
+source "$DIR/ps1.sh"  # depends on colors and xtitle
+source "$DIR/xtitle.sh"
 
 # docker X11 forwarding
 #xhost +local:nodraak > /dev/null
 
 # funcs
-source "$DIR/func-open.sh"
 source "$DIR/func-latex.sh"
-source "$DIR/func-pdf.sh"
 source "$DIR/func-miscs.sh"
+source "$DIR/func-open.sh"
+source "$DIR/func-pdf.sh"
 
 # env specific
 source "$DIR/env-home.sh"
 #source "$DIR/env-gmv.sh"
-
-export PATH=/opt/rtems-4.10/bin/:${PATH}
-export PATH=/opt/mkprom2/:${PATH}

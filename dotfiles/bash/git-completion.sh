@@ -15,13 +15,13 @@ function source_if_exists()
 # centos
 source_if_exists "/etc/bash_completion.d/git"
 
-# debian 10
+# ubuntu 22.04 / debian 10
 source_if_exists "/etc/bash_completion.d/git-prompt"
 
 # ?
 source_if_exists "/usr/lib/git-core/git-sh-prompt/git-sh-prompt.sh"
 
-# debian 10
+# ubuntu 22.04 / debian 10
 source_if_exists "/usr/share/bash-completion/completions/git"
 
 # centos
