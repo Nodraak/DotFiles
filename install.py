@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from __future__ import print_function
 import os
@@ -18,6 +18,7 @@ FILELIST = (
     ('config/sublime-text-3/Packages', '.config/sublime-text-3/Packages'),
     ('vim/vim', '.vim'),
     ('vim/vimrc', '.vimrc'),
+    ('config/mimeapps.list', '.config/mimeapps.list'),
 
 # laptop
     #('config/dunst', '.config/dunst'),
