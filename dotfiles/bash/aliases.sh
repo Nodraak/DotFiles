@@ -28,7 +28,8 @@ alias vd='vimdiff'
 
 # dev
 alias g='git'  # now this is what I call 'lazy'
-complete -o default -o nospace -F _git g
+#complete -o default -o nospace -F _git g
+__git_complete g git
 alias gg='gitg'
 alias gg.='gg .'
 alias gcc='gcc -fdiagnostics-color=auto'
