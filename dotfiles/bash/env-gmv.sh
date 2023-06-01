@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function setup_aliases_ltadch()
+function gmv_setup_aliases_ltadch()
 {
     # from http://wpad/wpad.dat - 2019-05-07
     export http_proxy="http://ptmproxy.gmv.es:80"
@@ -17,7 +17,7 @@ function setup_aliases_ltadch()
     alias sudo='sudo -EH'
 }
 
-function setup_aliases_s5dev()
+function gmv_setup_aliases_s5dev()
 {
     #
     # PATH
@@ -52,5 +52,5 @@ function setup_aliases_s5dev()
     export LC_CTYPE=en_US.utf8
 }
 
-#setup_aliases_ltadch
-#setup_aliases_s5dev
+#gmv_setup_aliases_ltadch
+#gmv_setup_aliases_s5dev

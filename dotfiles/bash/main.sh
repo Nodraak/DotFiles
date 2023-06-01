@@ -22,8 +22,8 @@ source "$DIR/func-pdf.sh"
 source "$DIR/func-miscs.sh"
 
 # env specific
-#source "$DIR/gmv.sh"
-
+source "$DIR/env-home.sh"
+#source "$DIR/env-gmv.sh"
 
 export PATH=/opt/rtems-4.10/bin/:${PATH}
 export PATH=/opt/mkprom2/:${PATH}

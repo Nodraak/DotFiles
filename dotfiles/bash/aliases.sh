@@ -41,10 +41,6 @@ alias disasArm='arm-none-eabi-objdump -D -F -M intel -m i386 --demangle'
 complete -o nospace -F _filedir_xspec pylint
 #alias pylintd='pylint3 --load-plugins pylint_django'
 
-# dual monitor - dont forget to reset conky
-alias dmen='xrandr --output HDMI1 --mode 1440x900 --above LVDS1 && ~/.conky/starter.py'
-alias dmdis='xrandr --output HDMI1 --off && ~/.conky/starter.py'
-
 # misc
 alias pdflatex='pdflatex -file-line-error -halt-on-error'
 HISTIGNORE='jrnl *'  # no export needed
