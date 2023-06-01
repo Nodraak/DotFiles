@@ -16,9 +16,10 @@
 		"*.pdf",
 		"*.swf",
 		"*.jar",
-		"*.zip"
+		"*.zip",
+		"*/ut-stubs/*"
 	],
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"copy_with_empty_selection": false,
 	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
 	"ensure_newline_at_eof_on_save": true,
@@ -50,5 +51,7 @@
 	],
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"ui_scale": 1.2,
+	"update_check": false
 }
