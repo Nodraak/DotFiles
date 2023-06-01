@@ -2,7 +2,7 @@
 
 # export or not export -> http://unix.stackexchange.com/questions/107851/using-export-in-bashrc
 
-DIR="$HOME/dotfiles/dotfiles/bash/"
+DIR="$HOME/Documents/nodraak/DotFiles/dotfiles/bash/"
 
 # basics
 source "$DIR/colors.sh"
@@ -22,5 +22,6 @@ source "$DIR/func-open.sh"
 source "$DIR/func-pdf.sh"
 
 # env specific
-source "$DIR/env-home.sh"
+#source "$DIR/env-home.sh"
 #source "$DIR/env-gmv.sh"
+source "$DIR/env-reflex.sh"

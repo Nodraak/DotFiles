@@ -3,8 +3,7 @@
     gpgsign = false
 [user]
     name = Adrien Chardon
-    email = adrienchardon@mailoo.org
-    signingkey = BB79836B
+    email = adrien@reflexaerospace.com
 [alias]
     a = add
     b = branch
