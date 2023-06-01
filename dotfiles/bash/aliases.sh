@@ -15,6 +15,7 @@ alias la='ls -lGha'
 alias lla='la'
 alias grep='grep --color'
 alias pcregrep='pcregrep --color'
+alias ip='ip --color'
 alias du='du -kh'
 alias df='df -khT'
 
@@ -26,12 +27,20 @@ alias v="vim"
 alias diff='colordiff'
 alias vd='vimdiff'
 
-# dev
+# dev - git
 alias g='git'  # now this is what I call 'lazy'
 #complete -o default -o nospace -F _git g
 __git_complete g git
 alias gg='gitg'
 alias gg.='gg .'
+
+# dev - invoke
+alias i="invoke"
+source <(invoke --print-completion-script bash)
+complete -F _complete_invoke -o default i
+alias il="invoke --list"
+
+# dev - miscs
 alias gcc='gcc -fdiagnostics-color=auto'
 alias disas='objdump -D -F -M intel --demangle'
 alias disasArm='arm-none-eabi-objdump -D -F -M intel -m i386 --demangle'

@@ -24,3 +24,9 @@ export DRIVE_GOMAXPROCS=8
 
 # rust
 export PATH=${HOME}/.cargo/bin:${PATH}
+
+# reproducible compilation - not sure which is needed
+export LANG="en_US.utf8"
+export LANGUAGE="en_US.utf8"
+export LC_ALL="en_US.utf8"
+export LC_CTYPE="en_US.utf8"
