@@ -23,7 +23,7 @@ mkdir .config/sublime-text-3  # quick workaround
 APTINSTALL="sudo apt install -q -y"
 
 # bash
-${APTINSTALL} bash-completion command-not-found
+${APTINSTALL} terminator bash-completion command-not-found
 
 # basic tools and lib
 ${APTINSTALL} unzip gzip bzip2
@@ -33,6 +33,7 @@ ${APTINSTALL} ca-certificates
 ${APTINSTALL} build-essential gdb make cmake autoconf automake shellcheck
 ${APTINSTALL} python3-dev python3-pip
 ${APTINSTALL} colordiff ascii cloc
+${APTINSTALL} can-utils
 ${APTINSTALL} kicad
 
 # sysadmin
