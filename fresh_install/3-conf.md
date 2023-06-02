@@ -56,6 +56,13 @@ $ dconf-editor
     picture-uri: path/to/file
 ```
 
+## Miscs
+
+```bash
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+```
+
 ## Cleanup
 
 ```bash
