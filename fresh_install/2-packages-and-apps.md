@@ -139,35 +139,85 @@ sudo dpkg -i sublime-text_build-3211_amd64.deb
 
 pin Firefox: `sudo apt-mark hold firefox`
 
-```bash
-# * uninstall apt's firefox
-# * download from website + install manually in /opt + symlink to /usr/bin
-# * plugings:
-#     * uBlock Origin https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
-#     * Privacy Badger https://www.eff.org/privacybadger
-#     * more extensions (cookie manager, disable ctrlq, ghostery, greasmonkey, gnotifier, live hhtp headers, modify http headers, sqlite manager, speed tweaks (speady fox), ssleuth, user agent switcher, web dev)
-# * settings (cf firefoxconfig)
-```
+```text
+* uninstall apt's firefox
+* download from website + install manually in /opt + symlink to /usr/bin
+* plugins:
+    * uBlock Origin https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+    * Privacy Badger https://www.eff.org/privacybadger
+    * more extensions (cookie manager, disable ctrlq, ghostery, greasmonkey, gnotifier, live hhtp headers, modify http headers, sqlite manager, speed tweaks (speady fox), ssleuth, user agent switcher, web dev)
+        * ublock origin
+        * umatrix
+        * privacy badger
+        * canvas blocker
+        * disconnect
+        * https everywhere
+        * decentraleyes
+        * au revoir utm
+        * google search link fix
+        * smart referer
 
-```
-adapted from https://github.com/mid-kid/config and @aeris22 hints
+// fix some really annoying behavior
 
-privacy.firstparty.isolate; true
+- browser.tabs.closeWindowWithLastTab = true
+- app.update.auto = false
 
-ublock origin
-umatrix
-privacy badger
-canvas blocker
-disconnect
-https everywhere
-decentraleyes
-au revoir utm
-google search link fix
-smart referer
+// Adapted from https://github.com/mid-kid/config and @aeris22 hints
+
+- privacy.firstparty.isolate = true
+
+// Don't phone home to mozilla
+- datareporting.healthreport.service.enabled = false
+- datareporting.healthreport.uploadEnabled = false
+- toolkit.telemetry.enabled = false
+- browser.selfsupport.url = ""
+
+// Stupid integrated browser plugins
+- browser.pocket.enabled = false
+
+// Search suggestions
+- browser.search.suggest.enabled = false
+
+// Geolocation
+- beacon.enabled = false
+- geo.enabled = false
+
+// Don't leak list of plugins
+- plugins.enumerable_names = ""
+
+// Disable prefetching
+- network.prefetch-next = false
+- network.dns.disablePrefetch = true
+- network.predictor.enabled = false
+
+// Do not track (It's a good idea on paper, but without some enforcement it's useless. Especially when Google ignores it)
+- privacy.trackingprotection.enabled = true
+- privacy.donottrackheader.enabled = true
+
+// Disable social media "integration"
+- social.directories = ""
+- social.remote-install.enabled = false
+- social.toast-notifications.enabled = false
+
+// Only allow cookies from originating server
+//- network.cookie.cookieBehavior = 1
+
+// Why do websites need my battery stats?
+- dom.battery.enabled = false
+
+// Only I say where I want to go
+- accessibility.blockautorefresh = true
+
+// Don't be shy.
+- browser.urlbar.trimURLs = false
+
+
+
+
+// Old
 
 - Self-Destructing Cookies
 - NoScript
-
 
 Options:
 -- Safebrowsing stuff
@@ -176,64 +226,16 @@ Options:
 - browser.safebrowsing.malware.enabled = false
 - extensions.blocklist.enabled = false
 
--- Don't phone home to mozilla
-- datareporting.healthreport.service.enabled = false
-- datareporting.healthreport.uploadEnabled = false
-- toolkit.telemetry.enabled = false
-- browser.selfsupport.url = ""
-
 -- Disable DRM shit
 - media.eme.enabled = false
 - media.gmp-eme-adobe.enabled = false
 
--- Stupid integrated browser plugins
-- browser.pocket.enabled = false
-
--- Search suggestions
-- browser.search.suggest.enabled = false
-
 -- WebRTC
 - media.peerconnection.enabled = false -> NOP, breaks appears.in ? (need restart)
-
--- Geolocation
-- beacon.enabled = false
-- geo.enabled = false
-
--- Don't leak list of plugins
-- plugins.enumerable_names = ""
-
--- Disable prefetching
-- network.prefetch-next = false
-- network.dns.disablePrefetch = true
-- network.predictor.enabled = false
 
 -- WebGL (Puts code in the GPU, could be harmful, isn't necessary anyway. Unless you're one of those "webapp" worshippers.)
 - webgl.disabled = true
 
--- Do not track (It's a good idea on paper, but without some enforcement it's useless. Especially when Google ignores it)
-- privacy.trackingprotection.enabled = true
-- privacy.donottrackheader.enabled = true
-
--- Disable social media "integration"
-- social.directories = ""
-- social.remote-install.enabled = false
-- social.toast-notifications.enabled = false
-
--- Only allow cookies from originating server
-- network.cookie.cookieBehavior = 1
-
--- Cookies last for one session only
-- network.cookie.lifetimePolicy = 2 (or 1?)
-
 -- So much for that cheap anti-right-click trick some sites pull off
 - dom.event.clipboardevents.enabled = false -> NOP, it breaks ctrl-c ctrl-v in gdocs
-
--- Why do websites need my battery stats?
-- dom.battery.enabled = false
-
--- Only I say where I want to go
-- accessibility.blockautorefresh = true
-
--- Don't be shy.
-- browser.urlbar.trimURLs = false
 ```
