@@ -5,12 +5,12 @@
 DIR="$HOME/dotfiles/dotfiles/bash/"
 
 # basics
-source "$DIR/aliases.sh"
 source "$DIR/colors.sh"
 source "$DIR/env.sh"
 source "$DIR/git-completion.sh"
-source "$DIR/ps1.sh"  # depends on colors and xtitle
 source "$DIR/xtitle.sh"
+source "$DIR/aliases.sh"  # depends on git-completion.sh
+source "$DIR/ps1.sh"  # depends on colors.sh and xtitle.sh
 
 # docker X11 forwarding
 #xhost +local:nodraak > /dev/null
