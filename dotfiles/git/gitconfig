@@ -5,7 +5,6 @@
     name = Adrien Chardon
     email = adrienchardon@mailoo.org
     signingkey = BB79836B
-
 [alias]
     a = add
     b = branch
@@ -22,7 +21,10 @@
     #pl = pull
     #pulledcode = log -p --reverse --no-merges --stat @{1}..
     #pulledcommit = log --reverse --no-merges --stat @{1}..
+
+    # l: abbreviated commit hash, author date, subject, author name, ref name
     l = log --pretty=format:'%C(red)%h %C(yellow)%ad %C(reset)%s %C(blue)%an%C(green)%d' --date=iso
+
     ri = rebase -i
     rc = rebase --continue
     l1 = log --pretty=oneline --abbrev-commit --decorate=short
@@ -49,3 +51,4 @@
     default = upstream
 [rebase]
     autostash = true
+    instructionFormat = "%ad - %s - %an"
