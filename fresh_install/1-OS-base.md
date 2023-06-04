@@ -20,7 +20,7 @@ Ref: https://superuser.com/questions/1453790/how-to-move-the-recovery-partition-
 USER=xx
 
 # Install (very) basic packages
-apt install -y sudo vim git
+apt install -y sudo visudo vim git
 
 # Enable root for user
 usermod -a -G sudo ${USER}

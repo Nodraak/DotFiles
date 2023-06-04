@@ -32,7 +32,7 @@ ${APTINSTALL} ca-certificates
 # compile/dev
 ${APTINSTALL} build-essential gdb make cmake autoconf automake shellcheck
 ${APTINSTALL} python3-dev python3-pip
-${APTINSTALL} colordiff ascii cloc
+${APTINSTALL} colordiff ascii cloc dos2unix
 ${APTINSTALL} can-utils
 ${APTINSTALL} kicad
 
@@ -40,7 +40,7 @@ ${APTINSTALL} kicad
 ${APTINSTALL} htop iotop iftop
 ${APTINSTALL} ethtool socat dnsutils netutils-tools net-tools
 ${APTINSTALL} telnet curl wget nmap strace
-${APTINSTALL} rsync stress
+${APTINSTALL} rsync stress tree
 ${APTINSTALL} dconf-editor
 
 # media
