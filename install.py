@@ -13,12 +13,13 @@ LINK = ['ln', '-s']
 FILELIST = (
 # base
     ('bash', '.bash'),
+    ('config/mimeapps.list', '.config/mimeapps.list'),
+    ('config/sublime-text-3/Packages', '.config/sublime-text-3/Packages'),
+    ('config/terminator', '.config/terminator'),
     ('git/gitconfig', '.gitconfig'),
     ('ipython', '.ipython'),
-    ('config/sublime-text-3/Packages', '.config/sublime-text-3/Packages'),
     ('vim/vim', '.vim'),
     ('vim/vimrc', '.vimrc'),
-    ('config/mimeapps.list', '.config/mimeapps.list'),
 
 # laptop
     #('config/dunst', '.config/dunst'),

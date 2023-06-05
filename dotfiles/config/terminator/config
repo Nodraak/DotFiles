@@ -1,0 +1,24 @@
+[global_config]
+  title_font = FreeMono 14
+[keybindings]
+  cycle_next = ""
+  cycle_prev = ""
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Monospace 14
+    scrollback_lines = 10000
+    disable_mousewheel_zoom = True
+    use_system_font = False
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
