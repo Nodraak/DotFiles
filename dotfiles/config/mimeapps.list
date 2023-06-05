@@ -1,7 +1,10 @@
 [Default Applications]
+application/pdf=firefox_firefox.desktop;
 application/x-shellscript=sublime_text.desktop;
-application/xhtml+xml=firefox_firefox.desktop
-text/html=firefox_firefox.desktop
-text/plain=sublime_text.desktop
-x-scheme-handler/http=firefox_firefox.desktop
-x-scheme-handler/https=firefox_firefox.desktop
+application/xhtml+xml=firefox_firefox.desktop;
+text/html=firefox_firefox.desktop;
+text/markdown=sublime_text.desktop;
+text/plain=sublime_text.desktop;
+text/x-python=sublime_text.desktop;
+x-scheme-handler/http=firefox_firefox.desktop;
+x-scheme-handler/https=firefox_firefox.desktop;

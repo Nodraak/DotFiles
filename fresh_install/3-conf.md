@@ -62,6 +62,8 @@ $ dconf-editor
 gsettings set org.gnome.desktop.calendar show-weekdate true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.interface show-battery-percentage true
+gsettings set org.gnome.FileRoller.FileSelector show-hidden true
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
 ```
 
 ## Cleanup

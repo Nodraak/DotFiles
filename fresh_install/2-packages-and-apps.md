@@ -24,6 +24,9 @@ APTINSTALL="sudo apt install -q -y"
 
 # bash
 ${APTINSTALL} terminator bash-completion command-not-found
+${APTINSTALL} git-lfs picocom usbutils moreutils acpi traceroute exif
+
+${APTINSTALL} inotify-tools  # important for sublime-text
 
 # basic tools and lib
 ${APTINSTALL} unzip gzip bzip2
@@ -48,7 +51,7 @@ ${APTINSTALL} ffmpeg imagemagick jpegoptim libxml2-utils
 ${APTINSTALL} dia graphviz
 
 # apps
-${APTINSTALL} gitg vlc libreoffice gimp
+${APTINSTALL} pcmanfm gitg vlc libreoffice gimp
 ```
 
 ## Python packages
@@ -128,6 +131,7 @@ cd ${HOME}/Downloads/
 wget https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
 sudo dpkg -i sublime-text_build-3211_amd64.deb
 # Add license
+# Install Package Control
 ```
 
 ## Firefox
@@ -185,10 +189,10 @@ pin Firefox: `sudo apt-mark hold firefox`
 // Don't leak list of plugins
 - plugins.enumerable_names = ""
 
-// Disable prefetching
-- network.prefetch-next = false
-- network.dns.disablePrefetch = true
-- network.predictor.enabled = false
+// Disable prefetching - break some "hover" mechanisms
+//- network.prefetch-next = false
+//- network.dns.disablePrefetch = true
+//- network.predictor.enabled = false
 
 // Do not track (It's a good idea on paper, but without some enforcement it's useless. Especially when Google ignores it)
 - privacy.trackingprotection.enabled = true
