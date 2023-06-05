@@ -21,7 +21,7 @@
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"copy_with_empty_selection": false,
-	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
+	"dictionary": "Packages/Dictionaries/French.dic",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[

@@ -43,26 +43,39 @@
             ]
         }
     },
+    /* Dictionaries source: https://github.com/titoBouzout/Dictionaries */
     {
-        "caption": "Dictionary: English",
-        "command": "set_setting",
-        "args":
-        {
-            "setting": "dictionary",
-            "value": "Packages/Language - English/en_US.dic"
-        }
+        "caption": "Dictionary: enable English",
+        "command": "run_multiple_commands",
+        "args": {
+            "commands": [
+                {"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/English (British).dic"}},
+                {"command": "set_setting", "args": {"setting": "spell_check", "value": true}},
+            ],
+        },
     },
     {
-        "caption": "Dictionary: French",
-        "command": "set_setting",
-        "args":
-        {
-            "setting": "dictionary",
-            "value": "Packages/Language - French - Français/fr_FR.dic"
-        }
+        "caption": "Dictionary: enable French",
+        "command": "run_multiple_commands",
+        "args": {
+            "commands": [
+                {"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/French.dic"}},
+                {"command": "set_setting", "args": {"setting": "spell_check", "value": true}},
+            ],
+        },
     },
     {
-        "caption": "Dictionary: Enable",
+        "caption": "Dictionary: enable German",
+        "command": "run_multiple_commands",
+        "args": {
+            "commands": [
+                {"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/German_de_DE.dic"}},
+                {"command": "set_setting", "args": {"setting": "spell_check", "value": true}},
+            ],
+        },
+    },
+    {
+        "caption": "Dictionary: enable",
         "command": "set_setting",
         "args":
         {
@@ -71,7 +84,7 @@
         }
     },
     {
-        "caption": "Dictionary: Disable",
+        "caption": "Dictionary: disable",
         "command": "set_setting",
         "args":
         {
