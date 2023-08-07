@@ -30,6 +30,37 @@ ll /var/lib/snapd/snaps/
 sudo snap set system refresh.retain=2
 
 snap list --all | awk '/disabled/{print $1, $3}' | while read snapname revision; do sudo snap remove "$snapname" --revision="$revision"; done
+
+
+
+snap remove firefox
+snap remove gtk-common-themes
+snap remove gnome-3-38-2004
+snap remove snapd-desktop-integration
+snap remove snap-store
+snap remove core20
+snap remove bare
+snap remove snapd
+
+snap list
+
+
+sudo systemctl stop snapd
+sudo systemctl disable snapd
+
+
+sudo apt purge snapd -y
+sudo apt-mark hold snapd
+
+sudo cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
+# To prevent repository packages from triggering the installation of Snap,
+# this file forbids snapd from being installed by APT.
+# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
+
 ```
 
 **Bluetooth**
@@ -64,6 +95,10 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.FileRoller.FileSelector show-hidden true
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
+
+# Modal windows will be then detached and resizable (ex gitg commit)
+gsettings set org.gnome.shell.overrides attach-modal-dialogs false
+# gsettings set org.gnome.shell.extensions.classic-overrides attach-modal-dialogs false
 ```
 
 ## Cleanup
