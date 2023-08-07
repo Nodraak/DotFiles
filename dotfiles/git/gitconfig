@@ -21,6 +21,7 @@
     #pl = pull
     #pulledcode = log -p --reverse --no-merges --stat @{1}..
     #pulledcommit = log --reverse --no-merges --stat @{1}..
+    po = push origin
 
     # l: abbreviated commit hash, author date, subject, author name, ref name
     l = log --pretty=format:'%C(red)%h %C(yellow)%ad %C(reset)%s %C(blue)%an%C(green)%d' --date=iso
@@ -31,7 +32,9 @@
     l2 = log --graph --oneline --decorate --all
     l3 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     l4 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-    statsAuthors = shortlog -sne --oneline --since='Jan 1 2010'
+
+    statsAuthors = shortlog -sne --since=2023-06-01 --until=2023-07-01 --merges
+
 [color]
     ui = auto
 [core]
