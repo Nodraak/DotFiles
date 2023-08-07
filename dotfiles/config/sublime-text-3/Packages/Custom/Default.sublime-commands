@@ -49,7 +49,8 @@
         "command": "run_multiple_commands",
         "args": {
             "commands": [
-                {"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/English (British).dic"}},
+                /*{"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/English (British).dic"}},*/
+                {"command": "set_setting", "args": {"setting": "dictionary", "value": "Packages/Dictionaries/English (American).dic"}},
                 {"command": "set_setting", "args": {"setting": "spell_check", "value": true}},
             ],
         },
